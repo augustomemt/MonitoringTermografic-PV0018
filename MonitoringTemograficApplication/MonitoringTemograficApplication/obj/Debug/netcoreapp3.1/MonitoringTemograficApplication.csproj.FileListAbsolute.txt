@@ -1,0 +1,248 @@
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.Manifest.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.xml
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\scopedcss\bundle\MonitoringTemograficApplication.styles.css
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.input.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.output.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorCoreGenerate.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.exe
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.deps.json
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.json
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CopyComplete
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\ProcessorTermografic.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Lang.Menssage.resources
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Menssage.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\Index.cshtml.g.cs
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\Users\Administrator\source\repos\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.AssemblyReference.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.exe
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.deps.json
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.json
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.dev.json
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.AssemblyReference.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Lang.Menssage.resources
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.GenerateResource.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfoInputs.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfo.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.Manifest.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.xml
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\scopedcss\bundle\MonitoringTemograficApplication.styles.css
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.input.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.output.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorCoreGenerate.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\Index.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Menssage.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CopyComplete
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Termografic\Login.cshtml.g.cs
+C:\Program Files (x86)\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Termografic\ProcessorTermografic.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.json
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.exe
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.deps.json
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.json
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.dev.json
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.AssemblyReference.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Lang.Menssage.resources
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.GenerateResource.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfoInputs.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfo.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CoreCompileInputs.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.Manifest.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.xml
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\scopedcss\bundle\MonitoringTemograficApplication.styles.css
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.input.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.output.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorCoreGenerate.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\Index.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Menssage.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Termografic\Login.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Termografic\ProcessorTermografic.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cache
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cs
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CopyComplete
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.exe
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.deps.json
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.json
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Lang.Menssage.resources
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.Manifest.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\staticwebassets\MonitoringTemograficApplication.StaticWebAssets.xml
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\scopedcss\bundle\MonitoringTemograficApplication.styles.css
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.input.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.TagHelpers.output.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorCoreGenerate.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\Index.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Menssage.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Termografic\Login.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Termografic\ProcessorTermografic.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.RazorTargetAssemblyInfo.cs
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.Views.pdb
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.csproj.CopyComplete
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
+C:\Users\Administrator\Desktop\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache

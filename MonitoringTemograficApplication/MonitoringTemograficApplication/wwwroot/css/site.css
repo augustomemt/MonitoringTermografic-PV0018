@@ -1,0 +1,144 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.page-wrapper {
+  background: #edf1f5;
+  position: relative;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom-color: green; 
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+#corpo {
+  background-color:green;
+
+}
+
+#CampLog{
+  display:inline-block;
+}
+
+#Botao {
+  background: green;
+  border-color: green;
+  top: 50px;
+  position: relative;
+  height:50px;
+}
+
+#TelaLog {
+  display: inline-block;
+  float: left;
+}
+
+#icone {
+  width: 130px;
+  right: 10px;
+  margin-left: 100px;
+}
+
+#divimg {
+  position:relative;
+  display: inline-block;
+  float:left;
+  left: 90px;
+}
+#code_login_1{
+  display:inline-block;
+}
+#section{
+  display:flex;
+  float:left;
+}
+
+
+#img {
+  width: 400px;
+  height: 450px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 300px;
+}
+
+#div1 {
+  display: inline-block;
+  width: 900px;
+  height: 700px;
+}
+
+#form{
+  width:300px;
+  height:400px;
+}
+
+#USUARIO{
+  font-size:30px;
+}
+
+#SENHA {
+  font-size: 30px;
+}
