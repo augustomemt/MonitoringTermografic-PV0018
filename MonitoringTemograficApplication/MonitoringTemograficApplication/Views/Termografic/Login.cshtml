@@ -25,19 +25,19 @@
                 <article class="card-body">
                   @{ await Html.RenderPartialAsync("~/Views/Shared/_Menssage.cshtml"); }
                   <form method="post" action="/Termografic/Login" id="form">
-                    <div class="form-group" id="USUARIO" >
-                      <label>Usuário</label>
-                      <input asp-for="Usuario" class="form-control" placeholder="Usuário" type="Usuario">
+                    <div class="form-group" id="USUARIO">
+                      <label>Usuário</label> <br> 
+                      <input asp-for="Usuario" class="form-control" placeholder="Usuário" type="Usuario" id="InpUsu">
                     </div> <br> <br> 
                     <div class="form-group" id="SENHA">
-                      <label>Senha</label>
-                      <input asp-for="Senha" class="form-control" placeholder="******" type="password">
+                      <label>Senha</label> <br>
+                      <input asp-for="Senha" class="form-control" placeholder="******" type="password" id="InpSen">
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary btn-block" id="Botao"> Acessar </button>
                     </div>
+                    <img src="~/CSP.png" alt="iconeCSP" id="icone">
                   </form>
-                  <img src="~/CSP.png" alt="iconeCSP" id="icone">
                 </article>
               </div>
               <div id="divimg">

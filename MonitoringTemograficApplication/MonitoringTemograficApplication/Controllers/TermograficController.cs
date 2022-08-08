@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MonitoringTemograficApplication.Controllers
 {
   
@@ -122,7 +123,7 @@ namespace MonitoringTemograficApplication.Controllers
         {
           foreach (var err in text.Value.Errors)
           {
-            sb.Append(err.ErrorMessage + "<br />");
+            sb.Append(err.ErrorMessage );
           }
 
         }
