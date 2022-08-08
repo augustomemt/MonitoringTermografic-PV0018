@@ -65,6 +65,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+
 }
 .footer {
   position: absolute;
@@ -164,3 +165,22 @@ body {
   border-radius: 200px;
   height: 60px;
 }
+
+#testedv {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  top: -100%;
+  left: 100px;
+}
+
+#divinterna {
+  width: 100px;
+  height: 100px;
+  background-color:black;
+  position: relative;
+  float: left
+  
+}
+
