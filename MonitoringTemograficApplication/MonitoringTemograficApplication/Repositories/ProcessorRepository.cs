@@ -33,13 +33,9 @@ namespace MonitoringTemograficApplication.Repositories
       int RecordPage = _config.GetValue<int>("RecordPage");
 
       int NumberPage = page ?? 1;
-      var TESTE = _context.TB_EXT_LD_LOG.ToList();
-      var baseProcessor = TESTE.AsQueryable();
+      var baseProcessor = _context.TB_EXT_LD_LOG.ToList().AsQueryable().OrderByDescending(d => d.dProcessor);
 
-      if (!String.IsNullOrEmpty(search))
-      {
-        baseProcessor = baseProcessor.Where(a => a.cHeatNo.ToString().Contains(search.Trim())).OrderByDescending(a => a.dProcessor);
-      }
+     
       return baseProcessor.ToPagedList<TB_EXT_LD_LOG>(NumberPage, 10);
     }
 

@@ -40,6 +40,7 @@ namespace MonitoringTemograficApplication.Controllers
     [HttpPost]
     public IActionResult ProcessorTermografic([FromForm] Processor client)
     {
+      
       if (ModelState.IsValid)
       {
         var result = _processor.processorChange(client);
@@ -49,7 +50,7 @@ namespace MonitoringTemograficApplication.Controllers
         }
         else
         {
-          ViewData["MSG_E"] = "Algo deu errado ao processar";
+          ViewData["MSG_A"] = "Algo deu errado ao processar";
           return View();
         }
 
