@@ -218,10 +218,10 @@ tr:hover {
 #DivProcs {
   position: relative;
   width: 480px;
-  height: 418px;
+  height: 440px;
   border: solid 1.7px;
   border-color: rgb(48 96 31 / 55%);
-  right: 92px;
+  right: 100px;
   border-radius: 24px;
 }
 tr {
