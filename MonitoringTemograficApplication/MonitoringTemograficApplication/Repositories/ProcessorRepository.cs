@@ -51,7 +51,7 @@ namespace MonitoringTemograficApplication.Repositories
       using (SqlConnection connection = new SqlConnection(_config.GetConnectionString("SIMT")))
       {
         var time = DateTime.Now;
-        SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Measurements]([Time],[LadleID],[HeatNumber],[cHeatNo])VALUES(@Time, @LaleID, @HeatNumber, @cHeatNo)", connection);
+        SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Measurements]([Time],[LadleID],[HeatNumber],[cHeatNo], [LadleAge])VALUES(@Time, @LaleID, @HeatNumber, @cHeatNo, @LadleAge)", connection);
         command.Parameters.Add("@Time", SqlDbType.DateTime);
         command.Parameters["@Time"].Value = time;
         command.Parameters.Add("@LaleID", SqlDbType.SmallInt);
@@ -60,6 +60,8 @@ namespace MonitoringTemograficApplication.Repositories
         command.Parameters["@HeatNumber"].Value = Convert.ToInt16(processor.Corrida.Trim('A'));
         command.Parameters.Add("@cHeatNo", SqlDbType.VarChar);
         command.Parameters["@cHeatNo"].Value = 'A';
+        command.Parameters.Add("@LadleAge", SqlDbType.SmallInt);
+        command.Parameters["@LadleAge"].Value = Convert.ToInt16(processor.VidaPanela);
 
         try
         {

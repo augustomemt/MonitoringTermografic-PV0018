@@ -38,14 +38,14 @@ namespace MonitoringTemograficApplication.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult ProcessorTermografic([FromForm] Processor client)
+        public IActionResult ProcessorTermografic([FromForm] Processor processor)
         {
 
 
 
             if (ModelState.IsValid)
             {
-                var result = _processor.processorChange(client);
+                var result = _processor.processorChange(processor);
                 if (result != false)
                 {
                     return RedirectToAction("Index", "Processor");

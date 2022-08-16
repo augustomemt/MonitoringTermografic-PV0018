@@ -7178,11 +7178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo.junior\\Desktop\\CSP_VIDAPANELA\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+      "projectUniqueName": "C:\\CSP_VIDAPANELA\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
       "projectName": "MonitoringTemograficApplication",
-      "projectPath": "C:\\Users\\paulo.junior\\Desktop\\CSP_VIDAPANELA\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+      "projectPath": "C:\\CSP_VIDAPANELA\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
       "packagesPath": "C:\\Users\\paulo.junior\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulo.junior\\Desktop\\CSP_VIDAPANELA\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\obj\\",
+      "outputPath": "C:\\CSP_VIDAPANELA\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\paulo.junior\\AppData\\Roaming\\NuGet\\NuGet.Config",
