@@ -55,19 +55,19 @@ namespace MonitoringTemograficApplication.Repositories
         command.Parameters.Add("@Time", SqlDbType.DateTime);
         command.Parameters["@Time"].Value = time;
         command.Parameters.Add("@LaleID", SqlDbType.SmallInt);
-        command.Parameters["@LaleID"].Value = Convert.ToInt16(processor.Panela);
+        command.Parameters["@LaleID"].Value = (processor.Panela);
         command.Parameters.Add("@HeatNumber", SqlDbType.SmallInt);
-        command.Parameters["@HeatNumber"].Value = Convert.ToInt16(processor.Corrida.Trim('A'));
+        command.Parameters["@HeatNumber"].Value = (processor.Corrida);
         command.Parameters.Add("@cHeatNo", SqlDbType.VarChar);
         command.Parameters["@cHeatNo"].Value = 'A';
         command.Parameters.Add("@LadleAge", SqlDbType.SmallInt);
-        command.Parameters["@LadleAge"].Value = Convert.ToInt16(processor.VidaPanela);
+        command.Parameters["@LadleAge"].Value = (processor.VidaPanela);
 
         try
         {
           connection.Open();
           var rowsAffected = command.ExecuteNonQuery();
-          RegisterProcessor(new TB_EXT_LD_LOG { cHeatNo = processor.Corrida, cUser = _logingClient.GetCliente().Usuario, dProcessor = time, nLdNo = Convert.ToInt16(processor.Panela), nLadleAge = Convert.ToInt32(processor.VidaPanela) });
+          RegisterProcessor(new TB_EXT_LD_LOG { cHeatNo = Convert.ToString((processor.Corrida)), cUser = _logingClient.GetCliente().Usuario, dProcessor = time, nLdNo = Convert.ToInt16(processor.Panela), nLadleAge = Convert.ToInt32(processor.VidaPanela) });
 
           return true;
          

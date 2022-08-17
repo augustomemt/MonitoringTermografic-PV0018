@@ -5,20 +5,24 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace MonitoringTemograficApplication.Models
 {
+
   public class Processor
   {
-    [Required(ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
-    [StringLength(10, ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
-    public string Corrida { get; set; }
 
-    [Required(ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
-    [StringLength(5, ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
-    public string Panela { get; set; }
+    
+    [Range(0,9, ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
+    public int Corrida { get; set;}
+ 
 
-    [Required(ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
-    [StringLength(5, ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
-    public string VidaPanela { get; set; }
+    
+    [Range(0, 4, ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
+    public int Panela { get; set; }
+
+    
+    [Range(0, 4, ErrorMessageResourceType = typeof(Menssage), ErrorMessageResourceName = "MSG_E001")]
+    public int VidaPanela { get; set; }
   }
 }
