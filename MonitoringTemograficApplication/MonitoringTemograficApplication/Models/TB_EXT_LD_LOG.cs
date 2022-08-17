@@ -13,6 +13,9 @@ namespace MonitoringTemograficApplication.Models
         public string cUser { get; set; }
         public string cHeatNo { get; set; }
         public Int16 nLdNo { get; set; }
+        public int nLadleAge { get; set; }
 
-    }
+
+
+  }
 }

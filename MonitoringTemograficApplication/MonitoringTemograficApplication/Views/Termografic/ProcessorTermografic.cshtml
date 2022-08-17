@@ -24,6 +24,13 @@
                 <input asp-for="Panela" class="form-control" placeholder="Digite o número da Panela" style="border-radius:15px; height:55px;">
                 <span asp-validation-for="Panela" class="text-danger"></span>
               </div>
+
+              <!----CORRIDA----->
+              <div class="form-group">
+                <label asp-for="VidaPanela" style="font-size:30px"></label>
+                <input asp-for="VidaPanela" class="form-control" placeholder=" Vida da Panela" style="border-radius:15px; height:55px;">
+                <span asp-validation-for="Corrida" class="text-danger"></span>
+              </div>
               <div class="form-group">
                 <label asp-for="Corrida" style="font-size:30px"></label>
                 <input asp-for="Corrida" class="form-control" placeholder="Digite o número da Corrida" style="border-radius:15px; height:55px;">
@@ -33,7 +40,6 @@
                 <button type="submit" class="btn btn-outline-success btn-primary btn-block">Processar Alterações</button>
 
               </div>
-
             </form>
             <form method="post" action="Cancel">
 
