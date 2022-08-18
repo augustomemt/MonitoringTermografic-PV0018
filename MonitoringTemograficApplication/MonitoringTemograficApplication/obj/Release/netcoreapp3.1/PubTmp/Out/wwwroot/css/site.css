@@ -14,8 +14,8 @@ a {
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: rgb(29 109 0 / 0.55);
+  border-color: green;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -43,11 +43,11 @@ html {
   border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom-color: green; 
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .2rem .75rem rgb(94 197 11 / 0.4);
 }
 
 button.accept-policy {
@@ -65,6 +65,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+
 }
 .footer {
   position: absolute;
@@ -72,4 +73,157 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+#corpo {
+  background-color:green;
+
+}
+
+#CampLog{
+  display:inline-block;
+}
+
+#Botao {
+  background: green;
+  border-color: green;
+  position: relative;
+  height: 50px;
+  left: 50px;
+}
+
+#TelaLog {
+  display: inline-block;
+  float: left;
+}
+
+#icone {
+  position:relative;
+  left:-50px;
+  width: 160px;
+  margin-left: 100px;
+  float: left;
+}
+
+#divimg {
+  position: relative;
+  display: inline-block;
+  float: left;
+  left: 90px;
+  top: 45px;
+  border-left: 4px solid;
+  border-color: rgb(29 109 0 / 0.55);
+}
+#code_login_1{
+  display:inline-block;
+}
+#section{
+  display:flex;
+  float:left;
+}
+
+
+#img {
+  width: 550px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 300px;
+  position: relative;
+  float: left;
+
+}
+
+#div1 {
+  display: inline-block;
+  width: 1000px;
+  height: 450px;
+  border: 6px solid;
+  justify-content: center;
+  position:relative;
+  right: 300px;
+  top: 100px;
+  border-radius:20px;
+  border-color:darkgrey;
+}
+
+#form {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  right:30px;
+}
+
+#USUARIO {
+  position: relative;
+  font-size: 25;
+  left: 50px;
+}
+
+#SENHA {
+  position: relative;
+  font-size: 25;
+  left: 50px;
+  top:-30px;
+}
+
+#InpUsu{
+  border-radius:90px;
+  height:60px;
+}
+#InpSen {
+  border-radius: 90px;
+  height: 60px;
+}
+
+#testedv {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  top: -100%;
+  left: 100px;
+}
+
+#divinterna {
+  width: 100px;
+  height: 100px;
+  background-color:black;
+  position: relative;
+  float: left
+  
+}
+#DivBtn {
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+
+}
+
+#DivTb{
+
+  border-radius:15px;
+}
+
+#Cptabela{
+
+}
+
+th {
+  background-color: green;
+  color: white;
+}
+tr:hover {
+  background-color: rgb(29 109 0 / 0.55);
+}
+
+#DivProcs {
+  position: relative;
+  width: 480px;
+  height: 520px;
+  border: solid 1.7px;
+  border-color: rgb(48 96 31 / 55%);
+  right: 100px;
+  border-radius: 24px;
+}
+tr {
+  font-weight: bold;
 }

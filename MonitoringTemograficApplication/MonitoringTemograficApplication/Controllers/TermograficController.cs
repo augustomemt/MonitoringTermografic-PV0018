@@ -41,11 +41,35 @@ namespace MonitoringTemograficApplication.Controllers
     public IActionResult ProcessorTermografic([FromForm] Processor client)
     {
 
-     
+
+    
+
+
 
       if (ModelState.IsValid)
       {
-      
+
+        if (client.Corrida.ToString().Length > 5)
+        {
+          ViewData["MSG_A"] = "Numero excedido, informe uma CORRIDA com ate 5 numeros";
+          return View();
+
+        }
+        if (client.Panela.ToString().Length > 5)
+        {
+          ViewData["MSG_A"] = "Numero excedido, informe uma PANELA com ate 5 numeros";
+          return View();
+
+        }
+        if (client.VidaPanela.ToString().Length > 5)
+        {
+          ViewData["MSG_A"] = "Numero excedido, informe uma VIDAPANELA com ate 5 numeros";
+          return View();
+
+        }
+
+
+
 
 
         var result = _processor.processorChange(client);
