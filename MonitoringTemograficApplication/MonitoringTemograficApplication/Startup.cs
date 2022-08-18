@@ -43,7 +43,7 @@ namespace MonitoringTemograficApplication
             services.AddScoped<IProcessor, ProcessorRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
 
-            string connection = "Server=VM-MEMT-14\\CSPNIVEL02;Database=EXT;user id=sa;password=metrum2002*;Trusted_Connection=False;";
+            string connection = "Server=172.16.9.14\\CSPNIVEL02;Database=EXT;user id=sa;password=metrum2002*;Trusted_Connection=False;";
             services.AddDbContext<MonitoringTermograficContext>(options => options.UseSqlServer(connection));
 
         }

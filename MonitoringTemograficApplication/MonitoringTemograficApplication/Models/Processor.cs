@@ -12,16 +12,17 @@ namespace MonitoringTemograficApplication.Models
   public class Processor
   {
 
-  
 
+    
     public int Corrida { get; set;}
 
 
-    
+
+
 
     public int Panela { get; set; }
 
-    
+
 
     public int VidaPanela { get; set; }
   }
