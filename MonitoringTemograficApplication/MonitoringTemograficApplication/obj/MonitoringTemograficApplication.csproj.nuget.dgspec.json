@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Vida Panela18\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj": {}
+    "C:\\csp19\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj": {}
   },
   "projects": {
-    "C:\\Vida Panela18\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj": {
+    "C:\\csp19\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Vida Panela18\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+        "projectUniqueName": "C:\\csp19\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
         "projectName": "MonitoringTemograficApplication",
-        "projectPath": "C:\\Vida Panela18\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+        "projectPath": "C:\\csp19\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
         "packagesPath": "C:\\Users\\paulo.junior\\.nuget\\packages\\",
-        "outputPath": "C:\\Vida Panela18\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\obj\\",
+        "outputPath": "C:\\csp19\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paulo.junior\\AppData\\Roaming\\NuGet\\NuGet.Config",

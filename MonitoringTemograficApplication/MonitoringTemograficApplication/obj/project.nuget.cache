@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z+n+oe68DrXJ0gW50pL2r5Fc2ZK7zCCQGcw+1Nxf603htZFutdcrhhQQE5640kN/rFcHwAmPMjTogWSqFheGwg==",
+  "dgSpecHash": "V7v9vUP8fVWsM1mx6+QX9asdrHRqDViHb4n/9MuBW9E43p29QRxS7hjQ/kTGHcm3H/fSLSS8vk435T/4kGQTHA==",
   "success": true,
-  "projectFilePath": "C:\\Vida Panela18\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+  "projectFilePath": "C:\\csp19\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo.junior\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
     "C:\\Users\\paulo.junior\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",

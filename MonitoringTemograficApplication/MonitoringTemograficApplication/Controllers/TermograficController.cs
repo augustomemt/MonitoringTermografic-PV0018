@@ -11,8 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace MonitoringTemograficApplication.Controllers
 {
 
@@ -42,11 +40,6 @@ namespace MonitoringTemograficApplication.Controllers
     public IActionResult ProcessorTermografic([FromForm] Processor client)
     {
 
-
-    
-
-
-
       if (ModelState.IsValid)
       {
 
@@ -68,11 +61,6 @@ namespace MonitoringTemograficApplication.Controllers
           return View();
 
         }
-
-
-
-
-
         var result = _processor.processorChange(client);
         if (result != false)
         {
@@ -83,8 +71,6 @@ namespace MonitoringTemograficApplication.Controllers
           ViewData["MSG_A"] = "Algo deu errado ao processar";
           return View();
         }
-
-
 
       }
       else
@@ -160,7 +146,6 @@ namespace MonitoringTemograficApplication.Controllers
         }
         ViewData["MSG_E"] = sb.ToString();
       }
-
 
       var model = ModelState;
       return View();
