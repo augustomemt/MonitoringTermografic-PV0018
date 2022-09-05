@@ -19,10 +19,12 @@ namespace MonitoringTemograficApplication.Repositories
 
     IConfiguration _config;
     MonitoringTermograficContext _context;
+    MeasurementsContext _measurementsContext;
     LogingClient _logingClient;
 
-    public ProcessorRepository(MonitoringTermograficContext context, IConfiguration configuration, LogingClient logingClient)
+    public ProcessorRepository(MonitoringTermograficContext context, IConfiguration configuration, LogingClient logingClient ,MeasurementsContext measurementsContext)
     {
+      _measurementsContext = measurementsContext;
       _context = context;
       _config = configuration;
       _logingClient = logingClient;
@@ -81,6 +83,15 @@ namespace MonitoringTemograficApplication.Repositories
       return false;
     }
 
+    public IPagedList<Measurements> GetAllMeasurements(int? page, string search)
+    {
+      int RecordPage = _config.GetValue<int>("RecordPage");
 
+      int NumberPage = page ?? 1;
+      var baseProcessor = _measurementsContext.Measurements.Where( m =>  m.LadleID != null && m.LadleAge != null && m.Location != null && m.RaceNumber != null).ToList().AsQueryable().OrderByDescending(d => d.Time);
+
+
+      return baseProcessor.ToPagedList<Measurements>(NumberPage, 10);
+    }
   }
 }

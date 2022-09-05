@@ -1,0 +1,101 @@
+﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
+@{
+  ViewData["Title"] = "MeasuremntExist";
+  var pesquisa = Context.Request.Query["pesquisa"];
+}
+
+
+<h1 style="text-align:center; ">Alterações Processadas</h1>
+
+<br />
+<br />
+<!--
+    Formulário
+    -- QueryString: Colaborador/Cliente/Index?pesquisa={palavraDigitada}&pagina=3
+-->
+@*<form method="get">
+      <div class="form-group">
+          <label for="pesquisa"></label>
+          <input type="text" name="pesquisa" id="pesquisa" value="@pesquisa" class="form-control" placeholder="Digite o nome do produto">
+      </div>
+      <button type="submit" class="btn btn-primary">OK</button>
+  </form>
+  <br />
+  <br />*@
+
+@if (TempData["MSG_S"] != null)
+{
+  <p class="alert alert-success">@TempData["MSG_S"]</p>
+}
+
+<div style=" justify-content:flex-end;  display:flex;">
+  <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
+
+</div>
+<br />
+@if (Model.Count > 0)
+{
+  <div class="table-responsivez" id="DivTb">
+    <table class="table  table-bordered" id="Cptabela">
+      <thead>
+        <tr>
+          <th scope="col">ID das Imagens</th>
+          <th scope="col">Data</th>
+          <th scope="col">Numero da Pnela</th>
+          <th scope="col">Vida Panela</th>
+          <th scope="col">Número da Corrida</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (Measurements measurements in Model)
+        {
+          <tr>
+            <td>@measurements.MeasurementKey.ToString()</td>
+            <td>@measurements.Time.ToString()</td>
+            <td>@measurements.LadleID.ToString()</td>
+            <td>@measurements.LadleAge.ToString()</td>
+            <td>@measurements.RaceNumber.ToString()</td>    
+            @*<td>
+        <a asp-action="Atualizar" asp-route-id="@produto.Id" class="btn btn-secondary">Atualizar</a>
+        <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
+        </td>*@
+          </tr>
+        }
+      </tbody>
+    </table>
+    <div id="DivBtn">
+      @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page, search = pesquisa }), new PagedListRenderOptions
+    {
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "btn btn-outline-success text-right"}
+    })
+    </div>
+
+  </div>
+
+
+
+}
+else
+{
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">ID das Imagens</th>
+          <th scope="col">Data</th>
+          <th scope="col">Numero da Pnela</th>
+          <th scope="col">Vida Panela</th>
+          <th scope="col">Número da Corrida</th>
+
+
+        </tr>
+      </thead>
+    </table>
+    <div>
+      Nenhum registro cadastrado!
+    </div>
+  </div>
+
+}

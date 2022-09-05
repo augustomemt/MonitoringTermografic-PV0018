@@ -125,7 +125,7 @@ namespace MonitoringTemograficApplication.Controllers
         {
           _LoginClient.Login(client);
 
-          return RedirectToAction("Index", "Processor");
+          return RedirectToAction("MeasurementExist", "Processor");
         }
         else
         {

@@ -12,7 +12,7 @@ namespace MonitoringTemograficApplication.Models
         public DateTime dProcessor { get; set; }
         public string cUser { get; set; }
         public string cHeatNo { get; set; }
-        public Int16 nLdNo { get; set; }
+        public Int16? nLdNo { get; set; }
         public int nLadleAge { get; set; }
 
 
