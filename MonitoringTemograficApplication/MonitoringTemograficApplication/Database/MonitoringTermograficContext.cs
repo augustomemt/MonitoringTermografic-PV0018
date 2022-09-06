@@ -22,5 +22,6 @@ namespace MonitoringTemograficApplication.Database
 
         public DbSet<TB_EXT_OP_CODE> TB_EXT_OP_CODE { get; set; }
 
-    }
+      
+  }
 }

@@ -9,6 +9,7 @@ using MonitoringTemograficApplication.Libraries.Login;
 using MonitoringTemograficApplication.Libraries.Session;
 using MonitoringTemograficApplication.Repositories;
 using MonitoringTemograficApplication.Repositories.Contracts;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,8 +46,9 @@ namespace MonitoringTemograficApplication
 
             string connection = "Server=VM-MEMT-14\\CSPNIVEL02;Database=EXT;user id=sa;password=metrum2002*;Trusted_Connection=False;";
             services.AddDbContext<MonitoringTermograficContext>(options => options.UseSqlServer(connection));
+            
 
-        }
+    }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

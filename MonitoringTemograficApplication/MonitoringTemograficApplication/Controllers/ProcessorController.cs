@@ -35,6 +35,14 @@ namespace MonitoringTemograficApplication.Database
       return RedirectToAction("Index", "Processor");
     }
 
+    public IActionResult MissingExist(int? pag, string search)
+    {
+      var missingExist = _processorRepository.GetAllMeasurements(pag, search);
+      return View(missingExist);
+      return RedirectToAction("MissingExist", "Processor");
+
+    }
+
     [HttpGet]
     public IActionResult Register()
     {
