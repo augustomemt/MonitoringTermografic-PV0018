@@ -1,48 +1,91 @@
-﻿
-@model MonitoringTemograficApplication.Models.Processor
+﻿@model MonitoringTemograficApplication.Models.Processor
 
 @{
-  ViewBag.Title = "ProcessorTermografic";
+    ViewBag.Title = "ProcessorTermografic";
 }
 
 
 <main role="main">
-  <h2 style="text-align:center;">
-    Cadastro Panela
-  </h2>
-  <br />
-  <br />
-  <section class="container  d-flex justify-content-center col-12">
-    <aside class="col-sm-4">
-      <div id="code_login_1">
-        <div class="card">
-          <article class="card-body" id="DivProcs">
-            @{ await Html.RenderPartialAsync("~/Views/Shared/_Menssage.cshtml"); }
-            <form method="post">
-              <div class="form-group">
-                <label asp-for="Panela" style="font-size:30px"></label>
-                <input asp-for="Panela" class="form-control" placeholder="Digite o número da Panela" style="border-radius:15px; height:55px;">
-                <span asp-validation-for="Panela" class="text-danger"></span>
-              </div>
-              <div class="form-group">
-                <label asp-for="Corrida" style="font-size:30px"></label>
-                <input asp-for="Corrida" class="form-control" placeholder="Digite o número da Corrida" style="border-radius:15px; height:55px;">
-                <span asp-validation-for="Corrida" class="text-danger"></span>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-outline-success btn-primary btn-block">Processar Alterações</button>
+    <div class="pros">
+    <h2>
+       Novo Processamento
+    </h2>
+    </div>
+    <br />
+    <br />
+    <section class="container  d-flex justify-content-center col-12">
+        <aside class="col-sm-4">
+            <div id="code_login_1">
+                <div class="card">
 
-              </div>
+                    <article class="card-body" id="DivProcs">
+                        @{
+                            await Html.RenderPartialAsync("~/Views/Shared/_Menssage.cshtml");
+                        }
+                        <form method="post">
+                             <!-----PANELA----->
+                            <div class="form-group">
+                                <label asp-for="Panela" style="font-size:30px"></label>
+                                <input asp-for="Panela" class="form-control" placeholder="Digite o número da Panela" style="border-radius:15px; height:55px;">
+                                <span asp-validation-for="Panela" class="text-danger"></span>
+                            </div>
 
-            </form>
-            <form method="post" action="Cancel">
+                            <!----VIDA PENELA----->
+                            <div class="form-group">
+                               <p style="font-size:30px"> Vida Panela</p>
+                                <input asp-for="VidaPanela" class="form-control" placeholder=" Vida da Panela" style="border-radius:15px; height:55px;">
+                                <span asp-validation-for="VidaPanela" class="text-danger"></span>
+                            </div>
 
-              <button type="submit" class="btn btn-outline-secondary btn-block" onclick="Cancel()">Cancelar</button>
-            </form>
+                             <!---CORRIDA------>
+                            <div class="form-group">
+                                <label asp-for="Corrida" style="font-size:30px"></label>
+                                <input asp-for="Corrida" class="form-control" placeholder="Digite o número da Corrida" style="border-radius:15px; height:55px;">
+                                <span asp-validation-for="Corrida" class="text-danger"></span>
+                            </div>
 
-          </article>
-        </div>
-      </div>
-    </aside>
-  </section>
+                            <!-----MODAL----->
+                            <div id="modalpanela" class="modal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                       
+                                        <div class="modal-body">
+                                            <p>Deseja Confirma ?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary">Salvar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="form-group">
+                                <button type="button" class="btn btn-outline-success btn-primary btn-block" onclick="OpenModal()">Processar Alterações</button>
+
+
+                            </div>
+                        </form>
+                        <form method="post" action="Cancel">
+
+                            <button type="submit" class="btn btn-outline-secondary btn-block" onclick="Cancel()">Cancelar</button>
+                        </form>
+
+                    </article>
+                </div>
+            </div>
+            </div>
+        </aside>
+    </section>
 </main>
+ <script>
+function OpenModal() {
+    $("#modalpanela").modal({
+        show: true
+    })
+};
+  </script>

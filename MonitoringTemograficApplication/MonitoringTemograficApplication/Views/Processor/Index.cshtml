@@ -43,23 +43,27 @@
         <th scope="col">Data Alteração</th>
         <th scope="col">Corrida</th>
         <th scope="col">Panela</th>
+        <th scope="col">Vida Panela</th>
         <th scope="col">Usuário</th>
+        
       </tr>
     </thead>
     <tbody>
       @foreach (TB_EXT_LD_LOG process in Model)
       {
-        <tr>
-          <td>@process.dProcessor.ToString()</td>
-          <td>@process.cHeatNo.ToString()</td>
-          <td>@process.nLdNo.ToString()</td>
-          <td>@process.cUser.ToString()</td>
+      <tr>
+        <td>@process.dProcessor.ToString()</td>
+        <td>@process.cHeatNo.ToString()</td>
+        <td>@process.nLdNo.ToString()</td>
+        <td>@process.nLadleAge.ToString()</td>
+        <td>@process.cUser.ToString()</td>
+        
 
-          @*<td>
-                <a asp-action="Atualizar" asp-route-id="@produto.Id" class="btn btn-secondary">Atualizar</a>
-                <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
-            </td>*@
-        </tr>
+        @*<td>
+        <a asp-action="Atualizar" asp-route-id="@produto.Id" class="btn btn-secondary">Atualizar</a>
+        <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
+    </td>*@
+      </tr>
       }
     </tbody>
   </table>
@@ -85,7 +89,9 @@ else
           <th scope="col">Data Alteração</th>
           <th scope="col">Corrida</th>
           <th scope="col">Panela</th>
+          <th scope="col">Vida Panela</th>
           <th scope="col">Usuário</th>
+          
         </tr>
       </thead>
     </table>

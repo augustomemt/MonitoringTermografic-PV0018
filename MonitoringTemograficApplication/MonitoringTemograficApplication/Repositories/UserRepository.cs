@@ -23,7 +23,7 @@ namespace MonitoringTemograficApplication.Repositories
     }
     public bool Login(string Name, string account)
     {
-      using (SqlConnection connection = new SqlConnection("Server=VM-MEMT-14\\CSPNIVEL02;Database=EXT;user id=sa;password=metrum2002*;Trusted_Connection=False;"))
+      using (SqlConnection connection = new SqlConnection("Server=172.16.9.14\\CSPNIVEL02;Database=EXT;user id=sa;password=metrum2002*;Trusted_Connection=False;"))
       {
         SqlCommand command = new SqlCommand("select pwdcompare(@passoword, [cPassWord]) from [EXT].[dbo].[TB_EXT_OP_CODE] where [cOpNam]=@User", connection);
         command.Parameters.Add("@passoword", SqlDbType.VarChar);

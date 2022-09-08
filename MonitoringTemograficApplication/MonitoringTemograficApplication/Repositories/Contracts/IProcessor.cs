@@ -14,6 +14,8 @@ namespace MonitoringTemograficApplication.Repositories.Contracts
     IPagedList<TB_EXT_LD_LOG> GetAllProcessors(int? page, string search);
     //IPagedList<TB_EXT_LD_LOG> GetAllProcessors(int? page, string search, string ordenation);
 
+    IPagedList<Measurements> GetAllMeasurements(int? page, string search);
+
     bool processorChange(Processor processor);
 
 

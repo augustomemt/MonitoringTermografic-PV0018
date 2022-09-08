@@ -1,0 +1,171 @@
+﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
+@{
+    ViewData["Title"] = "MeasuremntExist";
+    var pesquisa = Context.Request.Query["pesquisa"];
+}
+
+
+<h1 style="text-align:center; ">Alterações Processadas</h1>
+
+<br />
+<br />
+<!--
+    Formulário
+    -- QueryString: Colaborador/Cliente/Index?pesquisa={palavraDigitada}&pagina=3
+-->
+@*<form method="get">
+      <div class="form-group">
+          <label for="pesquisa"></label>
+          <input type="text" name="pesquisa" id="pesquisa" value="@pesquisa" class="form-control" placeholder="Digite o nome do produto">
+      </div>
+      <button type="submit" class="btn btn-primary">OK</button>
+  </form>
+  <br />
+  <br />*@
+
+@if (TempData["MSG_S"] != null)
+{
+    <p class="alert alert-success">@TempData["MSG_S"]</p>
+}
+
+<div style=" justify-content:flex-end;  display:flex;">
+    <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
+
+</div>
+<br />
+@if (Model.Count > 0)
+{
+    <div class="table-responsivez" id="DivTb">
+        <table class="table  table-bordered" id="Cptabela">
+            <thead>
+                <tr>
+                    <th scope="col">ID das Imagens</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Numero da Pnela</th>
+                    <th scope="col">Vida Panela</th>
+                    <th scope="col">Número da Corrida</th>
+                    <th> </th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Measurements measurements in Model)
+                {
+                    <tr>
+                        <td>@measurements.MeasurementKey.ToString()</td>
+                        <td>@measurements.Time.ToString()</td>
+                        <td>@measurements.LadleID.ToString()</td>
+                        <td>@measurements.LadleAge.ToString()</td>
+                        <td>@measurements.RaceNumber.ToString()</td>
+                        <td><button type="button" class="btn btn-outline-success" onclick="mostrarModal()">Atualizar</button></td>
+                       
+
+
+
+                       
+               
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div id="DivBtn">
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page, search = pesquisa }), new PagedListRenderOptions
+        {
+        LiElementClasses = new string[] { "page-item" },
+        PageClasses = new string[] { "btn btn-outline-success text-right"}
+        })
+        </div>
+
+    </div>
+
+
+
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID das Imagens</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Numero da Panela</th>
+                    <th scope="col">Vida Panela</th>
+                    <th scope="col">Número da Corrida</th>
+                </tr>
+            </thead>
+        </table>
+        <div>
+            Nenhum registro cadastrado!
+        </div>
+    </div>
+
+}
+<div id="modal" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title"></h6>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" class="form-control form-control-sm MeasurementKey" />
+                <div class="form-group">
+                    <label>Id Das Imagens </label>
+                    <input type="text" class="form-control form-control-sm IddasImagens" />
+                    <span class="text-danger erroNome d-IddasImagens"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Data</label>
+                    <input type="number" class="form-control form-control-sm Data" />
+                    <span class="text-danger erroIdade d-Data"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Numero Panela</label>
+                    <input type="text" class="form-control form-control-sm .Numero Panela" />
+                    <span class="text-danger erroProfissao d-NumeroPanela"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Vida Panela</label>
+                    <input type="text" class="form-control form-control-sm .VidaPanela" />
+                    <span class="text-danger erroProfissao d-VidaPanela"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>NumeroCorrida</label>
+                    <input type="text" class="form-control form-control-sm .NumeroCorrida" />
+                    <span class="text-danger erroProfissao d-numerocorrida"></span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
+                    <input type="button" value="Cancelar" class="btn btn-sm btn-light" data-bs-dismiss="modal" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+
+</div>
+@section scripts {
+    <script>
+
+        function mostrarModal() {
+        new bootstrap.Modal($("#modal"), {}).show();    }
+
+    </script>
+
+}
+
+
+
+
+
