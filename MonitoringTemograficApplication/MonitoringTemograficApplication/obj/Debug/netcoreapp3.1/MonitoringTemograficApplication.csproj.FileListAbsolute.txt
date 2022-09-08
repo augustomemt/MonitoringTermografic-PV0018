@@ -677,3 +677,5 @@ C:\CSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTe
 C:\CSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
 C:\CSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
 C:\CSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\MeasurementExist.cshtml.g.cs
+C:\CSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\EditMeasurementExist.cshtml.g.cs
+C:\CSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\MeasurementMissing.cshtml.g.cs

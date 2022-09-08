@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonitoringTemograficApplication.Libraries.Filter;
 using MonitoringTemograficApplication.Libraries.Login;
+using MonitoringTemograficApplication.Models;
 using MonitoringTemograficApplication.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,10 @@ namespace MonitoringTemograficApplication.Database
   {
     private IProcessor _processorRepository;
     private LogingClient _LoginClient;
-    public ProcessorController(IProcessor processorRepository, LogingClient LoginClient)
+    private MeasurementsContext _context;
+    public ProcessorController(IProcessor processorRepository, LogingClient LoginClient , MeasurementsContext context)
     {
+      _context = context;
       _LoginClient = LoginClient;
       _processorRepository = processorRepository;
     }
@@ -25,6 +28,25 @@ namespace MonitoringTemograficApplication.Database
     {
       _LoginClient.Logout();
       return RedirectToAction("Login", "Termografic");
+    }
+
+    [HttpGet]
+    public JsonResult EditMeasurementExist( int id)
+    {
+      return Json( _processorRepository.EditMeasurement(id));
+    }
+
+
+    [HttpPut]
+    public JsonResult Edit(Measurements measurement)
+    {
+      if (ModelState.IsValid)
+      {
+        _context.Measurements.Update(measurement);
+        _context.SaveChanges();
+        return Json(measurement);
+      }
+      return Json(ModelState);
     }
 
     public IActionResult Index(int? page, string search)
@@ -40,6 +62,14 @@ namespace MonitoringTemograficApplication.Database
       return View(measurements);
       return RedirectToAction("MeasurementExist", "Processor");
     }
+
+    public IActionResult MeasurementMissing(int? page, string search)
+    {
+      var measurements = _processorRepository.GetAllMeasurementsMissing(page, search);
+      return View(measurements);
+      return RedirectToAction("MeasurementMissing", "Processor");
+    }
+
 
     [HttpGet]
     public IActionResult Register()

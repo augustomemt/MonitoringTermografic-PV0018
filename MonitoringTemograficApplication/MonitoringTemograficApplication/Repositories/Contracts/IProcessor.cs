@@ -16,6 +16,10 @@ namespace MonitoringTemograficApplication.Repositories.Contracts
 
     IPagedList<Measurements> GetAllMeasurements(int? page, string search);
 
+    IPagedList<Measurements> GetAllMeasurementsMissing(int? page, string search);
+
+    Measurements EditMeasurement(int id);
+
     bool processorChange(Processor processor);
 
 

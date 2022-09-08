@@ -1,11 +1,11 @@
 ﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
 @{
-  ViewData["Title"] = "MeasuremntExist";
+  ViewData["Title"] = "MeasuremntMissing";
   var pesquisa = Context.Request.Query["pesquisa"];
 }
 
 
-<h1 style="text-align:center; ">Monitoramento Termográfico</h1>
+<h1 style="text-align:center; ">Dados Faltantes</h1>
 
 <br />
 <br />
@@ -41,9 +41,9 @@
         <tr>
           <th scope="col">ID das Imagens</th>
           <th scope="col">Data</th>
-          <th scope="col">Número da Panela</th>
-          <th scope="col">Vida Panela</th>
-          <th scope="col">Número da Corrida</th>
+          @* <th scope="col">Número da Panela</th>
+        <th scope="col">Vida Panela</th>
+        <th scope="col">Número da Corrida</th>*@
           <th></th>
         </tr>
       </thead>
@@ -53,12 +53,12 @@
           <tr>
             <td>@measurements.MeasurementKey.ToString()</td>
             <td>@measurements.Time.ToString()</td>
-            <td>@measurements.LadleID.ToString()</td>
-            <td>@measurements.LadleAge.ToString()</td>
-            <td>
-              @measurements.RaceNumber.ToString()
+            @*<td>@measurements.LadleID.ToString()</td>
+        <td>@measurements.LadleAge.ToString()</td>
+        <td>
+        @measurements.RaceNumber.ToString()
 
-            </td>
+        </td>*@
             <td>
               <button class="btn btn-sm btn-outline-info" onclick="GetMeasurement(@measurements.MeasurementKey)">Atualizar</button>
 
@@ -72,7 +72,7 @@
       </tbody>
     </table>
     <div id="DivBtn">
-      @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementExist", new { page = page, search = pesquisa }), new PagedListRenderOptions
+      @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementMissing", new { page = page, search = pesquisa }), new PagedListRenderOptions
     {
     LiElementClasses = new string[] { "page-item" },
     PageClasses = new string[] { "btn btn-outline-success text-right"}
@@ -92,12 +92,9 @@ else
         <tr>
           <th scope="col">ID das Imagens</th>
           <th scope="col">Data</th>
-          <th scope="col">Número da Panela</th>
-          <th scope="col">Vida Panela</th>
-          <th scope="col">Número da Corrida</th>
-          <th>
+          <th></th>
 
-          </th>
+
 
         </tr>
       </thead>
@@ -120,9 +117,7 @@ else
       <div class="modal-body">
         <input type="hidden" class="form-control form-control-sm MeasurementKey" />
         <input type="hidden" class="form-control form-control-sm Time" />
-        <input type="hidden" class="form-control form-control-sm Location" />
-        <input type="hidden" class="form-control form-control-sm ladleAgeValidate" />
-        <input type="hidden" class="form-control form-control-sm ladleIDValidate" />
+        
 
         <div class="form-group">
           <label>Numero da Panela</label>
@@ -170,22 +165,16 @@ else
                 escolherTituloModal('Atualizar');
                 $(".MeasurementKey").val(measurement.measurementKey);
                 $(".Time").val(measurement.time);
-                $(".Location").val(measurement.location);
-                $(".ladleID").val(measurement.ladleID);
-                $(".ladleAge").val(measurement.ladleAge);
-                $(".ladleIDValidate").val(measurement.ladleID);
-                $(".ladleAgeValidate").val(measurement.ladleAge);
-                $(".raceNumber").val(measurement.raceNumber);
+                //$(".Location").val(measurement.location);
+                //$(".ladleID").val(measurement.ladleID);
+                //$(".ladleAge").val(measurement.ladleAge);
+                //$(".raceNumber").val(measurement.raceNumber);
             }
         })
     }
-
     $(".btnCancelar").click(function () {
         location.reload(true)
     });
-
-
-
     $(".btnSalvar").click(function () {
         var measurement = {
             MeasurementKey: $('.MeasurementKey').val(),
@@ -195,34 +184,22 @@ else
             Location: $('.Location').val(),
             Time: $('.Time').val()
         };
-        var mesasurementValidate = {
-
-            ladleIDValidate: $('.ladleIDValidate').val(),
-            ladleAgeValidate: $('.ladleAgeValidate').val()
-
-        }
-
         console.log(measurement)
-        if (validarFormulario(measurement, mesasurementValidate)) {
-            //if (parseInt(measurement.MeasurementKey) > 0)
+        if (validarFormulario(measurement)) {
 
-            console.log('chegou aqui')
             updateMeasurement(measurement);
 
         }
     });
+    
     function validarFormulario(measurement, mesasurementValidate) {
         let numeroPanelaValido = validarNumeroPanela(measurement.LadleID);
         let vidaPanelaValida = validarVidaPanela(measurement.LadleAge);
         let raceNumberValida = validarRaceNumber(measurement.RaceNumber);
-        let compareValida = validarCompare(measurement, mesasurementValidate);
-        if (numeroPanelaValido == true && raceNumberValida == true && vidaPanelaValida == true && compareValida == true)
+        if (numeroPanelaValido == true && raceNumberValida == true && vidaPanelaValida == true)
             return true;
         return false;
     }
-
-    
-
     function validarNumeroPanela(numeroPanela) {
         let numeroPanelaValida = true;
 
@@ -285,32 +262,14 @@ else
             success: function (measurementUptaded) {
                 $("#modal").modal('hide');
                 location.reload(true)
-               
+
             }
         });
     }
 
-    function validarCompare(measurement, mesasurementValidate) 
-    {
-        let result = true;
-        if (parseInt(measurement.LadleAge) != parseInt(mesasurementValidate.ladleAgeValidate) && parseInt(measurement.LadleID) == parseInt(mesasurementValidate.ladleIDValidate)) {
-            
-            $(".ladleID").addClass('is-invalid');
-            $(".erroladleID").text("Número da panela deve ser atualizado");
-            $(".erroladleID").removeClass("d-none");
-            result = false;
-        }
-        if (parseInt(measurement.LadleID) != parseInt(mesasurementValidate.ladleIDValidate) && parseInt(measurement.LadleAge) == parseInt(mesasurementValidate.ladleAgeValidate)) {
-            
-            $(".ladleAge").addClass('is-invalid');
-            $(".erroladleAge").text("Vida da panela deve ser atualizada");
-            $(".erroladleAge").removeClass("d-none");
-            result = false;
-        }       
-        return result;
-    }
 
 
+    
 
     function mostrarModal() {
         console.log('chegou aqui')
