@@ -47,7 +47,11 @@ namespace MonitoringTemograficApplication.Database
       return RedirectToAction("ProcessorTermografic", "Termografic");
     }
 
-
+    public JsonResult GetId(int id)
+    {
+      var measurent = _processorRepository.GetId(id);
+      return Json(measurent);
+    }
   }
  
 }

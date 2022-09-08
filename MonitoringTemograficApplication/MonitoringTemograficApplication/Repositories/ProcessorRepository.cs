@@ -93,5 +93,12 @@ namespace MonitoringTemograficApplication.Repositories
 
       return baseProcessor.ToPagedList<Measurements>(NumberPage, 10);
     }
+    public Measurements GetId(int id)
+    {
+      var measurements = _measurementsContext.Measurements.Where(m => m.MeasurementKey == id).FirstOrDefault();
+      return (measurements);
+    }
+
+
   }
 }

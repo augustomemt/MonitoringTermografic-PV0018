@@ -18,6 +18,9 @@ namespace MonitoringTemograficApplication.Repositories.Contracts
 
     bool processorChange(Processor processor);
 
+    Measurements GetId(int id);
 
-    }
+    
+
+  }
 }
