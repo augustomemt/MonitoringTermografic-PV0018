@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MonitoringTemograficApplication.Models
 {
@@ -8,8 +10,10 @@ namespace MonitoringTemograficApplication.Models
     [Key]
     public Int64 MeasurementKey { get; set; }
 
-    public DateTime Time { get; set; }
+    
+    public DateTimeOffset Time { get; set; }
 
+   
     public int? LadleID { get; set; }
 
     public int? LadleAge { get; set; }

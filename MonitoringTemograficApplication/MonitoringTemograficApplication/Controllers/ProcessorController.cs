@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonitoringTemograficApplication.Libraries.Filter;
 using MonitoringTemograficApplication.Libraries.Login;
+using MonitoringTemograficApplication.Models;
 using MonitoringTemograficApplication.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -9,13 +10,15 @@ using System.Threading.Tasks;
 
 namespace MonitoringTemograficApplication.Database
 {
-  [ClientAuthorizationAttibute]
+  //[ClientAuthorizationAttibute]
   public class ProcessorController : Controller
   {
+    private MeasurementsContext _MeasurementsContext;
     private IProcessor _processorRepository;
     private LogingClient _LoginClient;
-    public ProcessorController(IProcessor processorRepository, LogingClient LoginClient)
+    public ProcessorController(IProcessor processorRepository, LogingClient LoginClient, MeasurementsContext MeasurementsContext)
     {
+      _MeasurementsContext = MeasurementsContext;
       _LoginClient = LoginClient;
       _processorRepository = processorRepository;
     }
@@ -51,6 +54,16 @@ namespace MonitoringTemograficApplication.Database
     {
       var measurent = _processorRepository.GetId(id);
       return Json(measurent);
+    }
+
+    [HttpPut]
+    public JsonResult Edit(Measurements measurements)
+    {
+      _MeasurementsContext.Measurements.Update(measurements);
+
+      _MeasurementsContext.SaveChanges();
+      return Json(measurements); 
+
     }
   }
  
