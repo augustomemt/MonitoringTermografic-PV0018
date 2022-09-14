@@ -926,6 +926,7 @@ C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\Monito
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\appsettings.json
 C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Debug\netcoreapp3.1\MonitoringTemograficApplication.exe
@@ -989,3 +990,6 @@ C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\Mo
 C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
 C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
 C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
+=======
+C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\MeasurementMissing.cshtml.g.cs
+>>>>>>> ac198b858cba145ad3b8311346b8d706f64b6824
