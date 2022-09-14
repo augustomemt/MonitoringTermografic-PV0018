@@ -43,6 +43,13 @@ namespace MonitoringTemograficApplication.Database
       return View(measurements);
       return RedirectToAction("MeasurementExist", "Processor");
     }
+    
+    public IActionResult MeasurementMissing(int? page, string search)
+    {
+      var measurements = _processorRepository.GetAllMeasurementsMising(page, search);
+      return View(measurements);
+      return RedirectToAction("MeasurementMissing", "Processor");
+    }
 
     [HttpGet]
     public IActionResult Register()

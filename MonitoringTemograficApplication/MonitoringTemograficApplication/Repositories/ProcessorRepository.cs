@@ -99,7 +99,15 @@ namespace MonitoringTemograficApplication.Repositories
       return (measurements);
     }
 
-    
+        public IPagedList<Measurements> GetAllMeasurementsMising(int? page, string search)
+        {
+            int RecordPage = _config.GetValue<int>("RecordPage");
 
-  }
+            int NumberPage = page ?? 1;
+            var baseProcessor = _measurementsContext.Measurements.Where(m => m.LadleID == null || m.LadleAge == null || m.RaceNumber == null).ToList().AsQueryable().OrderByDescending(d => d.Time);
+
+
+            return baseProcessor.ToPagedList<Measurements>(NumberPage, 10);
+        }
+    }
 }

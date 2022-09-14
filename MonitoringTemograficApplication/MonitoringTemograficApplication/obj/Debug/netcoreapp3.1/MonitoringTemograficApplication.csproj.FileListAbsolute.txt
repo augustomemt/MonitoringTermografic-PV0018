@@ -926,3 +926,4 @@ C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\Monito
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.dll
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.pdb
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\MonitoringTemograficApplication.genruntimeconfig.cache
+C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\MeasurementMissing.cshtml.g.cs

@@ -5,7 +5,7 @@
 }
 
 
-<h1 style="text-align:center; ">Alterações Processadas</h1>
+<h1 style="text-align:center; "> Dados Faltantes</h1>
 
 <br />
 <br />
@@ -39,12 +39,11 @@
         <table class="table  table-bordered" id="Cptabela">
             <thead>
                 <tr>
-                     <th scope="col">ID das Imagens</th>
+                    <th scope="col">ID das Imagens</th>
                     <th scope="col">Data</th>
                     <th scope="col">Numero da Pnela</th>
                     <th scope="col">Vida Panela</th>
                     <th scope="col">Número da Corrida</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -56,8 +55,6 @@
                         <td>@process.nLdNo.ToString()</td>
                         <td>@process.nLadleAge.ToString()</td>
                         <td>@process.cUser.ToString()</td>
-
-
                         @*<td>
                 <a asp-action="Atualizar" asp-route-id="@produto.Id" class="btn btn-secondary">Atualizar</a>
                 <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
@@ -75,9 +72,6 @@
         </div>
 
     </div>
-
-
-
 }
 else
 {
@@ -85,7 +79,7 @@ else
         <table class="table table-bordered">
             <thead>
                 <tr>
-                   <th scope="col">ID das Imagens</th>
+                    <th scope="col">ID das Imagens</th>
                     <th scope="col">Data</th>
                     <th scope="col">Numero da Pnela</th>
                     <th scope="col">Vida Panela</th>
