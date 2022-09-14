@@ -1,11 +1,11 @@
 ﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
 @{
-    ViewData["Title"] = "MeasuremntExist";
+    ViewData["Title"] = "MeasurementMissing";
     var pesquisa = Context.Request.Query["pesquisa"];
 }
 
 
-<h1 style="text-align:center; ">Alterações Processadas</h1>
+<h1 style="text-align:center; ">Dados Faltantes</h1>
 
 <br />
 <br />
@@ -41,6 +41,7 @@
                 <tr>
                     <th scope="col">ID das Imagens</th>
                     <th scope="col">Data</th>
+                    <th>Dados Faltantes</th>
 
 
                 </tr>
@@ -52,13 +53,13 @@
                         <td>@measurements.MeasurementKey.ToString()</td>
                         <td>@measurements.Time.ToString()</td>
 
-                        @* <td><button type="button" class="btn btn-outline-success" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
+                       <td><button type="button" class="btn btn-outline-success" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
                     </tr>
                 }
             </tbody>
         </table>
         <div id="DivBtn">
-            @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementExist", new { page = page, search = pesquisa }), new PagedListRenderOptions
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementMissing", new { page = page, search = pesquisa }), new PagedListRenderOptions
         {
         LiElementClasses = new string[] { "page-item" },
         PageClasses = new string[] { "btn btn-outline-success text-right"}
@@ -79,7 +80,7 @@ else
             </thead>
         </table>
         <div>
-            Nenhum registro não encontrado!
+            Nenhum registro  encontrado!
         </div>
     </div>
 }
@@ -93,8 +94,6 @@ else
                 <input type="hidden" class="form-control form-control-sm MeasurementKey" />
                 <input type="hidden" class="form-control form-control-sm Time" />
                 <input type="hidden" class="form-control form-control-sm Location" />
-
-
                 <div class="form-group">
 
                     <label>Numero Panela</label>
@@ -112,15 +111,15 @@ else
                     <label>NumeroCorrida</label>
                     <input type="text" class="form-control form-control-sm RaceNumber" />
                     <span class="text-danger erroProfissao d-NumeroCorrida"></span>
-                </div>*
+                </div>
             </div>
 
-            @*<div class="modal-footer">
+            <div class="modal-footer">
             <div class="form-group">
             <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
             <input type="button" value="Cancelar" class="btn btn-sm btn-light" data-bs-dismiss="modal" />
             </div>
-            </div>*@
+            </div>
 
         </div>
 
@@ -143,30 +142,28 @@ else
                 success: function(measurent) {
                     console.log(measurent)
                     mostrarModal();
-                    // $(".MeasurementKey").val(measurent.measurementKey);
+                     $(".MeasurementKey").val(measurent.measurementKey);
                     //$(".LadleAge").val(measurent.ladleAge);
-                    $(".LadleID").val(measurent.ladleID);
+                    //$(".LadleID").val(measurent.ladleID);
                     //$(".RaceNumber").val(measurent.raceNumber);
                     $(".Time").val(measurent.time);
-                    //$(".Location").val(measurent.location);
+                    $(".Location").val(measurent.location);
                 }
             })
         }
-        // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS FO FORMULARIO
+        // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS DO FORMULARIO
         $(".btnSalvar").click(function() {
             var Measurement = {
                 MeasurementKey: $('.MeasurementKey').val(),
-                // LadleAge: $('.LadleAge').val(),
+                 LadleAge: $('.LadleAge').val(),
                 LadleID: $('.LadleID').val(),
-                // RaceNumber: $('.RaceNumber').val(),
+                 RaceNumber: $('.RaceNumber').val(),
                 Time: $('.Time').val(),
-                //Location: $('.Location').val()
+                Location: $('.Location').val()
             };
             // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
 
             UpdateMeasruremnt(Measurement)
-
-
 
         });
         // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
@@ -180,7 +177,7 @@ else
                 },
                 success: function(Measruremnt) {
                     $("#modal").modal('hide');
-
+                    console.log(Measruremnt)
                     location.reload(true)
 
 
