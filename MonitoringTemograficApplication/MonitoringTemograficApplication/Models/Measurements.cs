@@ -11,7 +11,7 @@ namespace MonitoringTemograficApplication.Models
     public Int64 MeasurementKey { get; set; }
 
     
-    public DateTimeOffset Time { get; set; }
+    public DateTime Time { get; set; }
 
    
     public int? LadleID { get; set; }

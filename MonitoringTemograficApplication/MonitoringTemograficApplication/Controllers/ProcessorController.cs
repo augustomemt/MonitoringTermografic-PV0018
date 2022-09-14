@@ -57,12 +57,11 @@ namespace MonitoringTemograficApplication.Database
     }
 
     [HttpPut]
-    public JsonResult Edit(Measurements measurements)
+    public JsonResult Edit(Measurements Measruremnt01)
     {
-      _MeasurementsContext.Measurements.Update(measurements);
-
+      _MeasurementsContext.Measurements.Update(Measruremnt01);
       _MeasurementsContext.SaveChanges();
-      return Json(measurements); 
+      return Json(Measruremnt01); 
 
     }
   }
