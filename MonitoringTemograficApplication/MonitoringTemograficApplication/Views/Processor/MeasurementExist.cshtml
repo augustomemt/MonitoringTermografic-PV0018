@@ -1,7 +1,7 @@
 ﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
 @{
-    ViewData["Title"] = "MeasuremntExist";
-    var pesquisa = Context.Request.Query["pesquisa"];
+  ViewData["Title"] = "MeasuremntExist";
+  var pesquisa = Context.Request.Query["pesquisa"];
 }
 
 
@@ -25,197 +25,298 @@
 
 @if (TempData["MSG_S"] != null)
 {
-    <p class="alert alert-success">@TempData["MSG_S"]</p>
+  <p class="alert alert-success">@TempData["MSG_S"]</p>
 }
 
 @*<div style=" justify-content:flex-end;  display:flex;">
-    <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
+      <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
 
-</div>*@
+  </div>*@
 <br />
 @if (Model.Count > 0)
 {
-    <div class="table-responsivez" id="DivTb">
-        <table class="table  table-bordered" id="Cptabela">
-            <thead>
-                <tr>
-                    <th scope="col">ID das Imagens</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Numero da Pnela</th>
-                    <th scope="col">Vida Panela</th>
-                    <th scope="col">Número da Corrida</th>
-                    <th> </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (Measurements measurements in Model)
-                {
-                    <tr>
-                        <td>@measurements.MeasurementKey.ToString()</td>
-                        <td>@measurements.Time.ToString()</td>
-                        <td>@measurements.LadleID.ToString()</td>
-                        <td>@measurements.LadleAge.ToString()</td>
-                        <td>@measurements.RaceNumber.ToString()</td>
-                        <td><button type="button" class="btn btn-outline-success" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-        <div id="DivBtn">
-            @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementExist", new { page = page, search = pesquisa }), new PagedListRenderOptions
+  <div class="table-responsivez" id="DivTb">
+    <table class="table  table-bordered" id="Cptabela">
+      <thead>
+        <tr>
+          <th scope="col">ID das Imagens</th>
+          <th scope="col">Data</th>
+          <th scope="col">Numero da Pnela</th>
+          <th scope="col">Vida Panela</th>
+          <th scope="col">Número da Corrida</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (Measurements measurements in Model)
         {
-        LiElementClasses = new string[] { "page-item" },
-        PageClasses = new string[] { "btn btn-outline-success text-right"}
-        })
-        </div>
+          <tr>
+            <td>@measurements.MeasurementKey.ToString()</td>
+            <td>@measurements.Time.ToString()</td>
+            <td>@measurements.LadleID.ToString()</td>
+            <td>@measurements.LadleAge.ToString()</td>
+            <td>@measurements.RaceNumber.ToString()</td>
+            <td><button type="button" class="btn btn-outline-success" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+    <div id="DivBtn">
+      @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementExist", new { page = page, search = pesquisa }), new PagedListRenderOptions
+  {
+  LiElementClasses = new string[] { "page-item" },
+  PageClasses = new string[] { "btn btn-outline-success text-right" }
+  })
     </div>
+  </div>
 }
 else
 {
-    <div class="table-responsive">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">ID das Imagens</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Numero da Panela</th>
-                    <th scope="col">Vida Panela</th>
-                    <th scope="col">Número da Corrida</th>
-                </tr>
-            </thead>
-        </table>
-        <div>
-            Nenhum registro cadastrado!
-        </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">ID das Imagens</th>
+          <th scope="col">Data</th>
+          <th scope="col">Numero da Panela</th>
+          <th scope="col">Vida Panela</th>
+          <th scope="col">Número da Corrida</th>
+        </tr>
+      </thead>
+    </table>
+    <div>
+      Nenhum registro cadastrado!
     </div>
+  </div>
 }
 <div id="modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="modal-title"></h6>
-            </div>
-            <div class="modal-body">
-                <input type="hidden" class="form-control form-control-sm MeasurementKey" />
-                <input type="hidden" class="form-control form-control-sm Time" />
-                <input type="hidden" class="form-control form-control-sm Location" />
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title"></h6>
+      </div>
+      <div class="modal-body">
+
+        <input type="hidden" class="form-control form-control-sm MeasurementKey" />
+        <input type="hidden" class="form-control form-control-sm Time" />
+        <input type="hidden" class="form-control form-control-sm Location" />
+        <input type="hidden" class="form-control form-control-sm LadleAgeValidate" />
+        <input type="hidden" class="form-control form-control-sm LadleIDValidate" />
 
 
-                <div class="form-group">
+        <div class="form-group">
 
-                    <label>Numero Panela</label>
-                    <input type="text" class="form-control form-control-sm LadleID" />
-                    <span class="text-danger erroProfissao d-NumeroPanela"></span>
-                </div>
-
-                <div class="form-group">
-                    <label>Vida Panela</label>
-                    <input type="text" class="form-control form-control-sm LadleAge" />
-                    <span class="text-danger erroProfissao d-VidaPanela"></span>
-                </div>
-
-                <div class="form-group">
-                    <label>NumeroCorrida</label>
-                    <input type="text" class="form-control form-control-sm RaceNumber" />
-                    <span class="text-danger erroProfissao d-NumeroCorrida"></span>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <div class="form-group">
-                    <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
-                    <input type="button" value="Cancelar" class="btn btn-sm btn-light" data-bs-dismiss="modal" />
-                </div>
-            </div>
-
+          <label>Numero Panela</label>
+          <input type="text" class="form-control form-control-sm LadleID" />
+          <span class="text-danger erroID d-NumeroPanela"></span>
         </div>
 
+        <div class="form-group">
+          <label>Vida Panela</label>
+          <input type="text" class="form-control form-control-sm LadleAge" />
+          <span class="text-danger erroAge d-VidaPanela"></span>
+        </div>
+
+        <div class="form-group">
+          <label>NumeroCorrida</label>
+          <input type="text" class="form-control form-control-sm RaceNumber" />
+          <span class="text-danger erroRace d-NumeroCorrida"></span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="form-group">
+          <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
+          <input type="button" value="Cancelar" class="btn btn-sm btn-light" data-bs-dismiss="modal" />
+        </div>
+      </div>
+
     </div>
+
+  </div>
 </div>
 @section scripts {
-    <script>
-        function mostrarModal() {
-            new bootstrap.Modal($("#modal"), {}).show();
+  <script>
+    function mostrarModal() {
+      new bootstrap.Modal($("#modal"), {}).show();
+    }
+    // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
+    function pegarMeasurmentPeloId(MeasurmentId) {
+      //  REQUISIÇÃO REPONSAVEL POR PEGAR
+      $.ajax({
+        url: "GetId",
+        method: 'GET',
+        data: {
+          id: MeasurmentId
+        },
+        success: function (measurent) {
+          console.log(measurent)
+          mostrarModal();
+          $(".MeasurementKey").val(measurent.measurementKey);
+          $(".LadleAge").val(measurent.ladleAge);
+          $(".LadleAgeValidate").val(measurent.ladleAge);
+          $(".LadleID").val(measurent.ladleID);
+          $(".LadleIDValidate").val(measurent.ladleID);
+          $(".RaceNumber").val(measurent.raceNumber);
+          $(".Time").val(measurent.time);
+          //$(".Location").val(measurent.location);
+          $(".Location").val(measurent.location);
         }
-        // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
-        function pegarMeasurmentPeloId(MeasurmentId) {
-            //  REQUISIÇÃO REPONSAVEL POR PEGAR
-            $.ajax({
-                url: "GetId",
-                method: 'GET',
-                data: {
-                    id: MeasurmentId
-                },
-                success: function(measurent) {
-                    console.log(measurent)
-                    mostrarModal();
-                    $(".MeasurementKey").val(measurent.measurementKey);
-                    $(".LadleAge").val(measurent.ladleAge);
-                    $(".LadleID").val(measurent.ladleID);
-                    $(".RaceNumber").val(measurent.raceNumber);
-                    $(".Time").val(measurent.time);
-                    //$(".Location").val(measurent.location);
-                    $(".Location").val(measurent.location);
-                }
-            })
-        }
-        // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS FO FORMULARIO
-$(".btnSalvar").click(function() {
-    var Measurement = {
+      })
+    }
+    // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS FO FORMULARIO
+    $(".btnSalvar").click(function () {
+      var Measurement = {
         MeasurementKey: $('.MeasurementKey').val(),
         LadleAge: $('.LadleAge').val(),
         LadleID: $('.LadleID').val(),
         RaceNumber: $('.RaceNumber').val(),
         Time: $('.Time').val(),
-        Location: $('.Location').val()
-    };
-    // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
+        Location: $('.Location').val(),
+        LadleAgeValidate: $('.LadleAgeValidate').val(),
+        LadleIDValidate: $('.LadleIDValidate').val()
+      };
+      // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
 
-    UpdateMeasruremnt(Measurement)
-
-    //var variavel = 5;
-    //var variavel01 = 'Augusto'
-    //var varivel02 = false
-    //var variavel03 = 02 / 05 / 2019
-    //var variavel04 = 5.2
-    //var variavel05 = GetName()
-    //var variavel06= ChamaCarro()
-
-    //function string GetName(){
-    //    return 'Augusto'
-    //}
-
-    //function Carro ChamaCarro(){
-
-    //    var carro = {cor:'Preto', nome:'Palio'}
-
-    //    return carro 
-    //}
+      if (ValidarFormulario(Measurement)) {
+        UpdateMeasruremnt(Measurement)
+      }
 
 
-        });
-        // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
-        function UpdateMeasruremnt(Measruremnt) {
-            // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
-            $.ajax({
-                url: "Edit",
-                method: 'PUT',
-                data: {
-                    Measruremnt01: Measruremnt
-                },
-                success: function(Measruremnt) {
-                    $("#modal").modal('hide');
-
-                    location.reload(true)
 
 
-                }
-            });
+
+    });
+    // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
+    function UpdateMeasruremnt(Measruremnt) {
+      // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
+      $.ajax({
+        url: "Edit",
+        method: 'PUT',
+        data: {
+          Measruremnt01: Measruremnt
+        },
+        success: function (Measruremnt) {
+          $("#modal").modal('hide');
+
+          //location.reload(true)
+
+
         }
+      });
+    }
+
+
+    function ValidarFormulario(Measurement) {
+
+      let AgeValid = ValidarAge(Measurement.LadleAge);
+      let validaId = ValiditId(Measurement.LadleID);
+      let validaRace = ValidarRace(Measurement.RaceNumber);
+      let validarCompar = ValidarCompare(Measurement);
+      console.log(validarCompar);
+    
+      
+      console.log("Meu valor idade" + Measurement)
+      if (AgeValid == true && validaId == true && validaRace == true && validarCompar == true)
+        return true;
+
+      return false;
+
+    }
+
+    function ValidarCompare(Measurement) {
+
+      console.log(Measurement)
+      let result = true
+      if (parseInt(Measurement.LadleAge) != parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) == parseInt(Measurement.LadleIDValidate)) {
+        window.alert('Apos atlerar a idade é obrigatorio alterar o id')
+        result = false;
+       
+      }
+      if (parseInt(Measurement.LadleAge) == parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) != parseInt(Measurement.LadleIDValidate))
+      {
+        window.alert("apos alterar o id é obrigatorio alterar a idade da panela.")
+        result = false;
+      }
+      return result
+
+    }
+
+    function ValidarAge(LadleAge) {
+
+      let ageValida = true;
+
+      if (isNaN(LadleAge) ||LadleAge == undefined || LadleAge == "") {
+        $(".LadleAge").addClass('is-invalid');
+        $(".erroAge").text("Preencha a idade da panela.");
+        $(".erroAge").removeClass("d-none");
+        ageValida = false;
+       
+     
+      }
+
+
+      
+      else {
+        $(".LadleAge").removeClass('is-invalid');
+        $(".erroAge").addClass('is-valid');
+        $(".erroAge").addClass("d-none");
+        ageValida = true;
+      }
+      return ageValida;
+     
+    }
+    function ValiditId(LadleID) {
+      let IdValidit = true
+
+      if (isNaN(LadleID) || LadleID == undefined || LadleID == "") {
+        $(".LadleID").addClass('is-invalid');
+        $(".erroID").text("Preencha o ID da panela");
+        $(".erroID").removeClass("d-none");
+        
+        IdValidit = false;
+      }
+
+      else {
+        $(".LadleAge").removeClass('is-invalid');
+        $(".erroID").addClass('is-valid');
+        $(".erroID").addClass("d-none");
+      
+        IdValidit = true;
+      }
+      return IdValidit;
+
+    }
+    function ValidarRace(RaceNumber) {
+      let RaceValidt = true;
+
+      if (RaceNumber.trim() == '' || RaceNumber == undefined)
+      {
+        $(".RaceNumber").addClass('is-invalid');
+        $(".erroRace").text("Preencha o Numero da corrida");
+        $(".erroRace").removeClass("d-none");
+        RaceValidt = false;
+      }
+      else
+      {
+        $(".RaceNumber").removeClass('is-invalid');
+        $(".erroRace").addClass('is-valid');
+        $(".erroRace").addClass("d-none");
+       
+        RaceValidt = true;
+      }
+      return RaceValidt;
+
+    }
+    
 
 
 
-    </script>
+
+
+
+
+  </script>
 
 }
 
