@@ -35,6 +35,8 @@
 <br />
 @if (Model.Count > 0)
 {
+
+  
   <div class="table-responsivez" id="DivTb">
     <table class="table  table-bordered" id="Cptabela">
       <thead>
@@ -58,8 +60,10 @@
             <td>@measurements.RaceNumber.ToString()</td>
             <td><button type="button" class="btn btn-outline-success" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
           </tr>
+
         }
       </tbody>
+
     </table>
     <div id="DivBtn">
       @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementExist", new { page = page, search = pesquisa }), new PagedListRenderOptions
@@ -137,12 +141,14 @@ else
 </div>
 @section scripts {
   <script>
+
+
     function mostrarModal() {
       new bootstrap.Modal($("#modal"), {}).show();
-    }
+    };
     // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
     function pegarMeasurmentPeloId(MeasurmentId) {
-      //  REQUISIÇÃO REPONSAVEL POR PEGAR
+
       $.ajax({
         url: "GetId",
         method: 'GET',
@@ -159,12 +165,10 @@ else
           $(".LadleIDValidate").val(measurent.ladleID);
           $(".RaceNumber").val(measurent.raceNumber);
           $(".Time").val(measurent.time);
-          //$(".Location").val(measurent.location);
           $(".Location").val(measurent.location);
         }
       })
     }
-    // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS FO FORMULARIO
     $(".btnSalvar").click(function () {
       var Measurement = {
         MeasurementKey: $('.MeasurementKey').val(),
@@ -172,29 +176,18 @@ else
         LadleID: $('.LadleID').val(),
         RaceNumber: $('.RaceNumber').val(),
         Time: $('.Time').val(),
-<<<<<<< HEAD
         Location: $('.Location').val(),
         LadleAgeValidate: $('.LadleAgeValidate').val(),
         LadleIDValidate: $('.LadleIDValidate').val()
-      };
-      // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
-
-      if (ValidarFormulario(Measurement)) {
-        UpdateMeasruremnt(Measurement)
       }
+      if (ValidarFormulario(Measurement)) {
 
-=======
-        Location: $('.Location').val()
-    };
-    // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
         UpdateMeasruremnt(Measurement)
->>>>>>> ac198b858cba145ad3b8311346b8d706f64b6824
 
-
-
-
+      }
+      
     });
-    // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
+
     function UpdateMeasruremnt(Measruremnt) {
       // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
       $.ajax({
@@ -206,124 +199,188 @@ else
         success: function (Measruremnt) {
           $("#modal").modal('hide');
 
-          //location.reload(true)
+          location.reload(true)
 
 
         }
       });
     }
 
-
     function ValidarFormulario(Measurement) {
 
-      let AgeValid = ValidarAge(Measurement.LadleAge);
-      let validaId = ValiditId(Measurement.LadleID);
-      let validaRace = ValidarRace(Measurement.RaceNumber);
-      let validarCompar = ValidarCompare(Measurement);
-      console.log(validarCompar);
-    
-      
-      console.log("Meu valor idade" + Measurement)
-      if (AgeValid == true && validaId == true && validaRace == true && validarCompar == true)
-        return true;
+        let AgeValid = ValidarAge(Measurement.LadleAge);
+        let validaId = ValiditId(Measurement.LadleID);
+        let validaRace = ValidarRace(Measurement.RaceNumber);
+        let validarCompar = ValidarCompare(Measurement);
+        console.log(validarCompar);
 
-      return false;
 
-    }
+        console.log("Meu valor idade" + Measurement)
+        if (AgeValid == true && validaId == true && validaRace == true && validarCompar == true)
+          return true;
 
-    function ValidarCompare(Measurement) {
+        return false;
 
-      console.log(Measurement)
-      let result = true
-      if (parseInt(Measurement.LadleAge) != parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) == parseInt(Measurement.LadleIDValidate)) {
-        window.alert('Apos atlerar a idade é obrigatorio alterar o id')
-        result = false;
-       
-      }
-      if (parseInt(Measurement.LadleAge) == parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) != parseInt(Measurement.LadleIDValidate))
-      {
-        window.alert("apos alterar o id é obrigatorio alterar a idade da panela.")
-        result = false;
-      }
-      return result
-
-    }
-
-    function ValidarAge(LadleAge) {
-
-      let ageValida = true;
-
-      if (isNaN(LadleAge) ||LadleAge == undefined || LadleAge == "") {
-        $(".LadleAge").addClass('is-invalid');
-        $(".erroAge").text("Preencha a idade da panela.");
-        $(".erroAge").removeClass("d-none");
-        ageValida = false;
-       
-     
       }
 
+      function ValidarCompare(Measurement) {
 
-      
-      else {
-        $(".LadleAge").removeClass('is-invalid');
-        $(".erroAge").addClass('is-valid');
-        $(".erroAge").addClass("d-none");
-        ageValida = true;
-      }
-      return ageValida;
-     
-    }
-    function ValiditId(LadleID) {
-      let IdValidit = true
+        console.log(Measurement)
+        let result = true
+        if (parseInt(Measurement.LadleAge) != parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) == parseInt(Measurement.LadleIDValidate)) {
+          window.alert('Apos atlerar a idade é obrigatorio alterar o id')
+          result = false;
 
-      if (isNaN(LadleID) || LadleID == undefined || LadleID == "") {
-        $(".LadleID").addClass('is-invalid');
-        $(".erroID").text("Preencha o ID da panela");
-        $(".erroID").removeClass("d-none");
-        
-        IdValidit = false;
+        }
+        if (parseInt(Measurement.LadleAge) == parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) != parseInt(Measurement.LadleIDValidate)) {
+          window.alert("apos alterar o id é obrigatorio alterar a idade da panela.")
+          result = false;
+        }
+        return result
+
       }
 
-      else {
-        $(".LadleAge").removeClass('is-invalid');
-        $(".erroID").addClass('is-valid');
-        $(".erroID").addClass("d-none");
-      
-        IdValidit = true;
+      function ValidarAge(LadleAge) {
+
+        let ageValida = true;
+
+        if (isNaN(LadleAge) || LadleAge == undefined || LadleAge == "") {
+          $(".LadleAge").addClass('is-invalid');
+          $(".erroAge").text("Preencha a idade da panela.");
+          $(".erroAge").removeClass("d-none");
+          ageValida = false;
+
+
+        }
+
+
+
+        else {
+          $(".LadleAge").removeClass('is-invalid');
+          $(".erroAge").addClass('is-valid');
+          $(".erroAge").addClass("d-none");
+          ageValida = true;
+        }
+        return ageValida;
+
       }
-      return IdValidit;
+      function ValiditId(LadleID) {
+        let IdValidit = true
 
-    }
-    function ValidarRace(RaceNumber) {
-      let RaceValidt = true;
+        if (isNaN(LadleID) || LadleID == undefined || LadleID == "") {
+          $(".LadleID").addClass('is-invalid');
+          $(".erroID").text("Preencha o ID da panela");
+          $(".erroID").removeClass("d-none");
 
-      if (RaceNumber.trim() == '' || RaceNumber == undefined)
-      {
-        $(".RaceNumber").addClass('is-invalid');
-        $(".erroRace").text("Preencha o Numero da corrida");
-        $(".erroRace").removeClass("d-none");
-        RaceValidt = false;
+          IdValidit = false;
+        }
+
+        else {
+          $(".LadleAge").removeClass('is-invalid');
+          $(".erroID").addClass('is-valid');
+          $(".erroID").addClass("d-none");
+
+          IdValidit = true;
+        }
+        return IdValidit;
+
       }
-      else
-      {
-        $(".RaceNumber").removeClass('is-invalid');
-        $(".erroRace").addClass('is-valid');
-        $(".erroRace").addClass("d-none");
-       
-        RaceValidt = true;
+      function ValidarRace(RaceNumber) {
+        let RaceValidt = true;
+
+        if (RaceNumber.trim() == '' || RaceNumber == undefined) {
+          $(".RaceNumber").addClass('is-invalid');
+          $(".erroRace").text("Preencha o Numero da corrida");
+          $(".erroRace").removeClass("d-none");
+          RaceValidt = false;
+        }
+        else {
+          $(".RaceNumber").removeClass('is-invalid');
+          $(".erroRace").addClass('is-valid');
+          $(".erroRace").addClass("d-none");
+
+          RaceValidt = true;
+        }
+        return RaceValidt;
+
       }
-      return RaceValidt;
-
-    }
-    
-
-
-
-
-
-
 
   </script>
+
+
+  <!--<-->@*script>
+
+
+    function mostrarModal() {
+      new bootstrap.Modal($("#modal"), {}).show();
+    };
+    // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
+    function pegarMeasurmentPeloId(MeasurmentId) {
+
+      $.ajax({
+        url: "GetId",
+        method: 'GET',
+        data: {
+          id: MeasurmentId
+        },
+        success: function (measurent) {
+          console.log(measurent)
+          mostrarModal();
+          $(".MeasurementKey").val(measurent.measurementKey);
+          $(".LadleAge").val(measurent.ladleAge);
+          $(".LadleAgeValidate").val(measurent.ladleAge);
+          $(".LadleID").val(measurent.ladleID);
+          $(".LadleIDValidate").val(measurent.ladleID);
+          $(".RaceNumber").val(measurent.raceNumber);
+          $(".Time").val(measurent.time);
+          $(".Location").val(measurent.location);
+        }
+      })
+
+    }
+
+    // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS FO FORMULARIO
+    $(".btnSalvar").click(function () {
+      var Measurement = {
+        MeasurementKey: $('.MeasurementKey').val(),
+        LadleAge: $('.LadleAge').val(),
+        LadleID: $('.LadleID').val(),
+        RaceNumber: $('.RaceNumber').val(),
+        Time: $('.Time').val(),
+        Location: $('.Location').val(),
+        LadleAgeValidate: $('.LadleAgeValidate').val(),
+        LadleIDValidate: $('.LadleIDValidate').val()
+      };
+      // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
+
+      if (ValidarFormulario(Measurement)) {
+        UpdateMeasruremnt(Measurement)
+      }
+    )}
+
+
+      // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
+      function UpdateMeasruremnt(Measruremnt) {
+        // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
+        $.ajax({
+          url: "Edit",
+          method: 'PUT',
+          data: {
+            Measruremnt01: Measruremnt
+          },
+          success: function (Measruremnt) {
+            $("#modal").modal('hide');
+
+            location.reload(true)
+
+
+          }
+        });
+      }
+
+
+
+  </script>*@
 
 }
 

@@ -993,3 +993,4 @@ C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\Mo
 =======
 C:\cspUpdate\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\MeasurementMissing.cshtml.g.cs
 >>>>>>> ac198b858cba145ad3b8311346b8d706f64b6824
+C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\obj\Debug\netcoreapp3.1\Razor\Views\Processor\MeasurementMissing.cshtml.g.cs
