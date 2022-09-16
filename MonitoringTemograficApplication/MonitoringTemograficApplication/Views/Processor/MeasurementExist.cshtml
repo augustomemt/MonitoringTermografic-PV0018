@@ -228,12 +228,16 @@ else
         console.log(Measurement)
         let result = true
         if (parseInt(Measurement.LadleAge) != parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) == parseInt(Measurement.LadleIDValidate)) {
-          window.alert('Apos atlerar a idade é obrigatorio alterar o id')
+          $(".LadleAge").addClass('is-invalid');
+          $(".erroID").text("É necessario altera o Numero da panela  ");
+          $(".erroID").removeClass("d-none");
           result = false;
 
         }
         if (parseInt(Measurement.LadleAge) == parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) != parseInt(Measurement.LadleIDValidate)) {
-          window.alert("apos alterar o id é obrigatorio alterar a idade da panela.")
+          $(".LadleAge").addClass('is-invalid');
+          $(".erroAge").text("É necessario alterar o Id da panela. ");
+          $(".erroAge").removeClass("d-none");
           result = false;
         }
         return result
