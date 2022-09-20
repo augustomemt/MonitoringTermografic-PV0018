@@ -43,10 +43,10 @@
         <tr>
           <th scope="col">ID das Imagens</th>
           <th scope="col">Data</th>
-          <th scope="col">Numero da Pnela</th>
-          <th scope="col">Vida Panela</th>
+          <th scope="col">Número da Panela</th>
+          <th scope="col">Vida da Panela</th>
           <th scope="col">Número da Corrida</th>
-          <th> </th>
+          <th style="width:20px;"> </th>
         </tr>
       </thead>
       <tbody>
@@ -58,7 +58,7 @@
             <td>@measurements.LadleID.ToString()</td>
             <td>@measurements.LadleAge.ToString()</td>
             <td>@measurements.RaceNumber.ToString()</td>
-            <td><button type="button" class="btn btn-outline-success" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
+            <td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
           </tr>
 
         }
@@ -82,7 +82,7 @@ else
         <tr>
           <th scope="col">ID das Imagens</th>
           <th scope="col">Data</th>
-          <th scope="col">Numero da Panela</th>
+          <th scope="col">Número da Panela</th>
           <th scope="col">Vida Panela</th>
           <th scope="col">Número da Corrida</th>
         </tr>
@@ -110,28 +110,28 @@ else
 
         <div class="form-group">
 
-          <label>Numero Panela</label>
+          <label>Número da Panela</label>
           <input type="text" class="form-control form-control-sm LadleID" />
-          <span class="text-danger erroID d-NumeroPanela"></span>
+          <span class="text-danger erroID d-none"></span>
         </div>
 
         <div class="form-group">
-          <label>Vida Panela</label>
+          <label>Vida da Panela</label>
           <input type="text" class="form-control form-control-sm LadleAge" />
-          <span class="text-danger erroAge d-VidaPanela"></span>
+          <span class="text-danger erroAge d-none"></span>
         </div>
 
         <div class="form-group">
-          <label>NumeroCorrida</label>
+          <label>Número da Corrida</label>
           <input type="text" class="form-control form-control-sm RaceNumber" />
-          <span class="text-danger erroRace d-NumeroCorrida"></span>
+          <span class="text-danger erroRace d-none"></span>
         </div>
       </div>
 
       <div class="modal-footer">
         <div class="form-group">
           <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
-          <input type="button" value="Cancelar" class="btn btn-sm btn-light" data-bs-dismiss="modal" />
+          <input type="button" value="Cancelar" class="btn btn-sm btn-cancel" data-bs-dismiss="modal" />
         </div>
       </div>
 
@@ -141,10 +141,14 @@ else
 </div>
 @section scripts {
   <script>
-
+    $(".btn-cancel").click(function () {
+      location.reload(true)
+    });
 
     function mostrarModal() {
-      new bootstrap.Modal($("#modal"), {}).show();
+      $('#modal').modal({
+        show: true
+      });
     };
     // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
     function pegarMeasurmentPeloId(MeasurmentId) {
@@ -198,7 +202,7 @@ else
         },
         success: function (Measruremnt) {
           $("#modal").modal('hide');
-
+          console.log("modal fecha agora ")
           location.reload(true)
 
 
@@ -214,7 +218,6 @@ else
         let validarCompar = ValidarCompare(Measurement);
         console.log(validarCompar);
 
-
         console.log("Meu valor idade" + Measurement)
         if (AgeValid == true && validaId == true && validaRace == true && validarCompar == true)
           return true;
@@ -228,15 +231,15 @@ else
         console.log(Measurement)
         let result = true
         if (parseInt(Measurement.LadleAge) != parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) == parseInt(Measurement.LadleIDValidate)) {
-          $(".LadleAge").addClass('is-invalid');
-          $(".erroID").text("É necessario altera o Numero da panela  ");
+          $(".LadleID").addClass('is-invalid');
+          $(".erroID").text("É necessário altera o número da panela");
           $(".erroID").removeClass("d-none");
           result = false;
 
         }
         if (parseInt(Measurement.LadleAge) == parseInt(Measurement.LadleAgeValidate) && parseInt(Measurement.LadleID) != parseInt(Measurement.LadleIDValidate)) {
           $(".LadleAge").addClass('is-invalid');
-          $(".erroAge").text("É necessario alterar o Id da panela. ");
+          $(".erroAge").text("É necessário alterar a vida da panela");
           $(".erroAge").removeClass("d-none");
           result = false;
         }
@@ -250,18 +253,15 @@ else
 
         if (isNaN(LadleAge) || LadleAge == undefined || LadleAge == "") {
           $(".LadleAge").addClass('is-invalid');
-          $(".erroAge").text("Preencha a idade da panela.");
+          $(".erroAge").text("Preencha a vida da panela");
           $(".erroAge").removeClass("d-none");
           ageValida = false;
 
 
         }
-
-
-
         else {
           $(".LadleAge").removeClass('is-invalid');
-          $(".erroAge").addClass('is-valid');
+          $(".erroAge").addClass('is-valid');-
           $(".erroAge").addClass("d-none");
           ageValida = true;
         }
@@ -273,14 +273,14 @@ else
 
         if (isNaN(LadleID) || LadleID == undefined || LadleID == "") {
           $(".LadleID").addClass('is-invalid');
-          $(".erroID").text("Preencha o ID da panela");
+          $(".erroID").text("Preencha o número da panela");
           $(".erroID").removeClass("d-none");
 
           IdValidit = false;
         }
 
         else {
-          $(".LadleAge").removeClass('is-invalid');
+          $(".LadleID").removeClass('is-invalid');
           $(".erroID").addClass('is-valid');
           $(".erroID").addClass("d-none");
 
@@ -294,7 +294,7 @@ else
 
         if (RaceNumber.trim() == '' || RaceNumber == undefined) {
           $(".RaceNumber").addClass('is-invalid');
-          $(".erroRace").text("Preencha o Numero da corrida");
+          $(".erroRace").text("Preencha o número da corrida");
           $(".erroRace").removeClass("d-none");
           RaceValidt = false;
         }
@@ -310,81 +310,6 @@ else
       }
 
   </script>
-
-
-  <!--<-->@*script>
-
-
-    function mostrarModal() {
-      new bootstrap.Modal($("#modal"), {}).show();
-    };
-    // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
-    function pegarMeasurmentPeloId(MeasurmentId) {
-
-      $.ajax({
-        url: "GetId",
-        method: 'GET',
-        data: {
-          id: MeasurmentId
-        },
-        success: function (measurent) {
-          console.log(measurent)
-          mostrarModal();
-          $(".MeasurementKey").val(measurent.measurementKey);
-          $(".LadleAge").val(measurent.ladleAge);
-          $(".LadleAgeValidate").val(measurent.ladleAge);
-          $(".LadleID").val(measurent.ladleID);
-          $(".LadleIDValidate").val(measurent.ladleID);
-          $(".RaceNumber").val(measurent.raceNumber);
-          $(".Time").val(measurent.time);
-          $(".Location").val(measurent.location);
-        }
-      })
-
-    }
-
-    // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS FO FORMULARIO
-    $(".btnSalvar").click(function () {
-      var Measurement = {
-        MeasurementKey: $('.MeasurementKey').val(),
-        LadleAge: $('.LadleAge').val(),
-        LadleID: $('.LadleID').val(),
-        RaceNumber: $('.RaceNumber').val(),
-        Time: $('.Time').val(),
-        Location: $('.Location').val(),
-        LadleAgeValidate: $('.LadleAgeValidate').val(),
-        LadleIDValidate: $('.LadleIDValidate').val()
-      };
-      // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
-
-      if (ValidarFormulario(Measurement)) {
-        UpdateMeasruremnt(Measurement)
-      }
-    )}
-
-
-      // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
-      function UpdateMeasruremnt(Measruremnt) {
-        // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
-        $.ajax({
-          url: "Edit",
-          method: 'PUT',
-          data: {
-            Measruremnt01: Measruremnt
-          },
-          success: function (Measruremnt) {
-            $("#modal").modal('hide');
-
-            location.reload(true)
-
-
-          }
-        });
-      }
-
-
-
-  </script>*@
 
 }
 

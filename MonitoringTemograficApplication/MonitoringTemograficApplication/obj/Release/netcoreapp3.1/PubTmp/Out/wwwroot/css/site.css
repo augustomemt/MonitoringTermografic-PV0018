@@ -76,8 +76,7 @@ body {
 }
 
 #corpo {
-  background-color:green;
-
+    background-color: #dcdcdc;
 }
 
 #CampLog{
@@ -216,14 +215,21 @@ tr:hover {
 }
 
 #DivProcs {
-  position: relative;
-  width: 480px;
-  height: 520px;
-  border: solid 1.7px;
-  border-color: rgb(48 96 31 / 55%);
-  right: 100px;
-  border-radius: 24px;
+    position: relative;
+    width: 480px;
+    border: solid 1.7px;
+    border-color: rgb(48 96 31 / 55%);
+    right: 100px;
+    border-radius: 24px;
+    height: 100%;
 }
 tr {
   font-weight: bold;
+}
+.pros ,h2{
+    text-align:center;
+
+}
+.navbar-brand:target{
+  color: red;
 }

@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
       <div class="container">
         <a class="navbar-brand" asp-area="" asp-controller="Processor" asp-action="MeasurementExist">Monitoramento Termográfico</a>
-        <a class="navbar-brand" asp-area="" asp-controller="Processor" asp-action="MeasurementMissing">Dados Faltantes</a>
+        <a style="position: relative; left:20px;" class="navbar-brand" asp-area="" asp-controller="Processor" asp-action="MeasurementMissing">Dados Faltantes</a>
        @* <a class="navbar-brand" asp-area="" asp-controller="Processor" asp-action="Index">Alterações Realizadas</a>*@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -43,10 +43,9 @@
     <div class="container">
     </div>
   </footer>
- @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
-  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ 
   <script src="~/js/site.js" asp-append-version="true"></script>
   @RenderSection("Scripts", required: false)
 
