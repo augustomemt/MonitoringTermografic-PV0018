@@ -21,7 +21,9 @@ namespace MonitoringTemograficApplication.Repositories.Contracts
 
     Measurements GetId(int id);
 
-    
+    IPagedList<Measurements> GetReport(int? page, DateRange dateRange);
+
+
 
   }
 }

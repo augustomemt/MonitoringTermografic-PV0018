@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MonitoringTemograficApplication.Models
 {
+
   public class Measurements
   {
     [Key]

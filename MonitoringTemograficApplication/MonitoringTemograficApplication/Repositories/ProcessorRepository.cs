@@ -109,5 +109,16 @@ namespace MonitoringTemograficApplication.Repositories
 
       return baseProcessor.ToPagedList<Measurements>(NumberPage, 10);
     }
+
+    public IPagedList<Measurements> GetReport(int? page, DateRange dateRange)
+    {
+      int RecordPage = _config.GetValue<int>("RecordPage");
+
+      int NumberPage = page ?? 1;
+      var start = Convert.ToDateTime(dateRange.dateStart);
+      var end = Convert.ToDateTime(dateRange.dateEnd);
+      var resultReport = _measurementsContext.Measurements.Where(m => m.LadleID != null && m.LadleAge != null && m.RaceNumber != null && m.Time >= Convert.ToDateTime(dateRange.dateStart) && m.Time <= Convert.ToDateTime(dateRange.dateEnd) ).ToList().AsQueryable().OrderByDescending(d => d.Time);
+      return resultReport.ToPagedList<Measurements>(NumberPage, 10);
+    }
   }
 }

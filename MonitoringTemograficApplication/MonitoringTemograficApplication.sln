@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32510.428
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringTemograficApplication", "MonitoringTemograficApplication\MonitoringTemograficApplication.csproj", "{737DE971-ABFD-44C7-93BB-01FE882A5072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitoringTemograficApplication", "MonitoringTemograficApplication\MonitoringTemograficApplication.csproj", "{737DE971-ABFD-44C7-93BB-01FE882A5072}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WebSetupCSP", "WebSetupCSP\WebSetupCSP.vdproj", "{BFEE9205-21DE-46C1-B078-BBD5C6CF4268}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{737DE971-ABFD-44C7-93BB-01FE882A5072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{737DE971-ABFD-44C7-93BB-01FE882A5072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{737DE971-ABFD-44C7-93BB-01FE882A5072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEE9205-21DE-46C1-B078-BBD5C6CF4268}.Debug|Any CPU.ActiveCfg = Debug
+		{BFEE9205-21DE-46C1-B078-BBD5C6CF4268}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

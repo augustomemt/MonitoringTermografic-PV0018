@@ -9,39 +9,23 @@
 
 <br />
 <br />
-<!--
-    Formulário
-    -- QueryString: Colaborador/Cliente/Index?pesquisa={palavraDigitada}&pagina=3
--->
-@*<form method="get">
-      <div class="form-group">
-          <label for="pesquisa"></label>
-          <input type="text" name="pesquisa" id="pesquisa" value="@pesquisa" class="form-control" placeholder="Digite o nome do produto">
-      </div>
-      <button type="submit" class="btn btn-primary">OK</button>
-  </form>
-  <br />
-  <br />*@
+
 
 @if (TempData["MSG_S"] != null)
 {
   <p class="alert alert-success">@TempData["MSG_S"]</p>
 }
 
-@*<div style=" justify-content:flex-end;  display:flex;">
-      <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
 
-  </div>*@
 <br />
 @if (Model.Count > 0)
 {
 
-  
   <div class="table-responsivez" id="DivTb">
-    <table class="table  table-bordered" id="Cptabela">
-      <thead>
-        <tr>
-          <th scope="col">ID das Imagens</th>
+    <table class="table  table-bordered">
+      <thead id="TableIndex">
+        <tr style="color:white;">
+          <th scope="col" id="TableHv">ID das Imagens</th>
           <th scope="col">Data</th>
           <th scope="col">Número da Panela</th>
           <th scope="col">Vida da Panela</th>
@@ -52,7 +36,7 @@
       <tbody>
         @foreach (Measurements measurements in Model)
         {
-          <tr>
+          <tr id="TableHv">
             <td>@measurements.MeasurementKey.ToString()</td>
             <td>@measurements.Time.ToString()</td>
             <td>@measurements.LadleID.ToString()</td>
@@ -185,7 +169,6 @@ else
         LadleIDValidate: $('.LadleIDValidate').val()
       }
       if (ValidarFormulario(Measurement)) {
-
         UpdateMeasruremnt(Measurement)
 
       }
