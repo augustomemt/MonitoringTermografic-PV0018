@@ -1,12 +1,11 @@
-﻿
-@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.TB_EXT_LD_LOG>
+﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.TB_EXT_LD_LOG>
 @{
   ViewData["Title"] = "Index";
   var pesquisa = Context.Request.Query["pesquisa"];
 }
 
 
-<h1 style="text-align:center; ">Alterações Processadas</h1>
+<h1 style="text-align:center; "> Dados Faltantes</h1>
 
 <br />
 <br />
@@ -29,52 +28,50 @@
   <p class="alert alert-success">@TempData["MSG_S"]</p>
 }
 
-<div style=" justify-content:flex-end;  display:flex;">
+@*<div style=" justify-content:flex-end;  display:flex;">
   <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
 
-</div>
+</div>*@
 <br />
 @if (Model.Count > 0)
 {
-<div class="table-responsivez" id="DivTb">
-  <table class="table  table-bordered" id="Cptabela">
-    <thead>
-      <tr>
-        <th scope="col">Data Alteração</th>
-        <th scope="col">Corrida</th>
-        <th scope="col">Panela</th>
-        <th scope="col">Usuário</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach (TB_EXT_LD_LOG process in Model)
-      {
+  <div class="table-responsivez" id="DivTb">
+    <table class="table  table-bordered" id="TableIndex">
+      <thead> 
         <tr>
-          <td>@process.dProcessor.ToString()</td>
-          <td>@process.cHeatNo.ToString()</td>
-          <td>@process.nLdNo.ToString()</td>
-          <td>@process.cUser.ToString()</td>
-
-          @*<td>
-                <a asp-action="Atualizar" asp-route-id="@produto.Id" class="btn btn-secondary">Atualizar</a>
-                <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
-            </td>*@
+          <th scope="col">ID das Imagens</th>
+          <th scope="col">Data</th>
+          <th scope="col">Número da Panela</th>
+          <th scope="col">Vida da Panela</th>
+          <th scope="col">Número da Corrida</th>
         </tr>
-      }
-    </tbody>
-  </table>
-  <div id="DivBtn">
-    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page, search = pesquisa }), new PagedListRenderOptions
-  {
+      </thead>
+      <tbody>
+        @foreach (TB_EXT_LD_LOG process in Model)
+        {
+          <tr>
+            <td>@process.dProcessor.ToString()</td>
+            <td>@process.cHeatNo.ToString()</td>
+            <td>@process.nLdNo.ToString()</td>
+            <td>@process.nLadleAge.ToString()</td>
+            <td>@process.cUser.ToString()</td>
+            @*<td>
+        <a asp-action="Atualizar" asp-route-id="@produto.Id" class="btn btn-secondary">Atualizar</a>
+        <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
+        </td>*@
+          </tr>
+        }
+      </tbody>
+    </table>
+    <div id="DivBtn">
+      @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page, search = pesquisa }), new PagedListRenderOptions
+    {
     LiElementClasses = new string[] { "page-item" },
     PageClasses = new string[] { "btn btn-outline-success text-right"}
-  })
+    })
+    </div>
+
   </div>
-
-</div>
-
-
-
 }
 else
 {
@@ -82,10 +79,12 @@ else
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col">Data Alteração</th>
-          <th scope="col">Corrida</th>
-          <th scope="col">Panela</th>
-          <th scope="col">Usuário</th>
+          <th scope="col">ID das Imagens</th>
+          <th scope="col">Data</th>
+          <th scope="col">Numero da Pnela</th>
+          <th scope="col">Vida Panela</th>
+          <th scope="col">Número da Corrida</th>
+
         </tr>
       </thead>
     </table>

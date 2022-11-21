@@ -1,0 +1,183 @@
+﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
+@{
+  ViewData["Title"] = "Report";
+  var pesquisa = Context.Request.Query["pesquisa"];
+}
+
+
+<form id="reports-filters" class="row" style="margin-bottom:0;">
+  <div class="col-md-12 top-33">
+  </div>
+  <div class="col-md-12" style="padding:0;right:18px;">
+    <div class="col-md-12 space-20" style="margin-top:30px;">
+      <div id="DataIni" class="col-sm-2">
+        <label><b>Data Inicio</b></label>
+        <input name="startDate" type="date" class="form-control dateStart" required />
+      </div>
+      <div id="DataFim" class="col-sm-2">
+        <label><b>Data final</b></label>
+        <input name="endDate" type="date" class="form-control dateEnd" required />
+      </div>
+      <div id="GeraRelat" class="col-sm-2">
+        <input type="button" value="Gerar Relatório" class="btn btn-primary   btnGerar" />
+        @*<button type="submit" class="btn btn-primary energia_demanda Generate" onclick="Generate()">Gerar relatório</button>*@
+      </div>
+      <div class="col-md-12" style="margin-top:5px;"><label id="error_endDate" style="color: red"> </label></div>
+    </div>
+  </div>
+
+  <div class="col-md-12 title-container" style="border-radius:5px;height:50px;">
+
+    <div class="col-md-10" style="margin-top:8px;float:right;padding:0;">
+      <div class="dropdown col-sm-1" style="margin-right:9px;float:right;padding:0;">
+
+        <div id="contentexport">
+          <input id="inpexport" type="button" value="Exportar" class="btn btn-primary   btnExport" />
+        </div>
+        <div class="dropdown-menu export-pannel" style="margin-left:-80px;">
+          <h4>Formato</h4>
+          <ul class=" space-30">
+            <!--<li class="btn btn-default" style="width: 100%;"> <a class="dropdown-item" id="btn-export-pdf" href="/url/">PDF</a></li>-->
+            <li class="btn btn-default" style="width: 100%"> <a class="dropdown-item" id="btn-export-xls" href="/url/">XLSX</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<br/>
+<br/>
+<div class="table-responsivez" id="DivTb">
+  <table class="table">
+    <thead id="TableReport">
+      <tr id="table-column" style="text-align:center; font-size:20px; ">
+        
+      </tr>
+    </thead>
+    <tbody id="table-content">
+    </tbody>
+
+  </table>
+
+</div>
+
+
+
+
+@section scripts {
+  <script>
+    $(".btnGerar").click(function () {
+
+        var dateRange = {
+            dateStart: $('.dateStart').val(),
+            dateEnd: $('.dateEnd').val(),
+        };
+
+        if (Validate(dateRange)) {
+            ReportGenerate(dateRange)
+
+        }
+        else {
+            window.alert("Dana in")
+        }
+
+    });
+
+    function ReportGenerate(dateRange) {
+        $.ajax({
+            url: "PostReport",
+            data: dateRange,
+            cache: false,
+            success: function (response) {
+                console.log(response)
+                DrawTable(response)
+
+            }
+        });
+
+    }
+    function DrawTable(response) {
+        var html = ''
+
+        for (var i = 0; i < response.length; i++) {
+            html +=
+                "<tr id='TextReport' >" +
+                "<td>" + response[i].measurementKey + "</td>" +
+                "<td>" + response[i].time + "</td>" +
+                "<td>" + response[i].ladleID + "</td>" +
+                "<td>" + response[i].ladleAge + "</td>" +
+                "<td>" + response[i].raceNumber + "</td>" +
+                "</tr>"
+        }
+        if (response.length > 0) {
+            $(".btnExport").prop('disabled', false)
+        }
+
+       
+        console.log(html);
+        var column = "<th scope='col'>" + 'ID das Imagens' + "</th>" +
+            "<th scope='col'>" + "Data" + "</th>" +
+            "<th scope='col'>" + "Número da Panela" + "</th>" +
+            "<th scope='col'>" + "Vida da Panela" + "</th>" +
+            "<th scope='col'>" + "Número da corrida" + "</th>"
+        $('#table-column').html(column)
+
+        $('#table-content').html(html)
+        
+
+    }
+    function Validate(dateRange) {
+        if (dateRange.dateStart > dateRange.dateEnd) {
+            return false
+        }
+        return true
+    }
+    $(".btnExport").click(function () {
+
+        var dateRange = {
+            dateStart: $('.dateStart').val(),
+            dateEnd: $('.dateEnd').val(),
+        };
+        ExportExcel(dateRange)
+
+    });
+    function ExportExcel(dateRange) {
+
+        var data = "ExportXlsx?dateStart=" + dateRange.dateStart + "&" + "dateEnd=" + dateRange.dateEnd;
+        var request = new XMLHttpRequest();
+        request.open('GET', data, true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.responseType = 'blob';
+
+        request.onload = function (e) {
+            if (this.status === 200) {
+                var blob = this.response;
+                if (window.navigator.msSaveOrOpenBlob) {
+                    window.navigator.msSaveBlob(blob, "monitoramentotermograficos.xlsx");
+                }
+                else {
+                    var downloadLink = window.document.createElement('a');
+                    var contentTypeHeader = request.getResponseHeader("Content-Type");
+                    downloadLink.href = window.URL.createObjectURL(new Blob([blob], { type: contentTypeHeader }));
+                    downloadLink.download = "monitoramentotermograficos.xlsx";
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                }
+            }
+        };
+        console.log(data);
+        request.send(data);
+
+
+
+
+    }
+    $(document).ready(function () {
+        $(".btnExport").prop('disabled', true)();
+        $("#table-content").html("<p>"+"Não existe dados"+"</p>");
+    });
+
+
+  </script>
+}

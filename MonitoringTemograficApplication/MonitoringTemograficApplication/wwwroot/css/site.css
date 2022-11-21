@@ -76,8 +76,7 @@ body {
 }
 
 #corpo {
-  background-color:green;
-
+    background-color: #dcdcdc;
 }
 
 #CampLog{
@@ -203,27 +202,82 @@ body {
   border-radius:15px;
 }
 
-#Cptabela{
 
-}
 
-th {
+#tabletest {
   background-color: green;
   color: white;
 }
-tr:hover {
+#TableHv:hover {
   background-color: rgb(29 109 0 / 0.55);
 }
 
 #DivProcs {
-  position: relative;
-  width: 480px;
-  height: 440px;
-  border: solid 1.7px;
-  border-color: rgb(48 96 31 / 55%);
-  right: 100px;
-  border-radius: 24px;
+    position: relative;
+    width: 480px;
+    border: solid 1.7px;
+    border-color: rgb(48 96 31 / 55%);
+    right: 100px;
+    border-radius: 24px;
+    height: 100%;
 }
 tr {
   font-weight: bold;
+}
+.pros ,h2{
+    text-align:center;
+
+}
+.navbar-brand:target{
+  color: red;
+}
+
+#DataIni{
+  position:relative; 
+  float:left;
+  
+}
+
+#DataFim {
+  position: relative;
+  float: left;
+}
+
+#GeraRelat {
+  position: relative;
+  float: left;
+  top:30px;
+ 
+}
+
+#TableReport{
+  
+  width:300px;
+
+}
+#TableIndex{
+  background-color:green;
+  color:white;
+  text-align:center;
+}
+#TextReport{
+  text-align:center;
+  font-size:18px;
+}
+#contentexport {
+  position: relative;
+  right: 1029px;
+  width: 1110px;
+  height: 50px;
+  background-color: #ececed;
+  top: 27px;
+  border-radius: 5px;
+}
+#inpexport{
+  position:relative;
+  left:909px;
+  top:6.8px;
+  background-color:green;
+  height:35px;
+  
 }

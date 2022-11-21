@@ -4181,6 +4181,7 @@ input[type="button"].btn-block {
 
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
+
 }
 
 .navbar-nav {
@@ -5202,7 +5203,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .alert-danger {
   color: #721c24;
-  background-color: #f8d7da;
+  background-color: red;
   border-color: #f5c6cb;
 }
 
