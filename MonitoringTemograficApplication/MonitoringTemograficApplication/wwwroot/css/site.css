@@ -2,214 +2,219 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: rgb(29 109 0 / 0.55);
-  border-color: green;
+    color: #fff;
+    background-color: rgb(29 109 0 / 0.55);
+    border-color: green;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .page-wrapper {
-  background: #edf1f5;
-  position: relative;
+    background: #edf1f5;
+    position: relative;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom-color: green; 
+    border-bottom-color: green;
 }
 
 .box-shadow {
-  box-shadow: 0 .2rem .75rem rgb(94 197 11 / 0.4);
+    box-shadow: 0 .2rem .75rem rgb(94 197 11 / 0.4);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 #corpo {
     background-color: #dcdcdc;
 }
 
-#CampLog{
-  display:inline-block;
+#CampLog {
+    display: inline-block;
 }
 
 #Botao {
-  background: green;
-  border-color: green;
-  position: relative;
-  height: 50px;
-  left: 50px;
+    background: green;
+    border-color: green;
+    position: relative;
+    height: 50px;
+    left: 50px;
 }
 
 #TelaLog {
-  display: inline-block;
-  float: left;
+    display: inline-block;
+    float: left;
 }
 
 #icone {
-  position:relative;
-  left:-50px;
-  width: 160px;
-  margin-left: 100px;
-  float: left;
+    position: relative;
+    left: -50px;
+    width: 160px;
+    margin-left: 100px;
+    float: left;
 }
 
 #divimg {
-  position: relative;
-  display: inline-block;
-  float: left;
-  left: 90px;
-  top: 45px;
-  border-left: 4px solid;
-  border-color: rgb(29 109 0 / 0.55);
+    position: relative;
+    display: inline-block;
+    float: left;
+    left: 90px;
+    top: 45px;
+    border-left: 4px solid;
+    border-color: rgb(29 109 0 / 0.55);
 }
-#code_login_1{
-  display:inline-block;
+
+#code_login_1 {
+    display: inline-block;
 }
-#section{
-  display:flex;
-  float:left;
+
+#section {
+    display: flex;
+    float: left;
 }
 
 
 #img {
-  width: 550px;
-  border-bottom-left-radius: 30px;
-  border-top-left-radius: 300px;
-  position: relative;
-  float: left;
-
+    width: 550px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 300px;
+    position: relative;
+    float: left;
 }
 
 #div1 {
-  display: inline-block;
-  width: 1000px;
-  height: 450px;
-  border: 6px solid;
-  justify-content: center;
-  position:relative;
-  right: 300px;
-  top: 100px;
-  border-radius:20px;
-  border-color:darkgrey;
+    display: inline-block;
+    width: 1000px;
+    height: 450px;
+    border: 6px solid;
+    justify-content: center;
+    position: relative;
+    right: 300px;
+    top: 100px;
+    border-radius: 20px;
+    border-color: darkgrey;
 }
 
 #form {
-  width: 300px;
-  height: 400px;
-  position: relative;
-  right:30px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    right: 30px;
 }
 
 #USUARIO {
-  position: relative;
-  font-size: 25;
-  left: 50px;
+    position: relative;
+    font-size: 25;
+    left: 50px;
 }
 
 #SENHA {
-  position: relative;
-  font-size: 25;
-  left: 50px;
-  top:-30px;
+    position: relative;
+    font-size: 25;
+    left: 50px;
+    top: -30px;
 }
 
-#InpUsu{
-  border-radius:90px;
-  height:60px;
+#InpUsu {
+    border-radius: 90px;
+    height: 60px;
 }
+
 #InpSen {
-  border-radius: 90px;
-  height: 60px;
+    border-radius: 90px;
+    height: 60px;
 }
 
 #testedv {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  top: -100%;
-  left: 100px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    top: -100%;
+    left: 100px;
 }
 
 #divinterna {
-  width: 100px;
-  height: 100px;
-  background-color:black;
-  position: relative;
-  float: left
-  
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: relative;
+    float: left
 }
+
 #DivBtn {
-  position:relative;
-  display:flex;
-  justify-content:flex-end;
-
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#DivTb{
-
-  border-radius:15px;
+#DivTb {
+    position:relative;
+  border-radius: 15px;
+  top:30px;
 }
 
 
 
 #tabletest {
-  background-color: green;
-  color: white;
+    background-color: green;
+    color: white;
 }
+
 #TableHv:hover {
-  background-color: rgb(29 109 0 / 0.55);
+    background-color: rgb(29 109 0 / 0.55);
 }
 
 #DivProcs {
@@ -221,63 +226,72 @@ body {
     border-radius: 24px;
     height: 100%;
 }
+
 tr {
-  font-weight: bold;
-}
-.pros ,h2{
-    text-align:center;
-
-}
-.navbar-brand:target{
-  color: red;
+    font-weight: bold;
 }
 
-#DataIni{
-  position:relative; 
-  float:left;
-  
+.pros, h2 {
+    text-align: center;
+}
+
+.navbar-brand:target {
+    color: red;
+}
+
+#DataIni {
+    position: relative;
+    float: left;
 }
 
 #DataFim {
-  position: relative;
-  float: left;
+    position: relative;
+    float: left;
 }
 
 #GeraRelat {
-  position: relative;
-  float: left;
-  top:30px;
- 
+    position: relative;
+    float: left;
+    top: 30px;
 }
 
-#TableReport{
-  
-  width:300px;
+#TableReport {
+    width: 300px;
+}
 
+#TableIndex {
+    background-color: green;
+    color: white;
+    text-align: center;
 }
-#TableIndex{
-  background-color:green;
-  color:white;
-  text-align:center;
+
+#TextReport {
+    text-align: center;
+    font-size: 18px;
 }
-#TextReport{
-  text-align:center;
-  font-size:18px;
-}
+
 #contentexport {
-  position: relative;
-  right: 1029px;
-  width: 1110px;
-  height: 50px;
-  background-color: #ececed;
-  top: 27px;
-  border-radius: 5px;
+    position: relative;
+    right: 1029px;
+    width: 1110px;
+    height: 50px;
+    background-color: #ececed;
+    top: 27px;
+    border-radius: 5px;
 }
-#inpexport{
-  position:relative;
-  left:909px;
-  top:6.8px;
-  background-color:green;
-  height:35px;
-  
+
+#inpexport {
+    background-color:rgb(29,109,0/0.55);
+    border-color:green;
+    position: relative;
+    left: 1000px;
+    top: -29px;
+    
+    height: 35px;
+}
+
+#tilerelat {
+    position: relative;
+    top: 10px;
+    left: 7px;
 }
