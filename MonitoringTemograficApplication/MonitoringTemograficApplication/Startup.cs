@@ -45,7 +45,7 @@ namespace MonitoringTemograficApplication
       services.AddScoped<IProcessor, ProcessorRepository>();
       services.AddScoped<IUserRepository, UserRepository>();
 
-      string connection = "Server=SRV-ENG-TESTE-D\\ION;Database=EXT;user id=sa;password=ION!Everywhere;Trusted_Connection=False;";
+      string connection = "Server=172.16.9.133\\ION;Database=EXT;user id=sa;password=ION!Everywhere;Trusted_Connection=False;";
       services.AddDbContext<MonitoringTermograficContext>(options => options.UseSqlServer(connection));
       //services.AddDbContext<MeasurementsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SIMT")));
       services.AddEntityFrameworkSqlServer().AddDbContext<MeasurementsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SIMT")));
