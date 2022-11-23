@@ -118,7 +118,36 @@ namespace MonitoringTemograficApplication.Repositories
       var start = Convert.ToDateTime(dateRange.dateStart);
       var end = Convert.ToDateTime(dateRange.dateEnd);
       var resultReport = _measurementsContext.Measurements.Where(m => m.LadleID != null && m.LadleAge != null && m.RaceNumber != null && m.Time >= Convert.ToDateTime(dateRange.dateStart) && m.Time <= Convert.ToDateTime(dateRange.dateEnd) ).ToList().AsQueryable().OrderByDescending(d => d.Time);
+
+      
+      
       return resultReport.ToPagedList<Measurements>(NumberPage, 10);
+    }
+    public dynamic GetReports(int? page, DateRange dateRange)
+    {
+      
+      
+      int NumberPage = page ?? 1;
+      var start = Convert.ToDateTime(dateRange.dateStart);
+      var end = Convert.ToDateTime(dateRange.dateEnd);
+      var resultReport = _measurementsContext.Measurements.Where(m => m.LadleID != null && m.LadleAge != null && m.RaceNumber != null && m.Time >= Convert.ToDateTime(dateRange.dateStart) && m.Time <= Convert.ToDateTime(dateRange.dateEnd)).ToList().AsQueryable().OrderByDescending(d => d.Time);
+
+      int totalRecords = resultReport.Count();
+      if (page.HasValue)
+      {
+        resultReport = resultReport.Skip((NumberPage - 1) * 10).Take(10).OrderByDescending(s => s.Time);
+      }
+      
+      int totalPages = (int)Math.Ceiling((double)totalRecords / 10);
+
+      var result = new
+      {
+        measurements = resultReport,
+        totalRecords = totalRecords,
+        totalPages = totalPages
+      };
+
+      return result;
     }
   }
 }

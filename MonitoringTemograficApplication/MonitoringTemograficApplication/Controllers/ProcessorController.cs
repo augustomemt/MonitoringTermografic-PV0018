@@ -91,8 +91,9 @@ namespace MonitoringTemograficApplication.Database
         dateRange.dateStart = dateStart;
         dateRange.dateEnd = dateEnd;
       }
-      var measurements = _processorRepository.GetReport(page, dateRange); 
+      var measurements = _processorRepository.GetReport(page, dateRange);
       return View(measurements);
+
       return RedirectToAction("Report", "Processor");
 
     }
@@ -110,7 +111,7 @@ namespace MonitoringTemograficApplication.Database
         dateRange.dateStart = dateStart;
         dateRange.dateEnd = dateEnd;
       }
-      var resultado = _processorRepository.GetReport(page, dateRange);
+      var resultado = _processorRepository.GetReports(page, dateRange);
       return Json(resultado);
     }
     [HttpGet]
@@ -127,7 +128,7 @@ namespace MonitoringTemograficApplication.Database
         dateRange.dateStart = dateStart;
         dateRange.dateEnd = dateEnd;
       }
-      var resultado = _processorRepository.GetReport(page, dateRange);
+      var resultado = _processorRepository.GetReports(page, dateRange);
       using (var workbook = new XLWorkbook())
       {
         var worksheet = workbook.Worksheets.Add("Relatorio");

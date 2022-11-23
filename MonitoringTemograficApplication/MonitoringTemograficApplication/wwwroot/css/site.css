@@ -275,9 +275,12 @@ tr {
 }
 #inpexport{
   position:relative;
-  left:909px;
-  top:6.8px;
+  left:1004px;
+  top:-27.4px;
   background-color:green;
   height:35px;
-  
+}
+#titlerelat{
+  position:relative;
+  top:13px;
 }

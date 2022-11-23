@@ -13,6 +13,7 @@
       <div id="DataIni" class="col-sm-2">
         <label><b>Data Inicio</b></label>
         <input name="startDate" type="date" class="form-control dateStart" required />
+
       </div>
       <div id="DataFim" class="col-sm-2">
         <label><b>Data final</b></label>
@@ -20,7 +21,7 @@
       </div>
       <div id="GeraRelat" class="col-sm-2">
         <input type="button" value="Gerar Relatório" class="btn btn-primary   btnGerar" />
-        @*<button type="submit" class="btn btn-primary energia_demanda Generate" onclick="Generate()">Gerar relatório</button>*@
+        @*        <button type="submit" class="btn btn-primary btnGerar">Gerar relatório</button>*@
       </div>
       <div class="col-md-12" style="margin-top:5px;"><label id="error_endDate" style="color: red"> </label></div>
     </div>
@@ -32,6 +33,7 @@
       <div class="dropdown col-sm-1" style="margin-right:9px;float:right;padding:0;">
 
         <div id="contentexport">
+          <h4 id="titlerelat"> Relatóriov Monitoramento Termografico</h4>
           <input id="inpexport" type="button" value="Exportar" class="btn btn-primary   btnExport" />
         </div>
         <div class="dropdown-menu export-pannel" style="margin-left:-80px;">
@@ -45,20 +47,21 @@
     </div>
   </div>
 </form>
-<br/>
-<br/>
+<br />
+<br />
 <div class="table-responsivez" id="DivTb">
   <table class="table">
     <thead id="TableReport">
       <tr id="table-column" style="text-align:center; font-size:20px; ">
-        
       </tr>
     </thead>
     <tbody id="table-content">
     </tbody>
 
   </table>
+  <nav class="text-center" id="pagination">
 
+  </nav>
 </div>
 
 
@@ -66,9 +69,46 @@
 
 @section scripts {
   <script>
+    var pageNumber = 1
+    var size = 10
+    var numberOfPages = 0
     $(".btnGerar").click(function () {
 
+        console.log(pageNumber)
         var dateRange = {
+            
+            dateStart: $('.dateStart').val(),
+            dateEnd: $('.dateEnd').val(),
+            page : pageNumber
+        };
+
+        if (Validate(dateRange)) {
+            ReportGenerate(dateRange)
+
+        }
+
+    });
+
+    function Generate() {
+        var dateRange = {            
+            dateStart: $('.dateStart').val(),
+            dateEnd: $('.dateEnd').val(),
+            page : pageNumber
+
+        };
+
+        if (Validate(dateRange)) {
+            ReportGenerate(dateRange)
+
+        }
+    }
+
+    function Gerar(event) {
+        if (event) {
+            event.preventDefaut()
+        }
+        var dateRange = {
+            
             dateStart: $('.dateStart').val(),
             dateEnd: $('.dateEnd').val(),
         };
@@ -77,11 +117,7 @@
             ReportGenerate(dateRange)
 
         }
-        else {
-            window.alert("Dana in")
-        }
-
-    });
+    }
 
     function ReportGenerate(dateRange) {
         $.ajax({
@@ -90,7 +126,10 @@
             cache: false,
             success: function (response) {
                 console.log(response)
-                DrawTable(response)
+                DrawTable(response.measurements)
+                numberOfPages = response.totalPages
+                console.log(numberOfPages);
+                updatePagination()
 
             }
         });
@@ -113,7 +152,7 @@
             $(".btnExport").prop('disabled', false)
         }
 
-       
+
         console.log(html);
         var column = "<th scope='col'>" + 'ID das Imagens' + "</th>" +
             "<th scope='col'>" + "Data" + "</th>" +
@@ -123,14 +162,23 @@
         $('#table-column').html(column)
 
         $('#table-content').html(html)
-        
+        updatePagination();
 
     }
     function Validate(dateRange) {
-        if (dateRange.dateStart > dateRange.dateEnd) {
+        if (dateRange.dateStart === "" || dateRange.dateEnd === "") {
+            $("#error_endDate").html("A Data deve ser preenchida")
             return false
         }
-        return true
+        else {
+            if (dateRange.dateStart > dateRange.dateEnd) {
+                $("#error_endDate").html("A Data final deve ser mair que a Data inicial.")
+                return false
+            }
+            return true
+
+        }
+
     }
     $(".btnExport").click(function () {
 
@@ -174,9 +222,86 @@
 
     }
     $(document).ready(function () {
-        $(".btnExport").prop('disabled', true)();
-        $("#table-content").html("<p>"+"Não existe dados"+"</p>");
+
+        $(".btnExport").prop('disabled', true);
+
     });
+
+    $("#reports-filters").on('submit', function (event) {
+        console.log('banana')
+        try {
+            Gerar(event)
+        }
+        catch (err) {
+            console.log(err)
+        }
+
+    })
+
+    function changePage(_page, set) {
+
+        if (set) {
+            pageNumber = _page
+        } else {
+            pageNumber += _page
+        }
+
+        if (pageNumber < 1) {
+            pageNumber = 1
+        } else {
+            Generate()
+        }
+        updatePagination()
+    }
+    function updatePagination() {
+        var tagetDiv = '#pagination'
+
+        var paginationHTML = '<ul class="pagination justify-content-end ">'
+
+        if (pageNumber > 1) {
+            paginationHTML +=
+                '<li class="page-item">' +
+                '<span class="page-link" disabled onclick="changePage(-1)">Anterior</span>' +
+                '</li>'
+        }
+
+        for (var i = 0; i < numberOfPages; i++) {
+            var currentPage = i + 1
+            var isCurrentPage = pageNumber === currentPage
+
+            if (currentPage <= 3 || currentPage >= (numberOfPages - 3) || (currentPage <= (pageNumber + 3) && currentPage >= (page - 3))) {
+
+                paginationHTML +=
+                    '<li class="page-item  ' + (isCurrentPage ? 'active' : '') + '">' +
+                    '<span class="page-link" onclick="changePage(' + currentPage + ', true)"> ' + currentPage + '  </span>' +
+                    '</li>'
+
+            } else if (currentPage === 4) {
+                paginationHTML +=
+                    '<li class="page-item ">' +
+                    '<span class="page-link"  > ...  </span>' +
+                    '</li>'
+            } else if (currentPage === (numberOfPages - 4)) {
+                paginationHTML +=
+                    '<li class="page-item ">' +
+                    '<span class="page-link"  > ...  </span>' +
+                    '</li>'
+            }
+        }
+
+        if (pageNumber < numberOfPages) {
+            paginationHTML +=
+                '<li class="page-item">' +
+                '<span class="page-link" disabled href="#" onclick="changePage(1)" value="">Próximo</span>' +
+                '</li>' +
+                '</ul>'
+        }
+
+        console.log(paginationHTML);
+        $(tagetDiv).html(paginationHTML)
+    }
+
+
 
 
   </script>
