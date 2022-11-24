@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "O7cNlKoV2Md02lS7KrlQJUZkGO1Xfa8u+y0kv6Yqm+K7qxbm0c/wp7wDKoDi3jU2ys3BKGQSZjG+kC+3NrpkZg==",
+  "dgSpecHash": "pARc/AWK6UTXwZEnalBJOAirQw0iWKhzsNAYgqCT6oppbuyqS/Eu4rPAbhXUrp5yUXpQlXc3byw89p0M6JjvzQ==",
   "success": true,
   "projectFilePath": "C:\\AtualizadoCSP\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
   "expectedPackageFiles": [
@@ -162,8 +162,7 @@
     "C:\\Users\\carlos.nunes\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\carlos.nunes\\.nuget\\packages\\x.pagedlist\\7.6.0\\x.pagedlist.7.6.0.nupkg.sha512",
     "C:\\Users\\carlos.nunes\\.nuget\\packages\\x.pagedlist.mvc.core\\7.6.0\\x.pagedlist.mvc.core.7.6.0.nupkg.sha512",
-    "C:\\Users\\carlos.nunes\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
-    "C:\\Users\\carlos.nunes\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.28\\microsoft.netcore.app.host.win-x64.3.1.28.nupkg.sha512"
+    "C:\\Users\\carlos.nunes\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
   "logs": []
 }

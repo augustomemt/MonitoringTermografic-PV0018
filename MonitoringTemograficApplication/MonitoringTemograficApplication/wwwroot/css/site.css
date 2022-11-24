@@ -198,8 +198,15 @@ body {
 }
 
 #DivTb{
-
+  
   border-radius:15px;
+}
+
+#DivTbReport {
+    width: 1500px;
+    position: relative;
+    left: -200px;
+    border-radius: 15px;
 }
 
 
@@ -265,20 +272,25 @@ tr {
   font-size:18px;
 }
 #contentexport {
-  position: relative;
-  right: 1029px;
-  width: 1110px;
-  height: 50px;
-  background-color: #ececed;
-  top: 27px;
-  border-radius: 5px;
+    position: relative;
+    right: 1220px;
+    height: 50px;
+    background-color: #ececed;
+    top: 27px;
+    border-radius: 5px;
+    width: 1500px;
+
 }
-#inpexport{
-  position:relative;
-  left:1004px;
-  top:-27.4px;
-  background-color:green;
-  height:35px;
+#inpexport {
+    position: relative;
+    left: 1400px;
+    top: -27.4px;
+    background-color: green;
+    height: 35px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  
 }
 #titlerelat{
   position:relative;

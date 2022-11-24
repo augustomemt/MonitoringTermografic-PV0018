@@ -137,6 +137,8 @@ namespace MonitoringTemograficApplication.Database
         worksheet.Cell(currentRow, 2).Value = "Data";
         worksheet.Cell(currentRow, 3).Value = "Numero da panela";
         worksheet.Cell(currentRow, 4).Value = "vida da panela";
+        
+
         foreach (var result in resultado)
         {
           currentRow++;

@@ -22,5 +22,12 @@ namespace MonitoringTemograficApplication.Models
     public string RaceNumber { get; set; }
 
     public string Location { get; set; }
-  }
+
+    public string LadleDescription { get; set; }
+
+    public string Origin { get; set; }
+
+   
+
+    }
 }
