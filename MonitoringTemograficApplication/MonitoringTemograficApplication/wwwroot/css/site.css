@@ -282,14 +282,13 @@ tr {
 
 }
 #inpexport {
-    position: relative;
+    position:inherit;
     left: 1400px;
     top: -27.4px;
     background-color: green;
     height: 35px;
-    display: block;
-    justify-content: center;
-    align-items: center;
+   
+    
   
 }
 #titlerelat{
