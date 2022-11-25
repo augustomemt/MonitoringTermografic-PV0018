@@ -20,7 +20,7 @@
 <br />
 @if (Model.Count > 0)
 {
-    
+
     <div class="table-responsivez" id="DivTb">
         <table class="table  table-bordered">
             <thead id="TableIndex">
@@ -30,7 +30,7 @@
                     <th scope="col">Número da Panela</th>
                     <th scope="col">Vida da Panela</th>
                     <th scope="col">Número da Corrida</th>
-                    @*<th scope="col">Localização</th>*@
+                    <th scope="col">Localização</th>
                     <th style="width:20px;"> </th>
                 </tr>
             </thead>
@@ -43,11 +43,12 @@
                         <td>@measurements.LadleID.ToString()</td>
                         <td>@measurements.LadleAge.ToString()</td>
                         <td>@measurements.RaceNumber.ToString()</td>
+                        <td></td>
                         @*<td>@measurements.Location.ToString()</td>*@
 
                         <td>
                             <button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button>
-
+                            <button type="button" class="btn btn-outline-primary" onclick="deletMeasurmentPeloId(@measurements.MeasurementKey)">Deletar</button>
                         </td>
                     </tr>
                 }
@@ -131,7 +132,7 @@ else
 </div>
 @section scripts {
     <script>
-        window.alert("bugado")
+
 
         $(".btn-cancel").click(function() {
             location.reload(true)
@@ -166,6 +167,20 @@ else
             })
         }
 
+        function deletMeasurmentPeloId(Measruremnt) {
+            $.ajax({
+                url: "Delete",
+                method: 'Delete',
+                data: Measruremnt
+                    success: function(Measruremnt) {
+                        $("#modal").modal('hide');
+                        console.log("modal fecha agora ")
+                        location.reload(true)
+                    }
+            });
+
+        }
+
         $(".btnSalvar").click(function() {
             var Measurement = {
                 MeasurementKey: $('.MeasurementKey').val(),
@@ -185,7 +200,7 @@ else
         });
 
         function UpdateMeasruremnt(Measruremnt) {
-            console.log(measurent.location)
+
             // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
             $.ajax({
                 url: "Edit",

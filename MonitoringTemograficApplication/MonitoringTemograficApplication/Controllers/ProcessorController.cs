@@ -1,17 +1,11 @@
-﻿using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Office.CustomXsn;
-using DocumentFormat.OpenXml.Office2010.Excel;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using MonitoringTemograficApplication.Libraries.Filter;
+﻿using Microsoft.AspNetCore.Mvc;
 using MonitoringTemograficApplication.Libraries.Login;
 using MonitoringTemograficApplication.Models;
 using MonitoringTemograficApplication.Repositories.Contracts;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
+
 
 namespace MonitoringTemograficApplication.Database
 {
@@ -71,16 +65,38 @@ namespace MonitoringTemograficApplication.Database
         [HttpPut]
         public JsonResult Edit(Measurements Measruremnt01)
         {
-            _MeasurementsContext.Measurements.Update(Measruremnt01);
-            _MeasurementsContext.SaveChanges();
-            return Json(Measruremnt01);
+            try
+            {
+                _MeasurementsContext.Measurements.Update(Measruremnt01);
+                _MeasurementsContext.SaveChanges();
+                Response.StatusCode = (int)HttpStatusCode.OK;
+                return Json(Measruremnt01);
+            }
+            catch
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { Delet = false });
+            }
 
         }
-        public JsonResult Delet(Measurements Measruremnt01)
+        [HttpDelete]
+        public JsonResult Delete(string MeasurementKey)
         {
-            _MeasurementsContext.Measurements.Remove(Measruremnt01);
-            _MeasurementsContext.SaveChanges();
-            return Json(Measruremnt01);
+            try
+            {
+                Int64 id = Convert.ToInt64(MeasurementKey);
+                var measurements = _MeasurementsContext.Measurements.Where(m => m.MeasurementKey == id).FirstOrDefault();
+                _MeasurementsContext.Measurements.Remove(measurements);
+                _MeasurementsContext.SaveChanges();
+                Response.StatusCode = (int)HttpStatusCode.OK;
+                return Json(new { Delet = true });
+            }
+            catch
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { Delet = false });
+
+            }
 
         }
 
@@ -136,39 +152,10 @@ namespace MonitoringTemograficApplication.Database
                 dateRange.dateEnd = dateEnd;
             }
             var resultado = _processorRepository.GetAllExport(dateRange);
-            using (var workbook = new XLWorkbook())
-            {
-                var worksheet = workbook.Worksheets.Add("Relatorio");
-                var currentRow = 1;
-                worksheet.Cell(currentRow, 1).Value = "ID das Imagens";
-                worksheet.Cell(currentRow, 2).Value = "Data";
-                worksheet.Cell(currentRow, 3).Value = "Numero da panela";
-                worksheet.Cell(currentRow, 4).Value = "Descrição da panela";
-                worksheet.Cell(currentRow, 5).Value = "Rota";
-                worksheet.Cell(currentRow, 6).Value = "Localização";
-                
+            var resultContent = _processorRepository.GetFileExport(resultado);
 
+            return File(resultContent, "Aplication/vnd.openxmlformats-officedocument.soreadsheetml.sheet", "monitoramentotermograficos.xlsx");
 
-                foreach (var result in resultado)
-                {
-                    currentRow++;
-                    worksheet.Cell(currentRow, 1).Value = result.MeasurementKey;
-                    worksheet.Cell(currentRow, 2).Value = result.Time;
-                    worksheet.Cell(currentRow, 3).Value = result.LadleID;
-                    worksheet.Cell(currentRow, 4).Value = result.LadleAge;
-                    worksheet.Cell(currentRow, 5).Value = result.LadleDescription;
-                    worksheet.Cell(currentRow, 6).Value = result.Origin;
-                    worksheet.Cell(currentRow, 7).Value = result.Location;
-                }
-                using (var stream = new MemoryStream())
-                {
-                    workbook.SaveAs(stream);
-                    var content = stream.ToArray();
-                    return File(content, "Aplication/vnd.openxmlformats-officedocument.soreadsheetml.sheet", "monitoramentotermograficos.xlsx");
-                }
-
-
-            }
             return View();
         }
 

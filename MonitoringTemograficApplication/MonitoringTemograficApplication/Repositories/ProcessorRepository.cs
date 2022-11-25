@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using ClosedXML.Excel;
+using Microsoft.Extensions.Configuration;
 using MonitoringTemograficApplication.Database;
 using MonitoringTemograficApplication.Libraries.Login;
 using MonitoringTemograficApplication.Models;
@@ -7,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using X.PagedList;
@@ -158,11 +160,43 @@ namespace MonitoringTemograficApplication.Repositories
             return resultReport;
         }
 
-        public Measurements DelId(int id)
+        public byte[] GetFileExport(List<Measurements> results) 
         {
-            var measurements = _measurementsContext.Measurements.(m => m.MeasurementKey == id).FirstOrDefault();
-            
-           
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("Relatorio");
+                var currentRow = 1;
+                worksheet.Cell(currentRow, 1).Value = "ID das Imagens";
+                worksheet.Cell(currentRow, 2).Value = "Data";
+                worksheet.Cell(currentRow, 3).Value = "Numero da panela";
+                worksheet.Cell(currentRow, 4).Value = "Descrição da panela";
+                worksheet.Cell(currentRow, 5).Value = "Rota";
+                worksheet.Cell(currentRow, 6).Value = "Localização";
+
+
+
+                foreach (var result in results)
+                {
+                    currentRow++;
+                    worksheet.Cell(currentRow, 1).Value = result.MeasurementKey;
+                    worksheet.Cell(currentRow, 2).Value = result.Time;
+                    worksheet.Cell(currentRow, 3).Value = result.LadleID;
+                    worksheet.Cell(currentRow, 4).Value = result.LadleAge;
+                    worksheet.Cell(currentRow, 5).Value = result.LadleDescription;
+                    worksheet.Cell(currentRow, 6).Value = result.Origin;
+                    worksheet.Cell(currentRow, 7).Value = result.Location;
+                }
+                using (var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    var content = stream.ToArray();
+                    return content;
+                }
+
+
+            }
         }
+
+
     }
 }

@@ -20,13 +20,15 @@ namespace MonitoringTemograficApplication.Repositories.Contracts
         bool processorChange(Processor processor);
 
         Measurements GetId(int id);
-        Measurements DelId(int id);
+        
+
 
         IPagedList<Measurements> GetReport(int? page, DateRange dateRange);
         dynamic GetReports(int? page, DateRange dateRange);
 
         List<Measurements> GetAllExport(DateRange dateRange);
 
+        byte [] GetFileExport(List<Measurements> result);
 
     }
 }
