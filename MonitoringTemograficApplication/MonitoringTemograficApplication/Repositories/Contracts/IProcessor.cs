@@ -28,7 +28,7 @@ namespace MonitoringTemograficApplication.Repositories.Contracts
 
         List<Measurements> GetAllExport(DateRange dateRange);
 
-        byte[] GetFileExport(List<Measurements> result);
+        byte[] GetFileExport(List<Measurements> result, DateRange dateRange);
 
     }
 }
