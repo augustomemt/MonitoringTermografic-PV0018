@@ -48,7 +48,7 @@
 
                         <td>
                             <button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button>
-                            <button type="button" class="btn btn-outline-primary" onclick="deletMeasurmentPeloId(@measurements.MeasurementKey)">Deletar</button>
+                            <button style="width:88px;" class="btn btn-outline-danger" type="button" onclick="teste(@measurements.MeasurementKey)">deletar</button>
                         </td>
                     </tr>
                 }
@@ -133,7 +133,6 @@ else
 @section scripts {
     <script>
 
-
         $(".btn-cancel").click(function() {
             location.reload(true)
         });
@@ -167,19 +166,9 @@ else
             })
         }
 
-        function deletMeasurmentPeloId(Measruremnt) {
-            $.ajax({
-                url: "Delete",
-                method: 'Delete',
-                data: Measruremnt
-                    success: function(Measruremnt) {
-                        $("#modal").modal('hide');
-                        console.log("modal fecha agora ")
-                        location.reload(true)
-                    }
-            });
+  
 
-        }
+
 
         $(".btnSalvar").click(function() {
             var Measurement = {
@@ -198,6 +187,7 @@ else
             }
 
         });
+   
 
         function UpdateMeasruremnt(Measruremnt) {
 
@@ -316,6 +306,7 @@ else
             return RaceValidt;
 
         }
+
 
     </script>
 

@@ -160,7 +160,7 @@ namespace MonitoringTemograficApplication.Repositories
             return resultReport;
         }
 
-        public byte[] GetFileExport(List<Measurements> results) 
+        public byte[] GetFileExport(List<Measurements> results)
         {
             using (var workbook = new XLWorkbook())
             {
