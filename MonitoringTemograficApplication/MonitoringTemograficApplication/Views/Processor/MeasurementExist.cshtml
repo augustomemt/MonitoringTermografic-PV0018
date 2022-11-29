@@ -22,7 +22,7 @@
 {
 
     <div class="table-responsivez" id="DivTb">
-        <table class="table  table-bordered">
+        <table class="table">
             <thead id="TableIndex">
                 <tr style="color:white;">
                     <th scope="col" id="TableHv">ID das Imagens</th>
@@ -37,19 +37,42 @@
             <tbody>
                 @foreach (Measurements measurements in Model)
                 {
-                    <tr id="TableHv">
+
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:red;position:relative; left:190px;"> Alerta</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <span>
+                                       <p>
+                                           Confirmar exclusão?
+                                       </p>
+                                    </span>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-danger" onclick="Remove(@measurements.MeasurementKey)">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <tr id="TableHv" style="text-align:center;">
                         <td>@measurements.MeasurementKey.ToString()</td>
                         <td>@measurements.Time.ToString()</td>
                         <td>@measurements.LadleID.ToString()</td>
                         <td>@measurements.LadleAge.ToString()</td>
                         <td>@measurements.RaceNumber.ToString()</td>
-                        <td></td>
-                        @*<td>@measurements.Location.ToString()</td>*@
+                        <td>@measurements.Location.ToString()</td>
 
                         <td style="width:85px;">
-                            <img  style= "width:25px; height:25px;"type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)"/>
+                            <img style="width:25px; height:25px;" type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" />
                             @*<button type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)"></button>*@
-                            <img style= "width:25px; height:25px;" src="~/lib/bootstrapicons/trash-fill.svg"  onclick="Remove(@measurements.MeasurementKey)"/>
+                            <img style="width:25px; height:25px;" src="~/lib/bootstrapicons/trash-fill.svg" data-toggle="modal" data-target="#exampleModal" />
                         </td>
                     </tr>
                 }
@@ -85,6 +108,14 @@ else
         </div>
     </div>
 }
+
+
+@*onclick="Remove(@measurements.MeasurementKey)*@"
+
+
+
+
+
 <div id="modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -131,6 +162,8 @@ else
 
     </div>
 </div>
+
+
 @section scripts {
     <script>
 

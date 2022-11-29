@@ -8,7 +8,7 @@
 <form id="reports-filters" class="row" style="margin-bottom:0;">
   <div class="col-md-12 top-33">
   </div>
-  <div class="col-md-12" style="padding:0;right:18px;position:relative; left:-210px;">
+  <div class="col-md-12" style="padding:0;right:18px;position:relative;">
     <div class="col-md-12 space-20" style="margin-top:30px;">
       <div id="DataIni" class="col-sm-2">
         <label><b>Data Inicio</b></label>
@@ -50,16 +50,17 @@
 <br />
 <br />
 <div class="table-responsivez" id="DivTbReport">
-  <table class="table">
+  <table class="table" style="width:1090px;" >
     <thead id="TableReport">
-      <tr id="table-column" style="text-align:center; font-size:20px; ">
+      <tr id="table-column" style="text-align:center;font-size:15px;">
       </tr>
     </thead>
-    <tbody id="table-content">
+    <tbody id="table-content" style="text-align:center;padding-right: 30px;" >
     </tbody>
 
   </table>
-  <nav class="text-center" id="pagination">
+  <nav class="text-center" id="pagination" style="font-size:10px;position:relative;left:-260px;top:15px;">
+  
 
   </nav>
 </div>
@@ -139,12 +140,12 @@
         console.log(response)
 
         var html = ''
-
+        
         for (var i = 0; i < response.length; i++) {
             html +=
-                "<tr id='TextReport' >" +
+                "<tr id='TextReport' style='font-size:15px;padding-left:5000px'>" +
                 "<td>" + response[i].measurementKey + "</td>" +
-                "<td>" + response[i].time + "</td>" +
+                "<td>" + response[i].time.slice(0, 19).replaceAll("-","/").replaceAll("T"," ") + "</td>" +
                 "<td>" + response[i].ladleID + "</td>" +
                 "<td>" + response[i].ladleAge + "</td>" +
                 "<td>" + response[i].raceNumber + "</td>" +
@@ -157,16 +158,16 @@
 
 
         console.log(html);
-        var column = "<th scope='col'>" + 'ID das Imagens' + "</th>" +
-            "<th scope='col'>" + "Data" + "</th>" +
-            "<th scope='col'>" + "Número da Panela" + "</th>" +
+        var column = "<th scope='col' >" + 'ID das Imagens' + "</th>" +
+            "<th scope='col' >" + "Data" + "</th>" +
+            "<th scope='col' >" + "Número da Panela" + "</th>" +
             "<th scope='col'>" + "Vida da Panela" + "</th>" +
-            "<th scope='col'>" + "Descrição da panela" + "</th>" +
-            "<th scope='col'>" + "Rota" + "</th>" +
-            "<th scope='col'>" + "Descrição da rota" + "</th>" +
-            "<th scope='col'>" + "Localização" + "</th>"
+            "<th scope='col' >" + "Número da corrida" + "</th>" +
+            "<th scope='col' >" + "Descrição da panela" + "</th>" +
+            "<th scope='col' >" + "Rota" + "</th>" +
+            "<th scope='col' >" + "Localização" + "</th>"
 
-        var columnempty = "não existe dados"
+        var columnempty = "Dados Inexistentes"
         if (response.length == 0) {
             $('#table-column').html(columnempty)
             $('#table-content').html(html)
@@ -183,6 +184,11 @@
     function Validate(dateRange) {
         if (dateRange.dateStart === "" || dateRange.dateEnd === "") {
             $("#error_endDate").html("A Data deve ser preenchida")
+            return false
+        }
+        if (dateRange.dateStart.length > 10 || dateRange.dateEnd.length > 10) {
+            $("#error_endDate").html("Verifique a data informada. ")
+            console.log(dateRange.dateStart.count())
             return false
         }
         else {
@@ -224,7 +230,7 @@
                     downloadLink.href = window.URL.createObjectURL(new Blob([blob], { type: contentTypeHeader }));
                     var d = new Date().toISOString().slice(0, 19).replaceAll('-', '').replaceAll('T', '').replaceAll(':', '');
                     console.log(d);
-                    downloadLink.download = d+" MonitoramentoTermograficos.xlsx";
+                    downloadLink.download = d+"-MonitoramentoTermografico.xlsx";
                     document.body.appendChild(downloadLink);
                     downloadLink.click();
                     document.body.removeChild(downloadLink);

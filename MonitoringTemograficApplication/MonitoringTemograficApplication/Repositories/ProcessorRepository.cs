@@ -133,7 +133,7 @@ namespace MonitoringTemograficApplication.Repositories
             int NumberPage = page ?? 1;
             var start = Convert.ToDateTime(dateRange.dateStart);
             var end = Convert.ToDateTime(dateRange.dateEnd);
-            var resultReport = _measurementsContext.Measurements.Where(m => m.LadleID != null && m.LadleAge != null && m.RaceNumber != null && m.Time >= Convert.ToDateTime(dateRange.dateStart) && m.Time <= Convert.ToDateTime(dateRange.dateEnd)).ToList().AsQueryable().OrderByDescending(d => d.Time);
+            var resultReport = _measurementsContext.Measurements.Where(m => m.LadleID != null && m.LadleAge != null && m.RaceNumber != null && m.Origin != null && m.LadleDescription != null && m.Location != null && m.Time >= Convert.ToDateTime(dateRange.dateStart) && m.Time <= Convert.ToDateTime(dateRange.dateEnd)).ToList().AsQueryable().OrderByDescending(d => d.Time);
 
             int totalRecords = resultReport.Count();
             if (page.HasValue)
@@ -186,6 +186,9 @@ namespace MonitoringTemograficApplication.Repositories
                     ws.Cell(startRow, colum++).Value = result.LadleID;
                     ws.Cell(startRow, colum++).Value = result.LadleAge;
                     ws.Cell(startRow, colum++).Value = result.RaceNumber;
+                    ws.Cell(startRow, colum++).Value = result.Location;
+                    ws.Cell(startRow, colum++).Value = result.Origin;
+                    ws.Cell(startRow, colum++).Value = result.LadleDescription;
                     startRow++;
                 }
                 using (var stream = new MemoryStream())

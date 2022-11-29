@@ -203,9 +203,9 @@ body {
 }
 
 #DivTbReport {
-    width: 1500px;
+    width: 1335px;
     position: relative;
-    left: -200px;
+    font-size:20px;
     border-radius: 15px;
 }
 
@@ -227,6 +227,7 @@ body {
     right: 100px;
     border-radius: 24px;
     height: 100%;
+    
 }
 tr {
   font-weight: bold;
@@ -273,21 +274,19 @@ tr {
 }
 #contentexport {
     position: relative;
-    right: 1220px;
+    right: 1026px;
     height: 50px;
     background-color: #ececed;
     top: 27px;
     border-radius: 5px;
-    width: 1500px;
+    width: 1085px;
 
 }
 #inpexport {
     position:inherit;
-    left: 1400px;
-    top: -27.4px;
+    left: 987px;
+    top: -30.4px;
     background-color: green;
-    height: 35px;
-   
     
   
 }
