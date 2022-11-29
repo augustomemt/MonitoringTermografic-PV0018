@@ -12,12 +12,12 @@
     <div class="col-md-12 space-20" style="margin-top:30px;">
       <div id="DataIni" class="col-sm-2">
         <label><b>Data Inicio</b></label>
-        <input name="startDate" type="date" class="form-control dateStart" required />
+        <input name="startDate" type="date" class="form-control dateStart" maxlength="8" required />
 
       </div>
       <div id="DataFim" class="col-sm-2">
         <label><b>Data final</b></label>
-        <input name="endDate" type="date" class="form-control dateEnd" required />
+        <input name="endDate" type="date" class="form-control dateEnd"  maxlength="8" required />
       </div>
       <div id="GeraRelat" class="col-sm-2">
         <input type="button" value="Gerar Relatório" class="btn btn-primary   btnGerar" "    />
@@ -224,7 +224,7 @@
                     downloadLink.href = window.URL.createObjectURL(new Blob([blob], { type: contentTypeHeader }));
                     var d = new Date().toISOString().slice(0, 19).replaceAll('-', '').replaceAll('T', '').replaceAll(':', '');
                     console.log(d);
-                    downloadLink.download = d+"monitoramentotermograficos.xlsx";
+                    downloadLink.download = d+" MonitoramentoTermograficos.xlsx";
                     document.body.appendChild(downloadLink);
                     downloadLink.click();
                     document.body.removeChild(downloadLink);
