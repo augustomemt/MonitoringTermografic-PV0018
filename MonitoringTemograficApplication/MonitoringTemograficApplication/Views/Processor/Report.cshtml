@@ -23,7 +23,9 @@
         <input type="button" value="Gerar Relatório" class="btn btn-primary   btnGerar" "    />
         @*        <button type="submit" class="btn btn-primary btnGerar">Gerar relatório</button>*@
       </div>
-      <div class="col-md-12" style="margin-top:5px;"><label id="error_endDate" style="color: red"> </label></div>
+      <div class="col-md-12" style="margin-top:5px;">
+          <label id="error_endDate" style="color: red;font-weight:bold;"> </label>
+      </div>
     </div>
   </div>
 
@@ -193,7 +195,7 @@
         }
         else {
             if (dateRange.dateStart > dateRange.dateEnd) {
-                $("#error_endDate").html("A Data final deve ser mair que a Data inicial.")
+                $("#error_endDate").html("A Data Final deve ser maior que a Data Inicial.")
                 return false
             }
             return true

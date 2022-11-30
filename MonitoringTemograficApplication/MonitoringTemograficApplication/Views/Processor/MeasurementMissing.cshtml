@@ -52,8 +52,9 @@
           <tr id="TableHv" style="text-align:center;">
             <td>@measurements.MeasurementKey.ToString()</td>
             <td>@measurements.Time.ToString()</td>
-
-            <td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>
+            <td><img style="width:25px; height:25px;" type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
+           
+            @*<td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
           </tr>
         }
       </tbody>
@@ -88,7 +89,7 @@ else
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h6 class="modal-title"></h6>
+        <h6 class="modal-title">Adicionar Dados Faltantes</h6>
       </div>
       <div class="modal-body">
         <input type="hidden" class="form-control form-control-sm MeasurementKey" />
