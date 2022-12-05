@@ -33,6 +33,7 @@ a {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -42,8 +43,9 @@ html {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom-color: green; 
+  border-bottom-color: green;
 }
 
 .box-shadow {
@@ -65,8 +67,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -76,11 +78,11 @@ body {
 }
 
 #corpo {
-    background-color: #dcdcdc;
+  background-color: #dcdcdc;
 }
 
-#CampLog{
-  display:inline-block;
+#CampLog {
+  display: inline-block;
 }
 
 #Botao {
@@ -97,8 +99,8 @@ body {
 }
 
 #icone {
-  position:relative;
-  left:-50px;
+  position: relative;
+  left: -50px;
   width: 160px;
   margin-left: 100px;
   float: left;
@@ -113,12 +115,14 @@ body {
   border-left: 4px solid;
   border-color: rgb(29 109 0 / 0.55);
 }
-#code_login_1{
-  display:inline-block;
+
+#code_login_1 {
+  display: inline-block;
 }
-#section{
-  display:flex;
-  float:left;
+
+#section {
+  display: flex;
+  float: left;
 }
 
 
@@ -128,7 +132,6 @@ body {
   border-top-left-radius: 300px;
   position: relative;
   float: left;
-
 }
 
 #div1 {
@@ -137,18 +140,18 @@ body {
   height: 450px;
   border: 6px solid;
   justify-content: center;
-  position:relative;
+  position: relative;
   right: 300px;
   top: 100px;
-  border-radius:20px;
-  border-color:darkgrey;
+  border-radius: 20px;
+  border-color: darkgrey;
 }
 
 #form {
   width: 300px;
   height: 400px;
   position: relative;
-  right:30px;
+  right: 30px;
 }
 
 #USUARIO {
@@ -161,13 +164,14 @@ body {
   position: relative;
   font-size: 25;
   left: 50px;
-  top:-30px;
+  top: -30px;
 }
 
-#InpUsu{
-  border-radius:90px;
-  height:60px;
+#InpUsu {
+  border-radius: 90px;
+  height: 60px;
 }
+
 #InpSen {
   border-radius: 90px;
   height: 60px;
@@ -185,28 +189,26 @@ body {
 #divinterna {
   width: 100px;
   height: 100px;
-  background-color:black;
+  background-color: black;
   position: relative;
   float: left
-  
 }
+
 #DivBtn {
-  position:relative;
-  display:flex;
-  justify-content:flex-end;
-
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#DivTb{
-  
-  border-radius:15px;
+#DivTb {
+  border-radius: 15px;
 }
 
 #DivTbReport {
-    width: 1335px;
-    position: relative;
-    font-size:20px;
-    border-radius: 15px;
+  width: 1335px;
+  position: relative;
+  font-size: 20px;
+  border-radius: 15px;
 }
 
 
@@ -215,36 +217,38 @@ body {
   background-color: green;
   color: white;
 }
+
 #TableHv:hover {
   background-color: rgb(29 109 0 / 0.55);
 }
 
 #DivProcs {
-    position: relative;
-    width: 480px;
-    border: solid 1.7px;
-    border-color: rgb(48 96 31 / 55%);
-    right: 100px;
-    border-radius: 24px;
-    height: 100%;
-    
+  position: relative;
+  width: 480px;
+  border: solid 1.7px;
+  border-color: rgb(48 96 31 / 55%);
+  right: 100px;
+  border-radius: 24px;
+  height: 100%;
 }
+
 tr {
   font-weight: bold;
 }
-.pros ,h2{
-    text-align:center;
 
+.pros, h2 {
+  text-align: center;
 }
-.navbar-brand:target{
+
+.navbar-brand:target {
   color: red;
 }
 
-#DataIni{
-  position:relative; 
-  float:left;
-  
+#DataIni {
+  position: relative;
+  float: left;
 }
+
 
 #DataFim {
   position: relative;
@@ -254,44 +258,43 @@ tr {
 #GeraRelat {
   position: relative;
   float: left;
-  top:30px;
- 
+  top: 30px;
 }
 
-#TableReport{
+#TableReport {
+  width: 300px;
+}
+
+#TableIndex {
   
-  width:300px;
+  color: white;
+  text-align: center;
+}
 
+#TextReport {
+  text-align: center;
+  font-size: 18px;
 }
-#TableIndex{
-  background-color:green;
-  color:white;
-  text-align:center;
-}
-#TextReport{
-  text-align:center;
-  font-size:18px;
-}
+
 #contentexport {
-    position: relative;
-    right: 1026px;
-    height: 50px;
-    background-color: #ececed;
-    top: 27px;
-    border-radius: 5px;
-    width: 1085px;
+  position: relative;
+  right: 1026px;
+  height: 50px;
+  background-color: #ececed;
+  top: 27px;
+  border-radius: 5px;
+  width: 800px;
+}
 
-}
 #inpexport {
-    position:inherit;
-    left: 987px;
-    top: -30.4px;
-    background-color: green;
-    
-  
+  position: inherit;
+  left: 702px;
+  top: -44.4px;
+  background-color: green;
 }
-#titlerelat{
-  position:relative;
-  top:11px;
-  left:13px;
+
+#titlerelat {
+  position: relative;
+  top: 11px;
+  left: 13px;
 }
