@@ -1,7 +1,7 @@
 ﻿@model X.PagedList.IPagedList<MonitoringTemograficApplication.Models.Measurements>
 @{
-  ViewData["Title"] = "MeasurementMissing";
-  var pesquisa = Context.Request.Query["pesquisa"];
+    ViewData["Title"] = "MeasurementMissing";
+    var pesquisa = Context.Request.Query["pesquisa"];
 }
 
 
@@ -13,7 +13,7 @@
 
 @if (TempData["MSG_S"] != null)
 {
-  <p class="alert alert-success">@TempData["MSG_S"]</p>
+    <p class="alert alert-success">@TempData["MSG_S"]</p>
 }
 
 @*<div style=" justify-content:flex-end;  display:flex;">
@@ -21,252 +21,281 @@
 
 </div>*@
 <br />
-@if (Model.Count > 0)
-{
-  <div class="table-responsivez" id="DivTb">
-    <table class="table" >
-      <thead id="TableIndex">
-        <tr>
-          <th scope="col">ID das Imagens</th>
-          <th scope="col">Data</th>
-          <th style="width:20px;"></th>
 
 
-        </tr>
-      </thead>
-      <tbody>
-        @foreach (Measurements measurements in Model)
-        {
-          <tr id="TableHv" style="text-align:center;">
-            <td>@measurements.MeasurementKey.ToString()</td>
-            <td>@measurements.Time.ToString()</td>
-            <td><img style="width:25px; height:25px;" type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
-           
-            @*<td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
-          </tr>
-        }
-      </tbody>
-    </table>
-    <div id="DivBtn">
-      @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementMissing", new { page = page, search = pesquisa }), new PagedListRenderOptions
-    {
-    LiElementClasses = new string[] { "page-item" },
-    PageClasses = new string[] { "btn btn-outline-success text-right"}
-    })
-    </div>
-  </div>
-}
-else
-{
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">ID das Imagens</th>
-          <th scope="col">Data</th>
+<div class="page-wrapper">
 
-        </tr>
-      </thead>
-    </table>
-    <div>
-      Nenhum registro  encontrado!
-    </div>
-  </div>
-}
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h6 class="modal-title">Adicionar Dados Faltantes</h6>
-      </div>
-      <div class="modal-body">
-        <input type="hidden" class="form-control form-control-sm MeasurementKey" />
-        <input type="hidden" class="form-control form-control-sm Time" />
-        <input type="hidden" class="form-control form-control-sm Location" />
-        <div class="form-group">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <h4 class="page-title">Dados Existentes</h4>
+            </div>
 
-          <label>Número da Panela</label>
-          <input type="text" class="form-control form-control-sm LadleID" />
-          <span class="text-danger erroID d-NumeroPanela"></span>
         </div>
-
-        <div class="form-group">
-          <label>Vida da Panela</label>
-          <input type="text" class="form-control form-control-sm LadleAge" />
-          <span class="text-danger erroAge d-VidaPanela"></span>
-        </div>
-
-        <div class="form-group">
-          <label>Número da Corrida</label>
-          <input type="text" class="form-control form-control-sm RaceNumber" />
-          <span class="text-danger erroRace d-NumeroCorrida"></span>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <div class="form-group">
-          <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
-          <input type="button" value="Cancelar" class="btn btn-sm btn-cancel" data-bs-dismiss="modal" />
-        </div>
-      </div>
-
     </div>
 
-  </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <div class="card">
+                    <div class="card-body">
+                        @if (Model.Count > 0)
+                        {
+                            <div class="table-responsivez" id="DivTb">
+                                <table class="table">
+                                    <thead id="TableIndex">
+                                        <tr>
+                                            <th scope="col">ID das Imagens</th>
+                                            <th scope="col">Data</th>
+                                            <th style="width:20px;"></th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (Measurements measurements in Model)
+                                        {
+                                            <tr id="TableHv" style="text-align:center;">
+                                                <td>@measurements.MeasurementKey.ToString()</td>
+                                                <td>@measurements.Time.ToString()</td>
+                                                <td><img style="width:25px; height:25px;" type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
+
+                                                @*<td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <div id="DivBtn">
+                                    @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementMissing", new { page = page, search = pesquisa }), new PagedListRenderOptions
+                                {
+                                LiElementClasses = new string[] { "page-item" },
+                                PageClasses = new string[] { "btn btn-outline-success text-right"}
+                                })
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID das Imagens</th>
+                                            <th scope="col">Data</th>
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div>
+                                    Nenhum registro  encontrado!
+                                </div>
+                            </div>
+                        }
+                        <div id="modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title">Adicionar Dados Faltantes</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" class="form-control form-control-sm MeasurementKey" />
+                                        <input type="hidden" class="form-control form-control-sm Time" />
+                                        <input type="hidden" class="form-control form-control-sm Location" />
+                                        <div class="form-group">
+
+                                            <label>Número da Panela</label>
+                                            <input type="text" class="form-control form-control-sm LadleID" />
+                                            <span class="text-danger erroID d-NumeroPanela"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Vida da Panela</label>
+                                            <input type="text" class="form-control form-control-sm LadleAge" />
+                                            <span class="text-danger erroAge d-VidaPanela"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Número da Corrida</label>
+                                            <input type="text" class="form-control form-control-sm RaceNumber" />
+                                            <span class="text-danger erroRace d-NumeroCorrida"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <div class="form-group">
+                                            <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
+                                            <input type="button" value="Cancelar" class="btn btn-sm btn-cancel" data-bs-dismiss="modal" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
+
+
+
 @section scripts {
 
-  <script>
-    $(".btn-cancel").click(function () {
-        location.reload(true)
-    });
-
-    function mostrarModal() {
-        $('#modal').modal({
-            show: true
+    <script>
+        $(".btn-cancel").click(function() {
+            location.reload(true)
         });
-    };
-    // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
-    function pegarMeasurmentPeloId(MeasurmentId) {
-        //  REQUISIÇÃO REPONSAVEL POR PEGAR OS DADOS
-        $.ajax({
-            url: "GetId",
-            method: 'GET',
-            data: {
-                id: MeasurmentId
-            },
-            success: function (measurent) {
-                console.log(measurent)
-                mostrarModal();
-                $(".MeasurementKey").val(measurent.measurementKey);
-                //$(".LadleAge").val(measurent.ladleAge);
-                //$(".LadleID").val(measurent.ladleID);
-                //$(".RaceNumber").val(measurent.raceNumber);
-                $(".Time").val(measurent.time);
-                $(".Location").val(measurent.location);
-            }
-        })
-    }
-    // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS DO FORMULARIO
-    $(".btnSalvar").click(function () {
-        var Measurement = {
-            MeasurementKey: $('.MeasurementKey').val(),
-            LadleAge: $('.LadleAge').val(),
-            LadleID: $('.LadleID').val(),
-            RaceNumber: $('.RaceNumber').val(),
-            Time: $('.Time').val(),
-            Location: $('.Location').val()
+
+        function mostrarModal() {
+            $('#modal').modal({
+                show: true
+            });
         };
-        // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
+        // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
+        function pegarMeasurmentPeloId(MeasurmentId) {
+            //  REQUISIÇÃO REPONSAVEL POR PEGAR OS DADOS
+            $.ajax({
+                url: "GetId",
+                method: 'GET',
+                data: {
+                    id: MeasurmentId
+                },
+                success: function(measurent) {
+                    console.log(measurent)
+                    mostrarModal();
+                    $(".MeasurementKey").val(measurent.measurementKey);
+                    //$(".LadleAge").val(measurent.ladleAge);
+                    //$(".LadleID").val(measurent.ladleID);
+                    //$(".RaceNumber").val(measurent.raceNumber);
+                    $(".Time").val(measurent.time);
+                    $(".Location").val(measurent.location);
+                }
+            })
+        }
+        // FUNÇÃO RESPONSAVEL POR SALVAR OS DADOS , PEGA  OS DADOS DO FORMULARIO
+        $(".btnSalvar").click(function() {
+            var Measurement = {
+                MeasurementKey: $('.MeasurementKey').val(),
+                LadleAge: $('.LadleAge').val(),
+                LadleID: $('.LadleID').val(),
+                RaceNumber: $('.RaceNumber').val(),
+                Time: $('.Time').val(),
+                Location: $('.Location').val()
+            };
+            // CHAMADA PA A FUNÇÃO QUE ATUALIZA DADOS
 
-        if (ValidarFormulario(Measurement)) {
+            if (ValidarFormulario(Measurement)) {
 
-            UpdateMeasruremnt(Measurement)
+                UpdateMeasruremnt(Measurement)
+
+            }
+
+        });
+        // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
+        function UpdateMeasruremnt(Measruremnt) {
+            // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
+            $.ajax({
+                url: "Edit",
+                method: 'PUT',
+                data: {
+                    Measruremnt01: Measruremnt
+                },
+                success: function(Measruremnt) {
+                    $("#modal").modal('hide');
+                    console.log(Measruremnt)
+                    location.reload(true)
+
+
+                }
+            });
+        }
+        function ValidarFormulario(Measurement) {
+
+            let AgeValid = ValidarAge(Measurement.LadleAge);
+            let validaId = ValiditId(Measurement.LadleID);
+            let validaRace = ValidarRace(Measurement.RaceNumber);
+
+
+
+
+            console.log("Meu valor idade" + Measurement)
+            if (AgeValid == true && validaId == true && validaRace == true)
+                return true;
+
+            return false;
 
         }
 
-    });
-    // FUNÇÃO QUE faz A REQUISIÇÃO COM O BACKEND E ATUALIZA OS DADOS
-    function UpdateMeasruremnt(Measruremnt) {
-        // REQUISIÇÃO AJAX  QUE REALIZA A COMUNICAÇÃO COMO BACKEND
-        $.ajax({
-            url: "Edit",
-            method: 'PUT',
-            data: {
-                Measruremnt01: Measruremnt
-            },
-            success: function (Measruremnt) {
-                $("#modal").modal('hide');
-                console.log(Measruremnt)
-                location.reload(true)
+        function ValidarAge(LadleAge) {
+
+            let ageValida = true;
+
+            if (isNaN(LadleAge) || LadleAge == undefined || LadleAge == "") {
+                $(".LadleAge").addClass('is-invalid');
+                $(".erroAge").text("Preencha a idade da panela");
+                $(".erroAge").removeClass("d-none");
+                ageValida = false;
 
 
             }
-        });
-    }
-    function ValidarFormulario(Measurement) {
-
-        let AgeValid = ValidarAge(Measurement.LadleAge);
-        let validaId = ValiditId(Measurement.LadleID);
-        let validaRace = ValidarRace(Measurement.RaceNumber);
-        
-        
 
 
-        console.log("Meu valor idade" + Measurement)
-        if (AgeValid == true && validaId == true && validaRace == true )
-            return true;
 
-        return false;
+            else {
+                $(".LadleAge").removeClass('is-invalid');
+                $(".erroAge").addClass('is-valid');
+                $(".erroAge").addClass("d-none");
+                ageValida = true;
+            }
+            return ageValida;
 
-    }
+        }
+        function ValiditId(LadleID) {
+            let IdValidit = true
 
-    function ValidarAge(LadleAge) {
+            if (isNaN(LadleID) || LadleID == undefined || LadleID == "") {
+                $(".LadleID").addClass('is-invalid');
+                $(".erroID").text("Preencha o número da panela");
+                $(".erroID").removeClass("d-none");
 
-        let ageValida = true;
+                IdValidit = false;
+            }
 
-        if (isNaN(LadleAge) || LadleAge == undefined || LadleAge == "") {
-            $(".LadleAge").addClass('is-invalid');
-            $(".erroAge").text("Preencha a idade da panela");
-            $(".erroAge").removeClass("d-none");
-            ageValida = false;
+            else {
+                $(".LadleAge").removeClass('is-invalid');
+                $(".erroID").addClass('is-valid');
+                $(".erroID").addClass("d-none");
 
+                IdValidit = true;
+            }
+            return IdValidit;
+
+        }
+        function ValidarRace(RaceNumber) {
+            let RaceValidt = true;
+
+            if (RaceNumber.trim() == '' || RaceNumber == undefined) {
+                $(".RaceNumber").addClass('is-invalid');
+                $(".erroRace").text("Preencha o número da corrida");
+                $(".erroRace").removeClass("d-none");
+                RaceValidt = false;
+            }
+            else {
+                $(".RaceNumber").removeClass('is-invalid');
+                $(".erroRace").addClass('is-valid');
+                $(".erroRace").addClass("d-none");
+
+                RaceValidt = true;
+            }
+            return RaceValidt;
 
         }
 
-
-
-        else {
-            $(".LadleAge").removeClass('is-invalid');
-            $(".erroAge").addClass('is-valid');
-            $(".erroAge").addClass("d-none");
-            ageValida = true;
-        }
-        return ageValida;
-
-    }
-    function ValiditId(LadleID) {
-        let IdValidit = true
-
-        if (isNaN(LadleID) || LadleID == undefined || LadleID == "") {
-            $(".LadleID").addClass('is-invalid');
-            $(".erroID").text("Preencha o número da panela");
-            $(".erroID").removeClass("d-none");
-
-            IdValidit = false;
-        }
-
-        else {
-            $(".LadleAge").removeClass('is-invalid');
-            $(".erroID").addClass('is-valid');
-            $(".erroID").addClass("d-none");
-
-            IdValidit = true;
-        }
-        return IdValidit;
-
-    }
-    function ValidarRace(RaceNumber) {
-        let RaceValidt = true;
-
-        if (RaceNumber.trim() == '' || RaceNumber == undefined) {
-            $(".RaceNumber").addClass('is-invalid');
-            $(".erroRace").text("Preencha o número da corrida");
-            $(".erroRace").removeClass("d-none");
-            RaceValidt = false;
-        }
-        else {
-            $(".RaceNumber").removeClass('is-invalid');
-            $(".erroRace").addClass('is-valid');
-            $(".erroRace").addClass("d-none");
-
-            RaceValidt = true;
-        }
-        return RaceValidt;
-
-    }
-
-  </script>
+    </script>
 
 }
 
