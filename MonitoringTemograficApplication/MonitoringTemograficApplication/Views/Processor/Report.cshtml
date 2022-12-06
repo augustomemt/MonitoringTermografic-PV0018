@@ -5,69 +5,86 @@
 }
 
 <div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <h4 class="page-title"> Relatório Monitoramento Termográfico </h4>
+            </div>
+
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div>
                 <div class="card">
                     <div class="card-body">
+                        <div class=" grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
 
-                        <div id="reports-filters" class="row" style="margin-bottom:0;">
-                            <div class="col-md-12 top-33">
-                            </div>
-                            <div class="col-md-12" style="padding:0;right:18px;position:relative;">
-                                <div class="col-md-12 space-20" style="margin-top:30px;">
-                                    <div id="DataIni" class="col-sm-2">
-                                        <label><b>Data Inicio</b></label>
-                                        <input name="startDate" type="date" class="form-control dateStart" maxlength="8" required />
+                                    <div id="reports-filters" class="row" style="margin-bottom:0;">
+                                        <div class="col-md-12 top-33">
+                                        </div>
+                                        <div class="col-md-12" style="padding:0;right:18px;position:relative;">
+                                            <div class="col-md-12 space-20" style="margin-top:30px;">
+                                                <div id="DataIni" class="col-sm-2">
+                                                    <label><b>Data Inicio</b></label>
+                                                    <input name="startDate" type="date" class="form-control dateStart" maxlength="8" required />
 
-                                    </div>
-                                    <div id="DataFim" class="col-sm-2">
-                                        <label><b>Data final</b></label>
-                                        <input name="endDate" type="date" class="form-control dateEnd" maxlength="8" required />
-                                    </div>
-                                    <div id="GeraRelat" class="col-sm-2">
-                                        <input type="button" value="Gerar Relatório" class="btn btn-success  btnGerar" "      />
-                                        @*        <button type="submit" class="btn btn-primary btnGerar">Gerar relatório</button>*@
-                                    </div>
-                                    <div class="col-md-12" style="margin-top:5px;">
-                                        <label id="error_endDate" style="color: red;font-weight:bold;"> </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 title-container" style="border-radius:5px;height:50px;">
-                                <div class="col-md-10" style="margin-top:8px;float:right;padding:0;display: flex;align-items: center;">
-                                    <div class="dropdown col-sm-1" style="margin-right:9px;float:right;padding:0;">
-                                        <div id="contentexport">
-                                            <h3 id="titlerelat"> Relatório Monitoramento Termográfico</h3>
-                                            <input style="background-color:green; " id="inpexport" type="button" value="Exportar" class="btn btn-success   btnExport" />
+                                                </div>
+                                                <div id="DataFim" class="col-sm-2">
+                                                    <label><b>Data final</b></label>
+                                                    <input name="endDate" type="date" class="form-control dateEnd" maxlength="8" required />
+                                                </div>
+                                                <div id="GeraRelat" class="col-sm-2">
+
+                                                    <input style="background-color:green; " id="inpexport" type="button" value="Exportar" class="btn btn-success   btnExport" />
+
+                                                    <input type="button" value="Gerar Relatório" class="btn btn-success  btnGerar" "             />
+                                                    @*        <button type="submit" class="btn btn-primary btnGerar">Gerar relatório</button>*@
+                                                </div>
+
+
+                                                <div class="col-md-12" style="margin-top:5px;">
+                                                    <label id="error_endDate" style="color: red;font-weight:bold;"> </label>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="dropdown-menu export-pannel" style="margin-left:-80px;">
-                                            <h4>Formato</h4>
-                                            <ul class=" space-30">
-                                                <!--<li class="btn btn-default" style="width: 100%;"> <a class="dropdown-item" id="btn-export-pdf" href="/url/">PDF</a></li>-->
-                                                <li class="btn btn-default" style="width: 100%"> <a class="dropdown-item" id="btn-export-xls" href="/url/">XLSX</a></li>
-                                            </ul>
+                                        <div class="col-md-12 title-container" style="border-radius:5px;height:50px;">
+                                            <div class="col-md-10" style="margin-top:8px;float:right;padding:0;display: flex;align-items: center;">
+                                                <div class="dropdown col-sm-1" style="margin-right:9px;float:right;padding:0;">
+
+                                                    <div class="dropdown-menu export-pannel" style="margin-left:-80px;">
+                                                        <h4>Formato</h4>
+                                                        <ul class=" space-30">
+                                                            <!--<li class="btn btn-default" style="width: 100%;"> <a class="dropdown-item" id="btn-export-pdf" href="/url/">PDF</a></li>-->
+                                                            <li class="btn btn-default" style="width: 100%"> <a class="dropdown-item" id="btn-export-xls" href="/url/">XLSX</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <br />
+                                    <div class="table-responsive" id="DivTbReport">
+                                        <table class="table">
+                                            <thead id="TableIndex">
+                                                <tr id="table-column" style="text-align:center;font-size:15px;">
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-content" style="text-align:center;padding-right: 30px;">
+                                            </tbody>
+                                        </table>
+                                        <nav class="text-center" id="pagination" style="font-size:10px;position:relative;top:3px;">
+
+                                        </nav>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-
-                        <br />
-                        <div class="table-responsive" id="DivTbReport">
-                            <table class="table">
-                                <thead id="TableIndex">
-                                    <tr id="table-column" style="text-align:center;font-size:15px;">
-                                    </tr>
-                                </thead>
-                                <tbody id="table-content" style="text-align:center;padding-right: 30px;">
-                                </tbody>
-                            </table>
-                            <nav class="text-center" id="pagination" style="font-size:10px;position:relative;top:3px;">
-
-                            </nav>
-                        </div>
-
                     </div>
 
                 </div>
@@ -343,4 +360,4 @@
 
 
     </script>
-}
+            }

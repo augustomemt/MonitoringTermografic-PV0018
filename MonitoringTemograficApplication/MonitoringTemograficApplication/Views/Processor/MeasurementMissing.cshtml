@@ -40,8 +40,6 @@
                                             <th scope="col">ID das Imagens</th>
                                             <th scope="col">Data</th>
                                             <th style="width:20px;"></th>
-
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -50,7 +48,7 @@
                                             <tr id="TableHv" style="text-align:center;">
                                                 <td>@measurements.MeasurementKey.ToString()</td>
                                                 <td>@measurements.Time.ToString()</td>
-                                                <td><img style="width:25px; height:25px;" type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
+                                                <td> <i class="me-2 mdi mdi-lead-pencil" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
 
                                                 @*<td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
                                             </tr>
@@ -143,9 +141,16 @@
         });
 
         function mostrarModal() {
-            $('#modal').modal({
-                show: true
-            });
+            console.log("teste")
+            try {
+
+                $('#modal').modal('show');
+
+            }
+            catch (err) {
+                console.log(err)
+            }
+
         };
         // FUNÇÃO RESPONSAVEL POR PEGAR OS DADOS PELO ID
         function pegarMeasurmentPeloId(MeasurmentId) {
