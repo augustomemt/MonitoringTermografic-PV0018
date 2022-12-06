@@ -219,7 +219,7 @@ body {
 }
 
 #TableHv:hover {
-  background-color: rgb(29 109 0 / 0.55);
+    background-color: #a0a0a0;
 }
 
 #DivProcs {
@@ -280,15 +280,15 @@ tr {
     position: absolute;
     height: 50px;
     background-color: #ececed;
-    top: 27px;
+    top: 8px;
     border-radius: 5px;
     width: 800px;
 }
 
 #inpexport {
-  position: inherit;
+  position: relative;
   left: 702px;
-  top: -9.4px;
+  top: -29.4px;
   background-color: green;
 }
 

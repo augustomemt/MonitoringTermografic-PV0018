@@ -5,12 +5,6 @@
 }
 
 
-<h3 style="text-align:left; ">Dados Faltantes</h3>
-
-
-
-
-
 @if (TempData["MSG_S"] != null)
 {
     <p class="alert alert-success">@TempData["MSG_S"]</p>
@@ -20,15 +14,13 @@
     <a asp-action="Register" class="btn btn-outline-success text-right">Nova Alteração</a>
 
 </div>*@
-<br />
-
 
 <div class="page-wrapper">
 
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Dados Existentes</h4>
+                <h4 class="page-title">Dados Faltantes</h4>
             </div>
 
         </div>
@@ -41,7 +33,7 @@
                     <div class="card-body">
                         @if (Model.Count > 0)
                         {
-                            <div class="table-responsivez" id="DivTb">
+                            <div class="table-responsive" id="DivTb">
                                 <table class="table">
                                     <thead id="TableIndex">
                                         <tr>

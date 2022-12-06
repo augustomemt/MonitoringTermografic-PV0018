@@ -11,8 +11,6 @@
                 <div class="card">
                     <div class="card-body">
 
-                   
-
                         <div id="reports-filters" class="row" style="margin-bottom:0;">
                             <div class="col-md-12 top-33">
                             </div>
@@ -54,11 +52,11 @@
                                 </div>
                             </div>
                         </div>
-                        <br />
+
                         <br />
                         <div class="table-responsive" id="DivTbReport">
                             <table class="table">
-                                <thead id="TableReport">
+                                <thead id="TableIndex">
                                     <tr id="table-column" style="text-align:center;font-size:15px;">
                                     </tr>
                                 </thead>
@@ -301,7 +299,7 @@
             if (pageNumber > 1) {
                 paginationHTML +=
                     '<li  class="page-item">' +
-                    '<span style= "color:green; : green;" class="page-link" disabled onclick="changePage(-1)">Anterior</span>' +
+                    '<span style= "background-color:green;color:withe;" class="page-link" disabled onclick="changePage(-1)">Anterior</span>' +
                     '</li>'
             }
 
@@ -313,18 +311,18 @@
 
                     paginationHTML +=
                         '<li  class="page-item  ' + (isCurrentPage ? 'active' : '') + '">' +
-                        '<span style= "color:green;" class="page-link" onclick="changePage(' + currentPage + ', true)"> ' + currentPage + '  </span>' +
+                        '<span style= "background-color:green;color:withe;" class="page-link" onclick="changePage(' + currentPage + ', true)"> ' + currentPage + '  </span>' +
                         '</li>'
 
                 } else if (currentPage === 4) {
                     paginationHTML +=
                         '<li class="page-item ">' +
-                        '<span style= "color:green;" class="page-link"  > ...  </span>' +
+                        '<span style= "background-color:green;color:withe;" class="page-link"  > ...  </span>' +
                         '</li>'
                 } else if (currentPage === (numberOfPages - 4)) {
                     paginationHTML +=
                         '<li class="page-item ">' +
-                        '<span style= "color:green;" class="page-link"  > ...  </span>' +
+                        '<span style= "background-color:green;color:withe;" class="page-link"  > ...  </span>' +
                         '</li>'
                 }
             }
@@ -332,7 +330,7 @@
             if (pageNumber < numberOfPages) {
                 paginationHTML +=
                     '<li class="page-item">' +
-                    '<span style= "color:green;" class="page-link" disabled href="#" onclick="changePage(1)" value="">Próximo</span>' +
+                    '<span style= "background-color:green;color:withe;" class="page-link" disabled href="#" onclick="changePage(1)" value="">Próximo</span>' +
                     '</li>' +
                     '</ul>'
             }
