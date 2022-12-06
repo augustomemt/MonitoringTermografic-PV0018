@@ -205,7 +205,6 @@ body {
 }
 
 #DivTbReport {
-  width: 1335px;
   position: relative;
   font-size: 20px;
   border-radius: 15px;
@@ -256,13 +255,13 @@ tr {
 }
 
 #GeraRelat {
-  position: initial;
+  position: revert;
   float: left;
   top: 30px;
 }
 
 #TableReport {
-  width: 300px;
+
 }
 
 #TableIndex {
@@ -284,7 +283,6 @@ tr {
 #inpexport {
   position: relative;
   left: 133px;
-  background-color: green;
   top:34px;
 }
 
