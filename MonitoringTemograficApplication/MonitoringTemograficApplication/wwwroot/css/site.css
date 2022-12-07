@@ -296,3 +296,17 @@ tr {
     display: flex;
     font-size: large;
 }
+
+#navcolor {
+    font-size:20px;
+    left: 10px;
+    color:white;
+    padding:20px;
+}
+#navcolor:hover {
+  background-color:gray;
+}
+
+#inputexist {
+    cursor: pointer;
+}

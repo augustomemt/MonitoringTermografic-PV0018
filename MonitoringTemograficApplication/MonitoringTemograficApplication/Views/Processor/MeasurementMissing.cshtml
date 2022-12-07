@@ -33,107 +33,115 @@
                     <div class="card-body">
                         @if (Model.Count > 0)
                         {
-                            <div class="table-responsive" id="DivTb">
-                                <table class="table">
-                                    <thead id="TableIndex">
-                                        <tr>
-                                            <th scope="col">ID das Imagens</th>
-                                            <th scope="col">Data</th>
-                                            <th style="width:20px;"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (Measurements measurements in Model)
-                                        {
-                                            <tr id="TableHv" style="text-align:center;">
-                                                <td>@measurements.MeasurementKey.ToString()</td>
-                                                <td>@measurements.Time.ToString()</td>
-                                                <td> <i class="me-2 mdi mdi-lead-pencil" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
+                            <div class=" grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
 
-                                                @*<td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
-                                            </tr>
+                                        <div class="table-responsive" id="DivTb">
+                                            <table class="table">
+                                                <thead id="TableIndex">
+                                                    <tr>
+                                                        <th scope="col">ID das Imagens</th>
+                                                        <th scope="col">Data</th>
+                                                        <th style="width:20px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (Measurements measurements in Model)
+                                                    {
+                                                        <tr id="TableHv" style="text-align:center;">
+                                                            <td>@measurements.MeasurementKey.ToString()</td>
+                                                            <td>@measurements.Time.ToString()</td>
+                                                            <td> <i id="inputexist" class="me-2 mdi mdi-lead-pencil" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" /> </td>
+
+                                                            @*<td><button type="button" class="btn btn-outline-primary" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)">Atualizar</button></td>*@
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                            <div id="DivBtn">
+                                                @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementMissing", new { page = page, search = pesquisa }), new PagedListRenderOptions
+                                            {
+                                            LiElementClasses = new string[] { "page-item" },
+                                            PageClasses = new string[] { "btn btn-outline-success text-right"}
+                                            })
+                                            </div>
+                                        </div>
                                         }
-                                    </tbody>
-                                </table>
-                                <div id="DivBtn">
-                                    @Html.PagedListPager((IPagedList)Model, page => Url.Action("MeasurementMissing", new { page = page, search = pesquisa }), new PagedListRenderOptions
-                                {
-                                LiElementClasses = new string[] { "page-item" },
-                                PageClasses = new string[] { "btn btn-outline-success text-right"}
-                                })
-                                </div>
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">ID das Imagens</th>
-                                            <th scope="col">Data</th>
+                                        else
+                                        {
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">ID das Imagens</th>
+                                                        <th scope="col">Data</th>
 
-                                        </tr>
-                                    </thead>
-                                </table>
-                                <div>
-                                    Nenhum registro  encontrado!
-                                </div>
-                            </div>
-                        }
-                        <div id="modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h6 class="modal-title">Adicionar Dados Faltantes</h6>
-                                    </div>
-                                    <div class="modal-body">
-                                        <input type="hidden" class="form-control form-control-sm MeasurementKey" />
-                                        <input type="hidden" class="form-control form-control-sm Time" />
-                                        <input type="hidden" class="form-control form-control-sm Location" />
-                                        <div class="form-group">
-
-                                            <label>Número da Panela</label>
-                                            <input type="text" class="form-control form-control-sm LadleID" />
-                                            <span class="text-danger erroID d-NumeroPanela"></span>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                            <div>
+                                                Nenhum registro  encontrado!
+                                            </div>
                                         </div>
+                                        }
+                                        <div id="modal" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h6 class="modal-title">Adicionar Dados Faltantes</h6>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="hidden" class="form-control form-control-sm MeasurementKey" />
+                                                        <input type="hidden" class="form-control form-control-sm Time" />
+                                                        <input type="hidden" class="form-control form-control-sm Location" />
+                                                        <div class="form-group">
 
-                                        <div class="form-group">
-                                            <label>Vida da Panela</label>
-                                            <input type="text" class="form-control form-control-sm LadleAge" />
-                                            <span class="text-danger erroAge d-VidaPanela"></span>
-                                        </div>
+                                                            <label>Número da Panela</label>
+                                                            <input type="text" class="form-control form-control-sm LadleID" />
+                                                            <span class="text-danger erroID d-NumeroPanela"></span>
+                                                        </div>
 
-                                        <div class="form-group">
-                                            <label>Número da Corrida</label>
-                                            <input type="text" class="form-control form-control-sm RaceNumber" />
-                                            <span class="text-danger erroRace d-NumeroCorrida"></span>
-                                        </div>
-                                    </div>
+                                                        <div class="form-group">
+                                                            <label>Vida da Panela</label>
+                                                            <input type="text" class="form-control form-control-sm LadleAge" />
+                                                            <span class="text-danger erroAge d-VidaPanela"></span>
+                                                        </div>
 
-                                    <div class="modal-footer">
-                                        <div class="form-group">
-                                            <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
-                                            <input type="button" value="Cancelar" class="btn btn-sm btn-cancel" data-bs-dismiss="modal" />
+                                                        <div class="form-group">
+                                                            <label>Número da Corrida</label>
+                                                            <input type="text" class="form-control form-control-sm RaceNumber" />
+                                                            <span class="text-danger erroRace d-NumeroCorrida"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <div class="form-group">
+                                                            <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
+                                                            <input type="button" value="Cancelar" class="btn btn-sm btn-cancel" data-bs-dismiss="modal" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
 
-</div>
 
-
-
-@section scripts {
+                            @section scripts {
 
     <script>
         $(".btn-cancel").click(function() {
@@ -294,7 +302,7 @@
 
     </script>
 
-}
+            }
 
 
 
