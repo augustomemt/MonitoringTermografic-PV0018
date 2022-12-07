@@ -7390,19 +7390,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carlos.nunes\\.nuget\\packages\\": {}
+    "C:\\Users\\paulo.junior\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CSPNovo\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+      "projectUniqueName": "C:\\upsate_CSP\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
       "projectName": "MonitoringTemograficApplication",
-      "projectPath": "C:\\CSPNovo\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
-      "packagesPath": "C:\\Users\\carlos.nunes\\.nuget\\packages\\",
-      "outputPath": "C:\\CSPNovo\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\obj\\",
+      "projectPath": "C:\\upsate_CSP\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\MonitoringTemograficApplication.csproj",
+      "packagesPath": "C:\\Users\\paulo.junior\\.nuget\\packages\\",
+      "outputPath": "C:\\upsate_CSP\\MonitoringTermografic-PV0018\\MonitoringTemograficApplication\\MonitoringTemograficApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\carlos.nunes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paulo.junior\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

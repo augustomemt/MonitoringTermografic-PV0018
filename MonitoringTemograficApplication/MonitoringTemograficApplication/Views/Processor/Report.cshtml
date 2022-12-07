@@ -321,7 +321,7 @@
             if (pageNumber > 1) {
                 paginationHTML +=
                     '<li  class="page-item">' +
-                    '<span  class="page-link btn-outline-success text-right" disabled onclick="changePage(-1)">Anterior</span>' +
+                    '<span  class="btn btn-outline-success text-right" disabled onclick="changePage(-1)">Anterior</span>' +
                     '</li>'
             }
 
@@ -333,18 +333,18 @@
 
                     paginationHTML +=
                         '<li  class="page-item  ' + (isCurrentPage ? 'active' : '') + '">' +
-                        '<span  class="page-link  btn-outline-success text-right" onclick="changePage(' + currentPage + ', true)"> ' + currentPage + '  </span>' +
+                        '<span  class=" btn btn-outline-success text-right" onclick="changePage(' + currentPage + ', true)"> ' + currentPage + '  </span>' +
                         '</li>'
 
                 } else if (currentPage === 4) {
                     paginationHTML +=
                         '<li class="page-item ">' +
-                        '<span class="page-link  btn-outline-success text-right"  > ...  </span>' +
+                        '<span class="btn btn-success text-right"  > ...  </span>' +
                         '</li>'
                 } else if (currentPage === (numberOfPages - 4)) {
                     paginationHTML +=
                         '<li class="page-item ">' +
-                        '<span class="page-link  btn-outline-success text-right"  > ...  </span>' +
+                        '<span class=""btn btn-outline-success text-right"  > ...  </span>' +
                         '</li>'
                 }
             }
@@ -352,7 +352,7 @@
             if (pageNumber < numberOfPages) {
                 paginationHTML +=
                     '<li class="page-item">' +
-                    '<span class="page-link  " disabled href="#" onclick="changePage(1)" value="">Próximo</span>' +
+                    '<span class="btn btn-outline-success text-right " disabled href="#" onclick="changePage(1)" value="">Próximo</span>' +
                     '</li>' +
                     '</ul>'
             }
