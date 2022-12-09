@@ -67,24 +67,7 @@
                                             })
                                             </div>
                                         </div>
-                                        }
-                                        else
-                                        {
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">ID das Imagens</th>
-                                                        <th scope="col">Data</th>
-
-                                                    </tr>
-                                                </thead>
-                                            </table>
-                                            <div>
-                                                Nenhum registro  encontrado!
-                                            </div>
-                                        </div>
-                                        }
+                                        
                                         <div id="modal" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -129,19 +112,36 @@
                                     </div>
                                 </div>
                             </div>
-                            }
-                        </div>
+                        }
+                        else
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID das Imagens</th>
+                                            <th scope="col">Data</th>
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div>
+                                    Nenhum registro  encontrado!
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 
 
+</div>
 
-                            @section scripts {
+
+
+@section scripts {
 
     <script>
         $(".btn-cancel").click(function() {

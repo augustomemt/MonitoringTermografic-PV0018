@@ -36,16 +36,27 @@
 
                         @if (Model.Count > 0)
                         {
+
+
                             <div class=" grid-margin stretch-card">
                                 <div class="card">
+
                                     <div class="card-body">
+
+                                        <div style="position:relative; background-color: red;">
+                                            <div style="float:right;">
+                                                <buton class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#ModalProcessar">Processar </buton>
+
+                                            </div>
+                                        </div>
+
 
 
                                         <div class="table-responsive">
                                             <table class="table">
                                                 <thead id="TableIndex">
                                                     <tr style="color:white;">
-                                                        <th scope="col" >ID das Imagens</th>
+                                                        <th scope="col">ID das Imagens</th>
                                                         <th scope="col">Data</th>
                                                         <th scope="col">Número da Panela</th>
                                                         <th scope="col">Vida da Panela</th>
@@ -106,6 +117,7 @@
                                                         </div>
 
 
+
                                                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
@@ -119,8 +131,31 @@
                                                                         </span>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <button   type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                        <button  type="button" class="btn btn-danger" onclick="Remove(@measurements.MeasurementKey)">Excluir</button>
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                        <button type="button" class="btn btn-danger" onclick="Remove(@measurements.MeasurementKey)">Excluir</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <div class="modal fade" id="ModalProcessar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <span>
+                                                                            <p>
+
+                                                                            </p>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                        <button type="button" class="btn btn-danger">Confirmar</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -136,7 +171,7 @@
                                                             <td>@measurements.Location.ToString()</td>
 
                                                             <td id="icons-edition">
-                                                                <div >
+                                                                <div>
                                                                     <i id="inputexist" class="me-2 mdi mdi-lead-pencil" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)"></i>
                                                                 </div>
 
@@ -149,7 +184,7 @@
                                                         </div>*@
                                                                 @*   <img style="width:25px; height:25px;" type="button" class="me-2 mdi mdi-lead-pencil" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)" />*@
                                                                 @*<button type="button" src="~/lib/bootstrapicons/pencil-square.svg" onclick="pegarMeasurmentPeloId(@measurements.MeasurementKey)"></button>*@
-                                                                <div >
+                                                                <div>
                                                                     <i id="inputexist" class="me-2 mdi mdi-delete" data-toggle="modal" data-target="#exampleModal"></i>
                                                                 </div>
 

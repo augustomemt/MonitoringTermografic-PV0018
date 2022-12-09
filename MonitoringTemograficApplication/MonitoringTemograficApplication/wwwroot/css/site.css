@@ -310,3 +310,8 @@ tr {
 #inputexist {
     cursor: pointer;
 }
+
+buttonexist{
+    position:relative; 
+    left: 40px;
+}
