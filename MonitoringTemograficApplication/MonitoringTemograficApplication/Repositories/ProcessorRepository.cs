@@ -110,7 +110,7 @@ namespace MonitoringTemograficApplication.Repositories
             var baseProcessor = _measurementsContext.Measurements.Where(m => m.LadleID == null || m.LadleAge == null || m.RaceNumber == null).ToList().AsQueryable().OrderByDescending(d => d.Time);
 
 
-            return baseProcessor.ToPagedList<Measurements>(NumberPage, 10);
+            return baseProcessor.ToPagedList<Measurements>(NumberPage, 20);
         }
 
         public IPagedList<Measurements> GetReport(int? page, DateRange dateRange)

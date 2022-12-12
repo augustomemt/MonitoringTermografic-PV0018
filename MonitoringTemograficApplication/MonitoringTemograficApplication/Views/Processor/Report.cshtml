@@ -37,17 +37,16 @@
                                                     <label><b>Data final</b></label>
                                                     <input name="endDate" type="date" class="form-control dateEnd" maxlength="8" required />
                                                 </div>
-                                                <div id="GeraRelat" class="col-sm-2">
+                                                <div id="GeraRelat" >
 
-                                                    <div>
-                                                        <input style="background-color:green;" id="inpexport" type="button" value="Exportar" class="btn btn-success   btnExport" />
-                                                    </div>
-                                                    <div style="position:initial">
+                                                    <div style="position:relative; top:30px;">
                                                         <input type="button" value="Gerar Relatório" class="btn btn-success  btnGerar" />
                                                     </div>
-                                                   
-
-                                                    @*        <button type="submit" class="btn btn-primary btnGerar">Gerar relatório</button>*@
+                                                    <div id="btnexport">
+                                                        <input  id="inpexport" type="button" value="Exportar" class="btn btn-success   btnExport" />
+                                                    </div>
+                                                  
+                                                    
                                                 </div>
 
 
@@ -76,7 +75,7 @@
                                     <div class="table-responsive" id="DivTbReport">
                                         <table class="table">
                                             <thead id="TableIndex">
-                                                <tr id="table-column" style="text-align:center;font-size:15px;">
+                                                <tr id="table-column" style="text-align:center;font-size:15px;color: black;">
                                                 </tr>
                                             </thead>
                                             <tbody id="table-content" style="text-align:center;padding-right: 30px;">
@@ -106,6 +105,8 @@
 
 @section scripts {
     <script>
+
+        $('#btnexport').hide();
         var pageNumber = 1
         var size = 10
         var numberOfPages = 0
@@ -121,6 +122,8 @@
 
             if (Validate(dateRange)) {
                 ReportGenerate(dateRange)
+                    ;
+
 
             }
 
@@ -136,6 +139,7 @@
 
             if (Validate(dateRange)) {
                 ReportGenerate(dateRange)
+
 
             }
         }
@@ -208,7 +212,9 @@
                 $('#table-column').html(columnempty)
                 $('#table-content').html(html)
                 $(".btnExport").prop('disabled', true)
+                $('#btnexport').hide();
             } else {
+                $('#btnexport').show();
                 $('#table-column').html(column)
                 $(".btnExport").prop('disabled', false)
                 $('#table-content').html(html)

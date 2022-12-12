@@ -283,7 +283,7 @@ tr {
 #inpexport {
   position: relative;
   left: 133px;
-  top:34px;
+  top:-6px;
 }
 
 #titlerelat {
@@ -309,6 +309,8 @@ tr {
 
 #inputexist {
     cursor: pointer;
+    display: flex;
+    font-size: large;
 }
 
 buttonexist{
