@@ -4,7 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\ValidationCSP\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
-    <History>True|2022-09-19T14:42:00.4769379Z;True|2022-09-19T11:30:39.6874746-03:00;True|2022-09-16T15:58:43.8198270-03:00;True|2022-09-16T15:55:29.1752775-03:00;True|2022-09-16T15:47:51.4026993-03:00;</History>
+    <_PublishTargetUrl>C:\CSPfeatureTable\MonitoringTermografic-PV0018\MonitoringTemograficApplication\MonitoringTemograficApplication\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2023-01-02T16:13:31.8373112Z;True|2023-01-02T13:10:06.5226192-03:00;True|2023-01-02T11:52:55.4589770-03:00;True|2023-01-02T11:39:17.7846500-03:00;True|2023-01-02T11:32:15.3050512-03:00;True|2023-01-02T11:22:52.0983503-03:00;True|2023-01-02T11:20:05.0144393-03:00;True|2023-01-02T11:17:43.4131073-03:00;True|2023-01-02T11:14:29.3264990-03:00;True|2023-01-02T11:11:27.0208665-03:00;True|2023-01-02T11:06:39.3331431-03:00;True|2023-01-02T10:02:27.9997639-03:00;True|2023-01-02T09:43:41.6831033-03:00;True|2022-09-19T11:42:00.4769379-03:00;True|2022-09-19T11:30:39.6874746-03:00;True|2022-09-16T15:58:43.8198270-03:00;True|2022-09-16T15:55:29.1752775-03:00;True|2022-09-16T15:47:51.4026993-03:00;</History>
+    <LastFailureDetails />
   </PropertyGroup>
 </Project>

@@ -1,240 +1,240 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MonitoringTemograficApplication</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/lib/bootstrapicons" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/style.css" />
-    <link rel="stylesheet" href="~/css/style.min.css" />
-    <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-lite/" />
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <!-- Custom CSS -->
-    <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="../../dist/css/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - MonitoringTemograficApplication</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/lib/bootstrapicons" />
+  <link rel="stylesheet" href="~/css/site.css" />
+  <link rel="stylesheet" href="~/css/style.css" />
+  <link rel="stylesheet" href="~/css/style.min.css"> /
+
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+  <!-- Custom CSS -->
+<link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../../dist/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
 
-    @*<div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
+  @*<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar">
 
-    <h1>
-    <a class="logo" asp-controller="Processor" asp-action="MeasurementExist">Monitoramento Termográfico</a>
+  <h1>
+  <a class="logo" asp-controller="Processor" asp-action="MeasurementExist">Monitoramento Termográfico</a>
 
-    </h1>
-    <ul class="list-unstyled components mb-5">
-    <li>
-    <a asp-controller="Processor" asp-action="MeasurementExist" >Dados Existentes</a>
-    </li>
-    <li>
-    <a asp-controller="Processor" asp-action="MeasurementMissing">Dados Faltantes</a>
-    </li>
-    <li>
-    <a asp-area="" asp-controller="Processor" asp-action="Report">Relatório</a>
-    </li>
-    <li>
-    <a asp-action="Logout">Sair</a>
-    </li>
+  </h1>
+  <ul class="list-unstyled components mb-5">
+  <li>
+  <a asp-controller="Processor" asp-action="MeasurementExist" >Dados Existentes</a>
+  </li>
+  <li>
+  <a asp-controller="Processor" asp-action="MeasurementMissing">Dados Faltantes</a>
+  </li>
+  <li>
+  <a asp-area="" asp-controller="Processor" asp-action="Report">Relatório</a>
+  </li>
+  <li>
+  <a asp-action="Logout">Sair</a>
+  </li>
+  </ul>
+
+  </nav>
+
+  <div id="content" class="p-4 p-md-5 pt-5">
+
+
+  @RenderBody()
+
+  </div>
+  </div>*@
+  <div class="preloader">
+    <div class="lds-ripple">
+      <div class="lds-pos"></div>
+      <div class="lds-pos"></div>
+    </div>
+  </div>
+
+  <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
+       data-boxed-layout="full">
+    @*       <header class="topbar" data-navbarbg="skin6">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light" style="background-color:#f3f4f6;">
+    <div class="navbar-header" data-logobg="skin5">
+    <!-- This is for the sidebar toggle which is visible on mobile only -->
+    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+    <i class="ti-menu ti-close"></i>
+    </a>
+    <!-- ============================================================== -->
+    <!-- Logo -->
+    <!-- ============================================================== -->
+    <div class="navbar-brand">
+    <a href="index.html" class="logo">
+    <!-- Logo icon -->
+    <b class="logo-icon">
+    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+    <!-- Dark Logo icon -->
+
+    </b>
+    <!--End Logo icon -->
+    <!-- Logo text -->
+    <span class="logo-text">
+    <!-- dark Logo text -->
+    <img src="../../assets/images/csp logo.png" alt="homepage" class="dark-logo" />
+    <!-- Light Logo text -->
+    <img src="../../assets/images/csp logo.png" class="light-logo" alt="homepage" />
+    </span>
+    </a>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Logo -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Toggle which is visible on mobile only -->
+    <!-- ============================================================== -->
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Logo -->
+    <!-- ============================================================== -->
+    <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin6">
+    <!-- ============================================================== -->
+    <!-- toggle and nav items -->
+    <!-- ============================================================== -->
+    <ul class="navbar-nav float-start me-auto">
     </ul>
 
+
+    </div>
     </nav>
-
-    <div id="content" class="p-4 p-md-5 pt-5">
-
-
-    @RenderBody()
-
-    </div>
-    </div>*@
-    <div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
-    </div>
-
-    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
-         data-boxed-layout="full">
-        @*       <header class="topbar" data-navbarbg="skin6">
-        <nav class="navbar top-navbar navbar-expand-md navbar-light" style="background-color:#f3f4f6;">
-        <div class="navbar-header" data-logobg="skin5">
-        <!-- This is for the sidebar toggle which is visible on mobile only -->
-        <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-        <i class="ti-menu ti-close"></i>
-        </a>
-        <!-- ============================================================== -->
-        <!-- Logo -->
-        <!-- ============================================================== -->
-        <div class="navbar-brand">
-        <a href="index.html" class="logo">
-        <!-- Logo icon -->
-        <b class="logo-icon">
-        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-        <!-- Dark Logo icon -->
-
-        </b>
-        <!--End Logo icon -->
-        <!-- Logo text -->
-        <span class="logo-text">
-        <!-- dark Logo text -->
-        <img src="../../assets/images/csp logo.png" alt="homepage" class="dark-logo" />
-        <!-- Light Logo text -->
-        <img src="../../assets/images/csp logo.png" class="light-logo" alt="homepage" />
-        </span>
-        </a>
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Logo -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Toggle which is visible on mobile only -->
-        <!-- ============================================================== -->
-
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Logo -->
-        <!-- ============================================================== -->
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin6">
-        <!-- ============================================================== -->
-        <!-- toggle and nav items -->
-        <!-- ============================================================== -->
-        <ul class="navbar-nav float-start me-auto">
-        </ul>
-
-
-        </div>
-        </nav>
-        </header>*@
+    </header>*@
 
 
 
-        <aside class="left-sidebar" data-sidebarbg="skin5">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
+    <aside class="left-sidebar" data-sidebarbg="skin5">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
 
-                    <div class="navbar-header" data-logobg="skin5">
-                        <!-- This is for the sidebar toggle which is visible on mobile only -->
-                        <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-                            <i class="ti-menu ti-close"></i>
-                        </a>
-                        <!-- ============================================================== -->
-                        <!-- Logo -->
-                        <!-- ============================================================== -->
-                        <div class="navbar-brand">
-                            <a href="index.html" class="logo">
-                                <!-- Logo icon -->
-                                <b class="logo-icon">
-                                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                                    <!-- Dark Logo icon -->
+          <div class="navbar-header" data-logobg="skin5">
+            <!-- This is for the sidebar toggle which is visible on mobile only -->
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+              <i class="ti-menu ti-close"></i>
+            </a>
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-brand">
+              <a href="index.html" class="logo">
+                <!-- Logo icon -->
+                <b class="logo-icon">
+                  <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                  <!-- Dark Logo icon -->
 
-                                </b>
-                                <!--End Logo icon -->
-                                <!-- Logo text -->
-                                <span class="logo-text">
-                                    <!-- dark Logo text -->
-                                   <a  asp-controller="Processor" asp-action="MeasurementExist">
-                                        <img style="position:relative; top:-50px;"  src="../../assets/images/csp logo.png"  class="dark-logo table-responsive" />
+                </b>
+                <!--End Logo icon -->
+                <!-- Logo text -->
+                <span class="logo-text">
+                  <!-- dark Logo text -->
+                  <a asp-controller="Processor" asp-action="MeasurementExist">
+                    <img style="position:relative; top:-50px;" src="../../assets/images/csp logo.png" class="dark-logo table-responsive" />
 
-                                   </a>
-                                        @*<img style="position:relative; top:-50px;"  src="../../assets/images/csp logo.png" alt="homepage" class="dark-logo table-responsive" />*@
-                                    <!-- Light Logo text -->
-                                    @*<img src="../../assets/images/csp logo.png" class="light-logo" alt="homepage" />*@
-                                </span>
-                            </a>
-                        </div>
-
-                        <ul style="position:relative; top:-20px;" id="sidebarnav">
-                            <!--ICONES -->
-                            <li class="sidebar-item">
-                                <div id="navcolor">
-                                    <a style="color: white;"
-                                       aria-expanded="false" asp-controller="Processor" asp-action="MeasurementExist">
-                                        <i class="mdi mdi-format-list-bulleted"></i>
-                                        <span class="hide-menu">Dados Existentes</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="position:relative; top: 16px;" class="sidebar-item">
-                                <div id="navcolor">
-                                    <a style="color: white;" asp-controller="Processor" asp-action="MeasurementMissing"
-                                       aria-expanded="false">
-                                        @*
-                                        <i class="me-2 mdi mdi-file-find"></i>*@
-                                        <i class="mdi mdi-format-list-bulleted"></i>
-                                        <span class="hide-menu">Dados Faltantes</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="position:relative; top: 27px;" class="sidebar-item">
-                                <div id="navcolor">
-                                    <a style="color: white;" asp-area="" asp-controller="Processor" asp-action="Report"
-                                       aria-expanded="false">
-                                        @*<i class="me-2 mdi mdi-rename-box"></i>*@
-                                        @*<i class="fa-thin fa-bars"></i>*@
-                                        <i class="mdi mdi-file-document"></i>
-                                        <span class="hide-menu">Relatório</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="position:relative; top: 37px;" class="sidebar-item">
-                                <div id="navcolor">
-                                    <a style="color: white;" asp-action="Logout"
-                                       aria-expanded="false">
-                                        @* <i class="me-2 mdi mdi-window-close"></i>*@
-                                        <i class="mdi mdi-exit-to-app"></i>
-                                        <span class="hide-menu">Sair</span>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
+                  </a>
+                  @*<img style="position:relative; top:-50px;"  src="../../assets/images/csp logo.png" alt="homepage" class="dark-logo table-responsive" />*@
+                  <!-- Light Logo text -->
+                  @*<img src="../../assets/images/csp logo.png" class="light-logo" alt="homepage" />*@
+                </span>
+              </a>
             </div>
-            <!-- End Sidebar scroll-->
-        </aside>
+
+            <ul style="position:relative; top:-20px;" id="sidebarnav">
+              <!--ICONES -->
+              <li class="sidebar-item">
+                <div id="navcolor">
+                  <a style="color: white;"
+                     aria-expanded="false" asp-controller="Processor" asp-action="MeasurementExist">
+                    <i class="mdi mdi-format-list-bulleted"></i>
+                    <span class="hide-menu">Dados Existentes</span>
+                  </a>
+                </div>
+              </li>
+              <li style="position:relative; top: 16px;" class="sidebar-item">
+                <div id="navcolor">
+                  <a style="color: white;" asp-controller="Processor" asp-action="MeasurementMissing"
+                     aria-expanded="false">
+                    @*
+                    <i class="me-2 mdi mdi-file-find"></i>*@
+                    <i class="mdi mdi-format-list-bulleted"></i>
+                    <span class="hide-menu">Dados Faltantes</span>
+                  </a>
+                </div>
+              </li>
+              <li style="position:relative; top: 27px;" class="sidebar-item">
+                <div id="navcolor">
+                  <a style="color: white;" asp-area="" asp-controller="Processor" asp-action="Report"
+                     aria-expanded="false">
+                    @*<i class="me-2 mdi mdi-rename-box"></i>*@
+                    @*<i class="fa-thin fa-bars"></i>*@
+                    <i class="mdi mdi-file-document"></i>
+                    <span class="hide-menu">Relatório</span>
+                  </a>
+                </div>
+              </li>
+              <li style="position:relative; top: 37px;" class="sidebar-item">
+                <div id="navcolor">
+                  <a style="color: white;" asp-action="Logout"
+                     aria-expanded="false">
+                    @* <i class="me-2 mdi mdi-window-close"></i>*@
+                    <i class="mdi mdi-exit-to-app"></i>
+                    <span class="hide-menu">Sair</span>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
 
 
-        <div>
+    <div>
 
 
-            @RenderBody()
-
-        </div>
-
-
-
+      @RenderBody()
 
     </div>
 
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <!--Wave Effects -->
-    <script src="../../dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="../../dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="../../dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+
+
+  </div>
+
+
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- slimscrollbar scrollbar JavaScript -->
+  <!--Wave Effects -->
+  <script src="../../dist/js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="../../dist/js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="../../dist/js/custom.min.js"></script>
+  <!--This page JavaScript -->
+  <!--chartis chart-->
+  <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
+  <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+  <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @RenderSection("Scripts", required: false)
 
 </body>
 

@@ -317,3 +317,14 @@ buttonexist{
     position:relative; 
     left: 40px;
 }
+.mdi mdi-checkbox-marked-circle{
+
+  color:green;
+}
+.stilpagnumber {
+  color: #7460ee;
+  font-size: 13px;
+  padding-left: 17px;
+  
+}
+

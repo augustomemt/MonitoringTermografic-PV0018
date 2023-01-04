@@ -2455,7 +2455,8 @@ input[type="button"].btn-block {
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #2962FF; }
+    background-color: green;
+  }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #6c757d;
     background-color: transparent; }
@@ -2695,7 +2696,8 @@ input[type="button"].btn-block {
   opacity: 0; }
   .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
-    background-color: #2962FF; }
+    background-color: green;
+  }
   .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 1px #f2f4f5, transparent; }
   .custom-control-input:active ~ .custom-control-label::before {
@@ -3506,7 +3508,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #7460ee;
+  color: green;
   background-color: #fff;
   border: 1px solid #dee2e6; }
   .page-link:hover {
@@ -3534,15 +3536,14 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #2962FF;
-  border-color: #2962FF; }
+ 
+ }
 
 .page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
   cursor: auto;
-  background-color: #fff;
-  border-color: #dee2e6; }
+   }
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
@@ -3897,7 +3898,7 @@ input[type="button"].btn-block {
   .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #2962FF;
+    background-color: green;
     border-color: #2962FF; }
 
 .list-group-flush .list-group-item {

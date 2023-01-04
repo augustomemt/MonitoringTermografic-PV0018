@@ -27,7 +27,10 @@ namespace MonitoringTemograficApplication.Models
 
     public string Origin { get; set; }
 
-   
+    public string OriginDescription { get; set; }
 
-    }
+
+
+
+  }
 }
